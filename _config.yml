@@ -102,5 +102,5 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:Lyz-623/Lyz-623ull.github.io.git
+  repo: git@github.com:Lyz-623/Lyz-623.github.io.git
   branch: master
