@@ -7,7 +7,6 @@
 <h1 id="时变时谐电磁场">时变、时谐电磁场</h1>
 <h2 id="概述">概述</h2>
 <p>电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的<strong>时变与时谐</strong>特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
-<p>在实际工程中，电磁学理论为复杂电磁系统的运行提供了解释与预测方法，使其能够在技术领域发挥重要作用。因此，电磁学的研究不仅在科学理论的完善上具有重要意义，同时也为现代工程技术的发展提供了不可或缺的基础支撑。</p>
 <h2 id="麦克斯韦方程组">麦克斯韦方程组</h2>
 <table>
 <colgroup>
@@ -86,7 +85,7 @@ t}=J_{ic}+\frac{\partial D}{\partial t}=J_{ic}+J_d \tag{2}
 <p><span class="math display">\[
 \nabla · J_{ic} = -\frac{\partial\rho_{ev}}{\partial t} \tag{5}
 \]</span></p>
-<p>公式左侧是电流密度<span class="math inline">\(\mathbf{J_{ic}}\)</span>的散度，表示某一区域中电流的“流出速率”，右侧表示体电荷密度<span class="math inline">\(\rho_{ev}\)</span>随时间的变化率，负号表示电荷流出。公式(5)的核心思想是：<strong>一个区域内电荷的减少必须由净电流流出该区域决定</strong>。</p>
+<p>公式左侧是电流密度<span class="math inline">\(\mathbf{J_{ic}}\)</span>的散度，表示某一区域中电流的“流出速率”。右侧表示体电荷密度<span class="math inline">\(\rho_{ev}\)</span>随时间的变化率，负号表示电荷流出。公式(5)的核心思想是：<strong>一个区域内电荷的减少必须由净电流流出该区域决定</strong>。</p>
 ]]></content>
       <categories>
         <category>课程</category>
