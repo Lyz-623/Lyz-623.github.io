@@ -216,7 +216,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-01-03 12:20:25" itemprop="dateModified" datetime="2025-01-03T12:20:25+08:00">2025-01-03</time>
+                <time title="修改时间：2025-01-03 16:13:04" itemprop="dateModified" datetime="2025-01-03T16:13:04+08:00">2025-01-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,14 +234,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>721</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -254,20 +254,74 @@
 
       
           <span id="more"></span>
-<h1 id="时变、时谐电磁场"><a href="#时变、时谐电磁场" class="headerlink" title="时变、时谐电磁场"></a>时变、时谐电磁场</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的<strong>时变与时谐</strong>特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
+<h1 id="时变时谐电磁场">时变、时谐电磁场</h1>
+<h2 id="概述">概述</h2>
+<p>电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的<strong>时变与时谐</strong>特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
 <p>在实际工程中，电磁学理论为复杂电磁系统的运行提供了解释与预测方法，使其能够在技术领域发挥重要作用。因此，电磁学的研究不仅在科学理论的完善上具有重要意义，同时也为现代工程技术的发展提供了不可或缺的基础支撑。</p>
-<h2 id="麦克斯韦方程组"><a href="#麦克斯韦方程组" class="headerlink" title="麦克斯韦方程组"></a>麦克斯韦方程组</h2><figure style="text-align: center;">
-  <img src="https://www.jianguoyun.com/c/tblv2/wTpqkQta2TtYjQj7cZTVMLsDJuVUE4epXP-MBZTB26aHWjgmqfiXK6U9HCvRIBFD3Uwq6EeB/JYS6tYsa6-UBDaFAsnqOTlPfcOdDMmHlNaDbvwyzPg8/l" width="1026" height="402">
-  <figcaption style="text-align: center;">图1：麦克斯韦方程组的微分和积分形式</figcaption>
-</figure>
-
-<p><img src="/2025/01/02/Master%20Class/Advanced%20Electromagnetics/maxswelleqs.png" alt="alt text"></p>
-<p>首先是<strong>法拉第电磁感应定律</strong>： </p>
-<script type="math/tex; mode=display">
-\nabla\times E=-M_i-\frac{\partial B}{\partial t}=-M_i-M_d=-M_t \tag{1}</script><p>公式(1)描述了电场E的旋度由磁化电流和随时间变化的磁场共同决定，其中$M_i$是<strong>外加磁流密度(impressed magnetic current density)</strong>，单位伏特/平方米，是一个假设的物理量，用于描述材料中外部强加的磁化流。$M_d$是<strong>位移磁流密度(displacement magnetic current density)</strong>，对应于时间变化的磁场引起的效应，类似于电场中位移电流的概念。</p>
+<h2 id="麦克斯韦方程组">麦克斯韦方程组</h2>
+<table>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 78%">
+</colgroup>
+<thead>
+<tr>
+<th>Differential form</th>
+<th>Integral form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\nabla \times \mathbf{E} = -
+\mathbf{M}_i - \frac{\partial \mathbf{B}}{\partial t}\)</span></td>
+<td><span class="math inline">\(\oint_C \mathbf{E} \cdot d\mathbf{l} = -
+\iint_S \mathbf{M}_i \cdot d\mathbf{s} - \frac{\partial}{\partial t}
+\iint_S \mathbf{B} \cdot d\mathbf{s}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\nabla \times \mathbf{H} = \mathbf{J}_i
++ \mathbf{J}_c + \frac{\partial \mathbf{D}}{\partial t}\)</span></td>
+<td><span class="math inline">\(\oint_C \mathbf{H} \cdot d\mathbf{l} =
+\iint_S \mathbf{J}_i \cdot d\mathbf{s} + \iint_S \mathbf{J}_c \cdot
+d\mathbf{s} + \frac{\partial}{\partial t} \iint_S \mathbf{D} \cdot
+d\mathbf{s}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\nabla \cdot \mathbf{D} =
+\rho_{ev}\)</span></td>
+<td><span class="math inline">\(\iint_S \mathbf{D} \cdot d\mathbf{s} =
+Q_e\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\nabla \cdot \mathbf{B} =
+\rho_{mv}\)</span></td>
+<td><span class="math inline">\(\iint_S \mathbf{B} \cdot d\mathbf{s} =
+Q_m\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\nabla \cdot \mathbf{J}_{ic} = -
+\frac{\partial \rho_{ev}}{\partial t}\)</span></td>
+<td><span class="math inline">\(\iint_S \mathbf{J}_{ic} \cdot
+d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V \rho_{ev} \, dv =
+-\frac{\partial Q_e}{\partial t}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>首先是<strong>法拉第电磁感应定律</strong>：</p>
+<p><span class="math display">\[
+\nabla\times E=-M_i-\frac{\partial B}{\partial t}=-M_i-M_d=-M_t \tag{1}
+\]</span></p>
+<p>公式(1)描述了电场E的旋度由磁化电流和随时间变化的磁场共同决定，其中<span class="math inline">\(M_i\)</span>是<strong>外加磁流密度(impressed
+magnetic current
+density)</strong>，单位伏特/平方米，是一个假设的物理量，用于描述材料中外部强加的磁化流。<span class="math inline">\(M_d\)</span>是<strong>位移磁流密度(displacement
+magnetic current
+density)</strong>，对应于时间变化的磁场引起的效应，类似于电场中位移电流的概念。</p>
 <p>第二个方程是<strong>推广的安培环路定律</strong>：</p>
-<script type="math/tex; mode=display">
-\nabla\times H=-j_i+j_\frac{\partial D}{\partial t}=-j_{ic}+\frac{\partial D}{\partial t}=j_{ic}+j_d \tag{2}</script><p>公式(2)描述了</p>
+<p><span class="math display">\[
+\nabla\times H=-j_i+j_\frac{\partial D}{\partial
+t}=-j_{ic}+\frac{\partial D}{\partial t}=j_{ic}+j_d \tag{2}
+\]</span></p>
+<p>公式(2)描述了</p>
 
       
     </div>
@@ -396,12 +450,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
