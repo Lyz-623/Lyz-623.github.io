@@ -57,21 +57,29 @@ d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V \rho_{ev} \, dv =
 </tr>
 </tbody>
 </table>
-<p>首先是<strong>法拉第电磁感应定律</strong>：</p>
+<p>首先是<strong>法拉第电磁感应定律</strong>，描述了电场E的旋度由磁化电流和随时间变化的磁场共同决定：</p>
 <p><span class="math display">\[
 \nabla\times E=-M_i-\frac{\partial B}{\partial t}=-M_i-M_d=-M_t \tag{1}
 \]</span></p>
-<p>公式(1)描述了电场E的旋度由磁化电流和随时间变化的磁场共同决定，其中<span class="math inline">\(M_i\)</span>是<strong>外加磁流密度(impressed
+<p>公式(1)中<span class="math inline">\(\bold{M_i}\)</span>是<strong>外加磁流密度(impressed
 magnetic current
-density)</strong>，单位伏特/平方米，是一个假设的物理量，用于描述材料中外部强加的磁化流。<span class="math inline">\(M_d\)</span>是<strong>位移磁流密度(displacement
+density)</strong>，单位伏特/平方米，是一个假设的物理量，用于描述材料中外部强加的磁化流。<span class="math inline">\(\bold{M_d}\)</span>是<strong>位移磁流密度(displacement
 magnetic current
 density)</strong>，对应于时间变化的磁场引起的效应，类似于电场中位移电流的概念。</p>
 <p>第二个方程是<strong>推广的安培环路定律</strong>：</p>
 <p><span class="math display">\[
-\nabla\times H=-j_i+j_\frac{\partial D}{\partial
-t}=-j_{ic}+\frac{\partial D}{\partial t}=j_{ic}+j_d \tag{2}
+\nabla\times H=J_i+J_c+\frac{\partial D}{\partial
+t}=J_{ic}+\frac{\partial D}{\partial t}=J_{ic}+J_d \tag{2}
 \]</span></p>
-<p>公式(2)描述了</p>
+<p>公式(2)的左侧表示<strong>磁场强度矢量H</strong>的旋度，描述了电磁场中的一个关键现象：电流和变化的电场会产生磁场的环绕效应。其中<span class="math inline">\(\bold{J_i}\)</span>表示<strong>自由电流密度</strong>，通常由自由电荷的移动引起。<span class="math inline">\(\bold{J_c}\)</span>表示<strong>传导电流密度</strong>，通常由材料中的导电特性引起。<span class="math inline">\(\bold{J_d}\)</span>表示<strong>位移电流密度</strong>，描述了电场D随时间变化时引起的效应。即使没有实际的电荷流动，时间变化的电场也会产生类似于电流的效应。</p>
+<p>第三个方程是<strong>高斯电场定律</strong>： <span class="math display">\[
+\nabla · D = \rho_{ev} \tag{3}
+\]</span></p>
+<p>物理含义为：电场的发散性与区域内的电荷密度有关。其中<span class="math inline">\(\rho_{ev}\)</span>表示<strong>体电荷密度</strong>，电场的发散来源于电荷。正电荷产生电场向外发散，负电荷产生电场向内汇聚。</p>
+<p>第四个方程是<strong>高斯磁定律</strong>： <span class="math display">\[
+\nabla · B = \rho_{mv} \tag{4}
+\]</span></p>
+<p>左侧的散度计算表示磁场的发散性或源强度。在经典电磁理论中，<span class="math inline">\(\nabla·B=0\)</span>，即磁场没有真正的“源”，这里的公式中引入<span class="math inline">\(\rho_{mv}\)</span>，用于处理磁单极子的假设。</p>
 ]]></content>
       <categories>
         <category>课程</category>
