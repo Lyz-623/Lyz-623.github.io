@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"lyz-623.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="时变、时谐电磁场 概述 电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的时变与时谐特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。">
+  <meta name="description" content="时变、时谐电磁场概述电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的时变与时谐特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。 在实际工程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高等电磁学复习">
 <meta property="og:url" content="https://lyz-623.github.io/2025/01/02/Master%20Class/Advanced%20Electromagnetics/index.html">
 <meta property="og:site_name" content="Yunze&#39;s Blog">
-<meta property="og:description" content="时变、时谐电磁场 概述 电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的时变与时谐特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。">
+<meta property="og:description" content="时变、时谐电磁场概述电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的时变与时谐特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。 在实际工程">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-02T08:50:20.000Z">
-<meta property="article:modified_time" content="2025-01-03T08:41:29.081Z">
+<meta property="article:modified_time" content="2025-01-03T08:47:47.420Z">
 <meta property="article:author" content="LI Yunze">
 <meta property="article:tag" content="物理">
 <meta property="article:tag" content="电磁学">
@@ -222,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-01-03 16:41:29" itemprop="dateModified" datetime="2025-01-03T16:41:29+08:00">2025-01-03</time>
+                <time title="修改时间：2025-01-03 16:47:47" itemprop="dateModified" datetime="2025-01-03T16:47:47+08:00">2025-01-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,7 +247,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -267,16 +267,10 @@
 
       
         <span id="more"></span>
-<h1 id="时变时谐电磁场">时变、时谐电磁场</h1>
-<h2 id="概述">概述</h2>
-<p>电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的<strong>时变与时谐</strong>特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
+<h1 id="时变、时谐电磁场"><a href="#时变、时谐电磁场" class="headerlink" title="时变、时谐电磁场"></a>时变、时谐电磁场</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的<strong>时变与时谐</strong>特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
 <p>在实际工程中，电磁学理论为复杂电磁系统的运行提供了解释与预测方法，使其能够在技术领域发挥重要作用。因此，电磁学的研究不仅在科学理论的完善上具有重要意义，同时也为现代工程技术的发展提供了不可或缺的基础支撑。</p>
-<h2 id="麦克斯韦方程组">麦克斯韦方程组</h2>
+<h2 id="麦克斯韦方程组"><a href="#麦克斯韦方程组" class="headerlink" title="麦克斯韦方程组"></a>麦克斯韦方程组</h2><div class="table-container">
 <table>
-<colgroup>
-<col style="width: 21%">
-<col style="width: 78%">
-</colgroup>
 <thead>
 <tr>
 <th>Differential form</th>
@@ -285,64 +279,43 @@
 </thead>
 <tbody>
 <tr>
-<td><span class="math inline">\(\nabla \times \mathbf{E} = -
-\mathbf{M}_i - \frac{\partial \mathbf{B}}{\partial t}\)</span></td>
-<td><span class="math inline">\(\oint_C \mathbf{E} \cdot d\mathbf{l} = -
-\iint_S \mathbf{M}_i \cdot d\mathbf{s} - \frac{\partial}{\partial t}
-\iint_S \mathbf{B} \cdot d\mathbf{s}\)</span></td>
+<td>$\nabla \times \mathbf{E} = - \mathbf{M}_i - \frac{\partial \mathbf{B}}{\partial t}$</td>
+<td>$\oint_C \mathbf{E} \cdot d\mathbf{l} = - \iint_S \mathbf{M}_i \cdot d\mathbf{s} - \frac{\partial}{\partial t} \iint_S \mathbf{B} \cdot d\mathbf{s}$</td>
 </tr>
 <tr>
-<td><span class="math inline">\(\nabla \times \mathbf{H} = \mathbf{J}_i
-+ \mathbf{J}_c + \frac{\partial \mathbf{D}}{\partial t}\)</span></td>
-<td><span class="math inline">\(\oint_C \mathbf{H} \cdot d\mathbf{l} =
-\iint_S \mathbf{J}_i \cdot d\mathbf{s} + \iint_S \mathbf{J}_c \cdot
-d\mathbf{s} + \frac{\partial}{\partial t} \iint_S \mathbf{D} \cdot
-d\mathbf{s}\)</span></td>
+<td>$\nabla \times \mathbf{H} = \mathbf{J}_i + \mathbf{J}_c + \frac{\partial \mathbf{D}}{\partial t}$</td>
+<td>$\oint_C \mathbf{H} \cdot d\mathbf{l} = \iint_S \mathbf{J}_i \cdot d\mathbf{s} + \iint_S \mathbf{J}_c \cdot d\mathbf{s} + \frac{\partial}{\partial t} \iint_S \mathbf{D} \cdot d\mathbf{s}$</td>
 </tr>
 <tr>
-<td><span class="math inline">\(\nabla \cdot \mathbf{D} =
-\rho_{ev}\)</span></td>
-<td><span class="math inline">\(\iint_S \mathbf{D} \cdot d\mathbf{s} =
-Q_e\)</span></td>
+<td>$\nabla \cdot \mathbf{D} = \rho_{ev}$</td>
+<td>$\iint_S \mathbf{D} \cdot d\mathbf{s} = Q_e$</td>
 </tr>
 <tr>
-<td><span class="math inline">\(\nabla \cdot \mathbf{B} =
-\rho_{mv}\)</span></td>
-<td><span class="math inline">\(\iint_S \mathbf{B} \cdot d\mathbf{s} =
-Q_m\)</span></td>
+<td>$\nabla \cdot \mathbf{B} = \rho_{mv}$</td>
+<td>$\iint_S \mathbf{B} \cdot d\mathbf{s} = Q_m$</td>
 </tr>
 <tr>
-<td><span class="math inline">\(\nabla \cdot \mathbf{J}_{ic} = -
-\frac{\partial \rho_{ev}}{\partial t}\)</span></td>
-<td><span class="math inline">\(\iint_S \mathbf{J}_{ic} \cdot
-d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V \rho_{ev} \, dv =
--\frac{\partial Q_e}{\partial t}\)</span></td>
+<td>$\nabla \cdot \mathbf{J}_{ic} = - \frac{\partial \rho_{ev}}{\partial t}$</td>
+<td>$\iint_S \mathbf{J}_{ic} \cdot d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V \rho_{ev} \, dv = -\frac{\partial Q_e}{\partial t}$</td>
 </tr>
 </tbody>
 </table>
-<p>首先是<strong>法拉第电磁感应定律</strong>，描述了电场E的旋度由磁化电流和随时间变化的磁场共同决定：</p>
-<p><span class="math display">\[
-\nabla\times E=-M_i-\frac{\partial B}{\partial t}=-M_i-M_d=-M_t \tag{1}
-\]</span></p>
-<p>公式(1)中<span class="math inline">\(\bold{M_i}\)</span>是<strong>外加磁流密度(impressed
-magnetic current
-density)</strong>，单位伏特/平方米，是一个假设的物理量，用于描述材料中外部强加的磁化流。<span class="math inline">\(\bold{M_d}\)</span>是<strong>位移磁流密度(displacement
-magnetic current
-density)</strong>，对应于时间变化的磁场引起的效应，类似于电场中位移电流的概念。</p>
+</div>
+<p>首先是<strong>法拉第电磁感应定律</strong>，描述了电场E的旋度由磁化电流和随时间变化的磁场共同决定： </p>
+<script type="math/tex; mode=display">
+\nabla\times E=-M_i-\frac{\partial B}{\partial t}=-M_i-M_d=-M_t \tag{1}</script><p>公式(1)中$\bold{M_i}$是<strong>外加磁流密度(impressed magnetic current density)</strong>，单位伏特/平方米，是一个假设的物理量，用于描述材料中外部强加的磁化流。$\bold{M_d}$是<strong>位移磁流密度(displacement magnetic current density)</strong>，对应于时间变化的磁场引起的效应，类似于电场中位移电流的概念。</p>
 <p>第二个方程是<strong>推广的安培环路定律</strong>：</p>
-<p><span class="math display">\[
-\nabla\times H=J_i+J_c+\frac{\partial D}{\partial
-t}=J_{ic}+\frac{\partial D}{\partial t}=J_{ic}+J_d \tag{2}
-\]</span></p>
-<p>公式(2)的左侧表示<strong>磁场强度矢量H</strong>的旋度，描述了电磁场中的一个关键现象：电流和变化的电场会产生磁场的环绕效应。其中<span class="math inline">\(\bold{J_i}\)</span>表示<strong>自由电流密度</strong>，通常由自由电荷的移动引起。<span class="math inline">\(\bold{J_c}\)</span>表示<strong>传导电流密度</strong>，通常由材料中的导电特性引起。<span class="math inline">\(\bold{J_d}\)</span>表示<strong>位移电流密度</strong>，描述了电场D随时间变化时引起的效应。即使没有实际的电荷流动，时间变化的电场也会产生类似于电流的效应。</p>
-<p>第三个方程是<strong>高斯电场定律</strong>： <span class="math display">\[
-\nabla · D = \rho_{ev} \tag{3}
-\]</span></p>
-<p>物理含义为：电场的发散性与区域内的电荷密度有关。其中<span class="math inline">\(\rho_{ev}\)</span>表示<strong>体电荷密度</strong>，电场的发散来源于电荷。正电荷产生电场向外发散，负电荷产生电场向内汇聚。</p>
-<p>第四个方程是<strong>高斯磁定律</strong>： <span class="math display">\[
-\nabla · B = \rho_{mv} \tag{4}
-\]</span></p>
-<p>左侧的散度计算表示磁场的发散性或源强度。在经典电磁理论中，<span class="math inline">\(\nabla·B=0\)</span>，即磁场没有真正的“源”，这里的公式中引入<span class="math inline">\(\rho_{mv}\)</span>，用于处理磁单极子的假设。</p>
+<script type="math/tex; mode=display">
+\nabla\times H=J_i+J_c+\frac{\partial D}{\partial t}=J_{ic}+\frac{\partial D}{\partial t}=J_{ic}+J_d \tag{2}</script><p>公式(2)的左侧表示<strong>磁场强度矢量H</strong>的旋度，描述了电磁场中的一个关键现象：电流和变化的电场会产生磁场的环绕效应。其中$\bold{J_i}$表示<strong>自由电流密度</strong>，通常由自由电荷的移动引起。$\bold{J_c}$表示<strong>传导电流密度</strong>，通常由材料中的导电特性引起。$\bold{J_d}$表示<strong>位移电流密度</strong>，描述了电场D随时间变化时引起的效应。即使没有实际的电荷流动，时间变化的电场也会产生类似于电流的效应。</p>
+<p>第三个方程是<strong>高斯电场定律</strong>：</p>
+<script type="math/tex; mode=display">
+\nabla · D = \rho_{ev} \tag{3}</script><p>物理含义为：电场的发散性与区域内的电荷密度有关。其中$\rho_{ev}$表示<strong>体电荷密度</strong>，电场的发散来源于电荷。正电荷产生电场向外发散，负电荷产生电场向内汇聚。</p>
+<p>第四个方程是<strong>高斯磁定律</strong>：</p>
+<script type="math/tex; mode=display">
+\nabla · B = \rho_{mv} \tag{4}</script><p>左侧的散度计算表示磁场的发散性或源强度。在经典电磁理论中，$\nabla·B=0$，即磁场没有真正的“源”，这里的公式中引入$\rho_{mv}$，用于处理磁单极子的假设。</p>
+<p>最后还有一个经典麦克斯韦方程组中往往省略的公式，<strong>电荷守恒方程的微分形式</strong>：</p>
+<script type="math/tex; mode=display">
+\nabla · J_{ic} = -\frac{\partial\rho_{ev}}{\partial t} \tag{5}</script><p>公式左侧是电流密度$J_{ic}$的散度，表示某一区域中电流的“流出速率”，右侧表示体电荷密度$\rho_{ev}$随时间的变化率，负号表示电荷量减少（即电荷流出）,公式(5)的核心思想是：<strong>一个区域内电荷的减少必须由净电流流出该区域决定</strong>。</p>
 
     </div>
 
@@ -437,7 +410,7 @@ t}=J_{ic}+\frac{\partial D}{\partial t}=J_{ic}+J_d \tag{2}
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E5%8F%98%E6%97%B6%E8%B0%90%E7%94%B5%E7%A3%81%E5%9C%BA"><span class="nav-number">1.</span> <span class="nav-text">时变、时谐电磁场</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="nav-number">1.2.</span> <span class="nav-text">麦克斯韦方程组</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E5%8F%98%E3%80%81%E6%97%B6%E8%B0%90%E7%94%B5%E7%A3%81%E5%9C%BA"><span class="nav-number">1.</span> <span class="nav-text">时变、时谐电磁场</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="nav-number">1.2.</span> <span class="nav-text">麦克斯韦方程组</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
