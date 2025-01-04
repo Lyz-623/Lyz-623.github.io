@@ -4,15 +4,9 @@
     <title>高等电磁学复习</title>
     <url>/2025/01/02/Master%20Class/Advanced%20Electromagnetics/</url>
     <content><![CDATA[<span id="more"></span>
-<h1 id="时变时谐电磁场">时变、时谐电磁场</h1>
-<h2 id="概述">概述</h2>
-<p>电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的<strong>时变与时谐</strong>特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
-<h2 id="麦克斯韦方程组">麦克斯韦方程组</h2>
+<h1 id="时变、时谐电磁场"><a href="#时变、时谐电磁场" class="headerlink" title="时变、时谐电磁场"></a>时变、时谐电磁场</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>电磁学是一门涉及理论与实践的综合学科，其核心在于研究电磁场的<strong>时变与时谐</strong>特性。理论方面，电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
+<h2 id="麦克斯韦方程组"><a href="#麦克斯韦方程组" class="headerlink" title="麦克斯韦方程组"></a>麦克斯韦方程组</h2><div class="table-container">
 <table>
-<colgroup>
-<col style="width: 21%">
-<col style="width: 78%">
-</colgroup>
 <thead>
 <tr>
 <th>微分形式</th>
@@ -21,266 +15,159 @@
 </thead>
 <tbody>
 <tr>
-<td><span class="math inline">\(\nabla \times \mathbf{E} = -
-\mathbf{M}_i - \frac{\partial \mathbf{B}}{\partial t}\)</span></td>
-<td><span class="math inline">\(\oint_C \mathbf{E} \cdot d\mathbf{l} = -
-\iint_S \mathbf{M}_i \cdot d\mathbf{s} - \frac{\partial}{\partial t}
-\iint_S \mathbf{B} \cdot d\mathbf{s}\)</span></td>
+<td>$\nabla \times \mathbf{E} = - \mathbf{M}_i - \frac{\partial \mathbf{B}}{\partial t}$</td>
+<td>$\oint_C \mathbf{E} \cdot d\mathbf{l} = - \iint_S \mathbf{M}_i \cdot d\mathbf{s} - \frac{\partial}{\partial t} \iint_S \mathbf{B} \cdot d\mathbf{s}$</td>
 </tr>
 <tr>
-<td><span class="math inline">\(\nabla \times \mathbf{H} = \mathbf{J}_i
-+ \mathbf{J}_c + \frac{\partial \mathbf{D}}{\partial t}\)</span></td>
-<td><span class="math inline">\(\oint_C \mathbf{H} \cdot d\mathbf{l} =
-\iint_S \mathbf{J}_i \cdot d\mathbf{s} + \iint_S \mathbf{J}_c \cdot
-d\mathbf{s} + \frac{\partial}{\partial t} \iint_S \mathbf{D} \cdot
-d\mathbf{s}\)</span></td>
+<td>$\nabla \times \mathbf{H} = \mathbf{J}_i + \mathbf{J}_c + \frac{\partial \mathbf{D}}{\partial t}$</td>
+<td>$\oint_C \mathbf{H} \cdot d\mathbf{l} = \iint_S \mathbf{J}_i \cdot d\mathbf{s} + \iint_S \mathbf{J}_c \cdot d\mathbf{s} + \frac{\partial}{\partial t} \iint_S \mathbf{D} \cdot d\mathbf{s}$</td>
 </tr>
 <tr>
-<td><span class="math inline">\(\nabla \cdot \mathbf{D} =
-\rho_{ev}\)</span></td>
-<td><span class="math inline">\(\iint_S \mathbf{D} \cdot d\mathbf{s} =
-Q_e\)</span></td>
+<td>$\nabla \cdot \mathbf{D} = \rho_{ev}$</td>
+<td>$\iint_S \mathbf{D} \cdot d\mathbf{s} = Q_e$</td>
 </tr>
 <tr>
-<td><span class="math inline">\(\nabla \cdot \mathbf{B} =
-\rho_{mv}\)</span></td>
-<td><span class="math inline">\(\iint_S \mathbf{B} \cdot d\mathbf{s} =
-Q_m\)</span></td>
+<td>$\nabla \cdot \mathbf{B} = \rho_{mv}$</td>
+<td>$\iint_S \mathbf{B} \cdot d\mathbf{s} = Q_m$</td>
 </tr>
 <tr>
-<td><span class="math inline">\(\nabla \cdot \mathbf{J}_{ic} = -
-\frac{\partial \rho_{ev}}{\partial t}\)</span></td>
-<td><span class="math inline">\(\iint_S \mathbf{J}_{ic} \cdot
-d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V \rho_{ev} \, dv =
--\frac{\partial Q_e}{\partial t}\)</span></td>
+<td>$\nabla \cdot \mathbf{J}_{ic} = - \frac{\partial \rho_{ev}}{\partial t}$</td>
+<td>$\iint_S \mathbf{J}_{ic} \cdot d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V \rho_{ev} \, dv = -\frac{\partial Q_e}{\partial t}$</td>
 </tr>
 </tbody>
 </table>
-<p>首先是<strong>法拉第电磁感应定律</strong>，描述了电场E的旋度由磁化电流和随时间变化的磁场共同决定：</p>
-<p><span class="math display">\[
-\nabla\times E=-M_i-\frac{\partial B}{\partial t}=-M_i-M_d=-M_t
-\]</span></p>
-<p>公式(1)中<span class="math inline">\(\mathbf{M_i}\)</span>是<strong>外加磁流密度(impressed
-magnetic current
-density)</strong>，单位伏特/平方米，是一个假设的物理量，用于描述材料中外部强加的磁化流。<span class="math inline">\(\mathbf{M_d}\)</span>是<strong>位移磁流密度(displacement
-magnetic current
-density)</strong>，对应于时间变化的磁场引起的效应，类似于电场中位移电流的概念。</p>
+</div>
+<p>首先是<strong>法拉第电磁感应定律</strong>，描述了电场E的旋度由磁化电流和随时间变化的磁场共同决定： </p>
+<script type="math/tex; mode=display">
+\nabla\times E=-M_i-\frac{\partial B}{\partial t}=-M_i-M_d=-M_t</script><p>公式(1)中$\mathbf{M_i}$是<strong>外加磁流密度(impressed magnetic current density)</strong>，单位伏特/平方米，是一个假设的物理量，用于描述材料中外部强加的磁化流。$\mathbf{M_d}$是<strong>位移磁流密度(displacement magnetic current density)</strong>，对应于时间变化的磁场引起的效应，类似于电场中位移电流的概念。</p>
 <p>第二个方程是<strong>推广的安培环路定律</strong>：</p>
-<p><span class="math display">\[
-\nabla\times H=J_i+J_c+\frac{\partial D}{\partial
-t}=J_{ic}+\frac{\partial D}{\partial t}=J_{ic}+J_d
-\]</span></p>
-<p>公式(2)的左侧表示<strong>磁场强度矢量H</strong>的旋度，描述了电磁场中的一个关键现象：电流和变化的电场会产生磁场的环绕效应。其中<span class="math inline">\(\mathbf{J_i}\)</span>表示<strong>自由电流密度</strong>，通常由自由电荷的移动引起。<span class="math inline">\(\mathbf{J_c}\)</span>表示<strong>传导电流密度</strong>，通常由材料中的导电特性引起。<span class="math inline">\(\mathbf{J_d}\)</span>表示<strong>位移电流密度</strong>，描述了电场D随时间变化时引起的效应。即使没有实际的电荷流动，时间变化的电场也会产生类似于电流的效应。</p>
-<p>第三个方程是<strong>高斯电场定律</strong>： <span class="math display">\[
-\nabla · D = \rho_{ev}
-\]</span></p>
-<p>物理含义为：电场的发散性与区域内的电荷密度有关。其中<span class="math inline">\(\mathbf{\rho_{ev}}\)</span>表示<strong>体电荷密度</strong>，电场的发散来源于电荷。正电荷产生电场向外发散，负电荷产生电场向内汇聚。</p>
+<script type="math/tex; mode=display">
+\nabla\times H=J_i+J_c+\frac{\partial D}{\partial t}=J_{ic}+\frac{\partial D}{\partial t}=J_{ic}+J_d</script><p>公式(2)的左侧表示<strong>磁场强度矢量H</strong>的旋度，描述了电磁场中的一个关键现象：电流和变化的电场会产生磁场的环绕效应。其中$\mathbf{J_i}$表示<strong>自由电流密度</strong>，通常由自由电荷的移动引起。$\mathbf{J_c}$表示<strong>传导电流密度</strong>，通常由材料中的导电特性引起。$\mathbf{J_d}$表示<strong>位移电流密度</strong>，描述了电场D随时间变化时引起的效应。即使没有实际的电荷流动，时间变化的电场也会产生类似于电流的效应。</p>
+<p>第三个方程是<strong>高斯电场定律</strong>：</p>
+<script type="math/tex; mode=display">
+\nabla · D = \rho_{ev}</script><p>物理含义为：电场的发散性与区域内的电荷密度有关。其中$\mathbf{\rho_{ev}}$表示<strong>体电荷密度</strong>，电场的发散来源于电荷。正电荷产生电场向外发散，负电荷产生电场向内汇聚。</p>
 <p>第四个方程是<strong>高斯磁定律</strong>：</p>
-<p><span class="math display">\[
-\nabla · B = \rho_{mv}
-\]</span></p>
-<p>左侧的散度计算表示磁场的发散性或源强度。在经典电磁理论中，<span class="math inline">\(\nabla·B=0\)</span>，即磁场没有真正的“源”，这里的公式中引入<span class="math inline">\(\mathbf{\rho_{mv}}\)</span>，用于处理磁单极子的假设。磁荷和磁电流密度在传统电磁学中被认为不可实现，这是因为在经典麦克斯韦方程组中，磁荷并没有实际证据支持，例如磁单极子至今尚未被发现。然而，为了<strong>数学上的对称性和平衡性</strong>，在扩展理论中引入了这些概念，以使麦克斯韦方程组更加对称。</p>
+<script type="math/tex; mode=display">
+\nabla · B = \rho_{mv}</script><p>左侧的散度计算表示磁场的发散性或源强度。在经典电磁理论中，$\nabla·B=0$，即磁场没有真正的“源”，这里的公式中引入$\mathbf{\rho_{mv}}$，用于处理磁单极子的假设。磁荷和磁电流密度在传统电磁学中被认为不可实现，这是因为在经典麦克斯韦方程组中，磁荷并没有实际证据支持，例如磁单极子至今尚未被发现。然而，为了<strong>数学上的对称性和平衡性</strong>，在扩展理论中引入了这些概念，以使麦克斯韦方程组更加对称。</p>
 <p>最后还有一个经典麦克斯韦方程组中往往省略的公式，<strong>电荷守恒方程的微分形式</strong>：</p>
-<p><span class="math display">\[
-\nabla · J_{ic} = -\frac{\partial\rho_{ev}}{\partial t}
-\]</span></p>
-<p>公式左侧是电流密度<span class="math inline">\(\mathbf{J_{ic}}\)</span>的散度，表示某一区域中电流的“流出速率”。右侧表示体电荷密度<span class="math inline">\(\rho_{ev}\)</span>随时间的变化率，负号表示电荷流出。公式(5)的核心思想是：<strong>一个区域内电荷的减少必须由净电流流出该区域决定</strong>。</p>
+<script type="math/tex; mode=display">
+\nabla · J_{ic} = -\frac{\partial\rho_{ev}}{\partial t}</script><p>公式左侧是电流密度$\mathbf{J_{ic}}$的散度，表示某一区域中电流的“流出速率”。右侧表示体电荷密度$\rho_{ev}$随时间的变化率，负号表示电荷流出。公式(5)的核心思想是：<strong>一个区域内电荷的减少必须由净电流流出该区域决定</strong>。</p>
 <p>微分形式要求场在局部是平滑和可导的，因为它描述的是场在一个点或小范围内的变化，这需要明确的导数存在。而积分形式则更关注整体性质，不需要场在每一点都可导，只要在积分区域内场是连续的即可。微分形式适合分析局部行为，而积分形式更适合描述全局效应，尤其是在不规则或不可导的区域。利用<strong>斯托克斯定理</strong>和<strong>散度定理</strong>，可以从其微分形式中推导出麦克斯韦方程的积分形式。</p>
-<p><span class="math display">\[
-\oint_C \mathbf{A} \cdot d\mathbf{l} = \iint_S (\nabla \times
-\mathbf{A}) \cdot d\mathbf{s}\quad
-\iint_S \mathbf{A} \cdot d\mathbf{s} = \iiint_V (\nabla \cdot
-\mathbf{A}) \,dv
-\]</span></p>
-<p>转换结果第一张表格里有整理，这里不再赘述。</p>
-<h2 id="本构参数及关系">本构参数及关系</h2>
-<p>材料中含有带电粒子，当这些材料受到电磁场的作用时，它们的带电粒子与电磁场矢量相互作用，产生电流，并改变电磁波在这些介质中的传播。为了在宏观尺度上解释这些带电粒子的存在和行为，而不需要在微观晶格结构中引入它们，我们给出了一组有关电磁场矢量的三个表达式。这些表达式被称为本构关系，第一个本构关系式为：</p>
-<p><span class="math display">\[
-D = \hat{\varepsilon} * E
-\]</span></p>
-<p>其中<span class="math inline">\(\hat{\varepsilon}\)</span>是介质的时变介电常数(farads/meter)，卷积*的引入是为了处理时变效应。在自由空间中介电常数是一个固定值，而不随时间变化：<span class="math inline">\(\hat{\varepsilon}=\varepsilon_0=8.854\times10^{-12}(\text{farads/meter})\)</span>。</p>
+<script type="math/tex; mode=display">
+\oint_C \mathbf{A} \cdot d\mathbf{l} = \iint_S (\nabla \times \mathbf{A}) \cdot d\mathbf{s}\quad 
+\iint_S \mathbf{A} \cdot d\mathbf{s} = \iiint_V (\nabla \cdot \mathbf{A}) \,dv</script><p>转换结果第一张表格里有整理，这里不再赘述。</p>
+<h2 id="本构参数及关系"><a href="#本构参数及关系" class="headerlink" title="本构参数及关系"></a>本构参数及关系</h2><p>材料中含有带电粒子，当这些材料受到电磁场的作用时，它们的带电粒子与电磁场矢量相互作用，产生电流，并改变电磁波在这些介质中的传播。为了在宏观尺度上解释这些带电粒子的存在和行为，而不需要在微观晶格结构中引入它们，我们给出了一组有关电磁场矢量的三个表达式。这些表达式被称为本构关系，第一个本构关系式为：</p>
+<script type="math/tex; mode=display">
+D = \hat{\varepsilon} * E</script><p>其中$\hat{\varepsilon}$是介质的时变介电常数(farads/meter)，卷积*的引入是为了处理时变效应。在自由空间中介电常数是一个固定值，而不随时间变化：$\hat{\varepsilon}=\varepsilon_0=8.854\times10^{-12}(\text{farads/meter})$。</p>
 <p>第二个本构关系式为：</p>
-<p><span class="math display">\[
-B = \hat{\mu} * H
-\]</span></p>
-<p>其中<span class="math inline">\(\hat{\mu}\)</span>是介质的时变磁导率，用于描述材料对磁场的响应能力，单位为henries/meter。在真空中，<span class="math inline">\(\hat{\mu}=\mu_0=4\pi\times10^{-7}\text{henries/meter}\)</span>。</p>
+<script type="math/tex; mode=display">
+B = \hat{\mu} * H</script><p>其中$\hat{\mu}$是介质的时变磁导率，用于描述材料对磁场的响应能力，单位为henries/meter。在真空中，$\hat{\mu}=\mu_0=4\pi\times10^{-7}\text{henries/meter}$。</p>
 <p>第三个本构关系式为：</p>
-<p><span class="math display">\[
-J_c = \hat{\sigma} * E
-\]</span></p>
-<p>其中<span class="math inline">\(\hat{\sigma}\)</span>是介质的时变导电率，反映了材料对电场的动态响应。在时变情况下，卷积描述了电场与导电率随时间变化的相互作用，比如材料的记忆效应或非线性效应。真空被视为理想的绝缘体，其导电率为零。</p>
+<script type="math/tex; mode=display">
+J_c = \hat{\sigma} * E</script><p>其中$\hat{\sigma}$是介质的时变导电率，反映了材料对电场的动态响应。在时变情况下，卷积描述了电场与导电率随时间变化的相互作用，比如材料的记忆效应或非线性效应。真空被视为理想的绝缘体，其导电率为零。</p>
 <p>在频域或对于频率不随时间变化的本构参数（即时间不变参数），上述关系简化为直接的乘积。本构参数是位置、场强和频率的函数：</p>
 <ul>
-<li><strong>电磁场的强度（applied field
-strength）</strong>：参数可能随电场强度或磁场强度变化。</li>
-<li><strong>空间位置（position within the
-medium）</strong>：在非均匀介质中，参数可能随位置变化。</li>
-<li><strong>电磁场的方向（direction of the applied
-field）</strong>：在各向异性介质中，参数可能与场的方向相关。</li>
-<li><strong>操作频率（frequency of
-operation）</strong>：在频率依赖的材料（如色散性介质）中，参数通常随频率变化。</li>
+<li><strong>电磁场的强度（applied field strength）</strong>：参数可能随电场强度或磁场强度变化。</li>
+<li><strong>空间位置（position within the medium）</strong>：在非均匀介质中，参数可能随位置变化。</li>
+<li><strong>电磁场的方向（direction of the applied field）</strong>：在各向异性介质中，参数可能与场的方向相关。</li>
+<li><strong>操作频率（frequency of operation）</strong>：在频率依赖的材料（如色散性介质）中，参数通常随频率变化。</li>
 </ul>
-<h2 id="电路场关系">电路场关系</h2>
-<p>麦克斯韦方程是描述电磁场的基本方程，但它也可以用电路量（如电压、电流）来表示，这些对应形式称为<strong>电路方程</strong>。这种电路方程是电路理论中的基本关系，例如基尔霍夫定律，它们实际上是更一般的麦克斯韦场方程的特例。基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式:</p>
-<p><span class="math display">\[
-\oint_C \mathbf{E} \cdot d\mathbf{l} = -\frac{\partial}{\partial t}
-\iint_S \mathbf{B} \cdot d\mathbf{s} = -\frac{\partial \psi_m}{\partial
-t} \iff \sum v=-\frac{\partial \psi_m}{\partial t}=-L_s\frac{\partial
-i}{\partial t}
-\]</span></p>
-<p>场关系和电路关系分别表示麦克斯韦方程在场量和电路量中的等效形式。再看看下面的公式:</p>
-<p><span class="math display">\[
+<h2 id="电路场关系"><a href="#电路场关系" class="headerlink" title="电路场关系"></a>电路场关系</h2><p>麦克斯韦方程是描述电磁场的基本方程，但它也可以用电路量（如电压、电流）来表示，这些对应形式称为<strong>电路方程</strong>。这种电路方程是电路理论中的基本关系，例如基尔霍夫定律，它们实际上是更一般的麦克斯韦场方程的特例。基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式:</p>
+<script type="math/tex; mode=display">
+\oint_C \mathbf{E} \cdot d\mathbf{l} = -\frac{\partial}{\partial t} \iint_S \mathbf{B} \cdot d\mathbf{s} = -\frac{\partial \psi_m}{\partial t} \iff \sum v=-\frac{\partial \psi_m}{\partial t}=-L_s\frac{\partial i}{\partial t}</script><p>场关系和电路关系分别表示麦克斯韦方程在场量和电路量中的等效形式。再看看下面的公式:</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
-{\oiint}_{S} J_{ic}·\cdot d\mathbf{s} = -\frac{\partial}{\partial t}
-\iiint_S \rho_{ev} d\mathbf{v} = -\frac{\partial L_e}{\partial t} \iff
-\sum i=-\frac{\partial L_e}{\partial t}=-C_s\frac{\partial v}{\partial
-t}
-\end{aligned}
-\]</span></p>
-<p>左侧是电荷守恒的场表达，右侧是其在电路中的表达形式。同样电路中的基本公式都可以在电磁场中找到对应的公式，左侧是Field
-Relation，右侧是Circuit Relation：</p>
-<p><span class="math display">\[
+{\oiint}_{S} J_{ic}·\cdot d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_S \rho_{ev} d\mathbf{v} = -\frac{\partial L_e}{\partial t} \iff \sum i=-\frac{\partial L_e}{\partial t}=-C_s\frac{\partial v}{\partial t}
+\end{aligned}</script><p>左侧是电荷守恒的场表达，右侧是其在电路中的表达形式。同样电路中的基本公式都可以在电磁场中找到对应的公式，左侧是Field Relation，右侧是Circuit Relation：</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
 J_c = \sigma E \iff i_R=\frac 1Rv_R=Gv_R\\
 B = \mu H\iff \psi_m=Li_L\\
-M_d=\mu\frac{\partial H}{\partial t}\iff v_L=L\frac{\partial
-i_L}{\partial t}\\
-D=\varepsilon E\iff L_e=Cv_e\\
-J_d=\varepsilon\frac{\partial E}{\partial t}\iff i_C=C\frac{\partial
-v_C}{\partial t}
-\end{aligned}
-\]</span></p>
-<h2 id="边界条件">边界条件</h2>
-<p>麦克斯韦方程的微分形式适用于求解场矢量，适用条件如下：</p>
+M_d=\mu\frac{\partial H}{\partial t}\iff v_L=L\frac{\partial i_L}{\partial t}\\
+D=\varepsilon E\iff L_e=Cv_e\\ 
+J_d=\varepsilon\frac{\partial E}{\partial t}\iff i_C=C\frac{\partial v_C}{\partial t}
+\end{aligned}</script><h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><p>麦克斯韦方程的微分形式适用于求解场矢量，适用条件如下：</p>
 <ul>
 <li>单值性（single-valued）：场量在空间的每个点都必须有唯一值。</li>
 <li>有界性（bounded）：场量值不能无穷大。</li>
-<li>连续性（continuous
-distributions）：场量及其导数在整个空间上必须连续（没有突变或不连续点）。</li>
+<li>连续性（continuous distributions）：场量及其导数在整个空间上必须连续（没有突变或不连续点）。</li>
 </ul>
-<p>麦克斯韦方程的微分形式适用于场量连续的区域，但在边界处（如不同介质的交界面或存在电荷、电流的边界），由于介质电学性质的不连续性，场量可能发生跳跃。在这种情况下，微分形式的方程不再适用，必须通过
-边界条件
-来描述场矢量在边界两侧的变化，直接分析场量本身，而不是其导数。这种方法是研究电磁场跨越边界行为的关键。</p>
+<p>麦克斯韦方程的微分形式适用于场量连续的区域，但在边界处（如不同介质的交界面或存在电荷、电流的边界），由于介质电学性质的不连续性，场量可能发生跳跃。在这种情况下，微分形式的方程不再适用，必须通过 边界条件 来描述场矢量在边界两侧的变化，直接分析场量本身，而不是其导数。这种方法是研究电磁场跨越边界行为的关键。</p>
 <div style="text-align: center;">
-<img src="https://www.jianguoyun.com/c/tblv2/Qw8bmFhadD56mOKPgLXopn8QWYxyOl-uFWW_64275sfflCY0YH-tMVSvJzo8YzAXjuB0cHVt/pvZyxfhQWFcN4blQFi87K3JUgmBwnUFgIhqWKVZeTKs/l" alt="边界条件" style="max-width: 100%; height: auto;">
-<p style="text-align: center;">
-<em>图 1: 边界条件</em>
-</p>
+  <img src="https://www.jianguoyun.com/c/tblv2/Qw8bmFhadD56mOKPgLXopn8QWYxyOl-uFWW_64275sfflCY0YH-tMVSvJzo8YzAXjuB0cHVt/pvZyxfhQWFcN4blQFi87K3JUgmBwnUFgIhqWKVZeTKs/l" alt="边界条件" style="max-width: 100%; height: auto;">
+  <p style="text-align: center;"><em>图 1: 边界条件</em></p>
 </div>
+
 <div style="text-align: center;">
-<img src="https://th.bing.com/th/id/OIP.1cA7H2jeMHNnqxZfLMtEQQHaDe?rs=1&pid=ImgDetMain" alt="边界条件" style="max-width: 100%; height: auto;">
-<p style="text-align: center;">
-<em>图 1: 边界条件</em>
-</p>
+  <img src="https://th.bing.com/th/id/OIP.1cA7H2jeMHNnqxZfLMtEQQHaDe?rs=1&pid=ImgDetMain" alt="边界条件" style="max-width: 100%; height: auto;">
+  <p style="text-align: center;"><em>图 1: 边界条件</em></p>
 </div>
+
 <p>首先，让我们考虑两个介质之间的界面，如图1所示，在这个界面上没有电荷或源。只要两种介质都不是完美的导体，或者实际的源没有放置在那里，这些条件就可以满足。</p>
-<p>在有限导电率介质（Finite Conductivity
-Media）中，电场边界条件的推导过程如下。首先考虑法拉第电磁感应定律，并且假设没有外部磁化电流(<span class="math inline">\(M_i=0\)</span>):</p>
-<p><span class="math display">\[
-\oint_{C_0}E\cdot dl=-\frac{\partial}{\partial t}\iint_{S_0}B\cdot
-d\mathbf{s}
-\]</span></p>
-<p>这个公式是法拉第电磁感应定律的积分形式，描述了一个闭合路径<span class="math inline">\(C_0\)</span>上的电流环流等于穿过该路径包围的曲面<span class="math inline">\(S_0\)</span>的磁通变化量。电场在两种介质界面上的切向分量是连续的，沿界面边界没有外加的磁电流密度：</p>
-<p><span class="math display">\[
-\hat{\mathbf{n}}\times (E_2-E_1)=0
-\]</span></p>
-<p>假设无自由表面电流<span class="math inline">\(J_i=0\)</span>，即在界面上没有额外的电流流动。根据安培环路定律的积分形式：</p>
-<p><span class="math display">\[
-\oint_C H\cdot dl=\iint_SJ_i\cdot ds+\iint_SJ_c\cdot
-ds+\frac{\partial}{\partial t}\iint_S D\cdot ds
-\]</span></p>
-<p>可得到：</p>
-<p><span class="math display">\[
-\hat{\mathbf{n}}\times(H_2-H_1)=0
-\]</span></p>
-<p>说明磁场强度的切向分量在交界面是连续的。</p>
+<p>在有限导电率介质（Finite Conductivity Media）中，电场边界条件的推导过程如下。首先考虑法拉第电磁感应定律，并且假设没有外部磁化电流($M_i=0$):</p>
+<script type="math/tex; mode=display">
+\oint_{C_0}E\cdot dl=-\frac{\partial}{\partial t}\iint_{S_0}B\cdot d\mathbf{s}</script><p>这个公式是法拉第电磁感应定律的积分形式，描述了一个闭合路径$C_0$上的电流环流等于穿过该路径包围的曲面$S_0$的磁通变化量。电场在两种介质界面上的切向分量是连续的，沿界面边界没有外加的磁电流密度：</p>
+<script type="math/tex; mode=display">
+\hat{\mathbf{n}}\times (E_2-E_1)=0</script><p>假设无自由表面电流$J_i=0$，即在界面上没有额外的电流流动。根据安培环路定律的积分形式：</p>
+<script type="math/tex; mode=display">
+\oint_C H\cdot dl=\iint_SJ_i\cdot ds+\iint_SJ_c\cdot ds+\frac{\partial}{\partial t}\iint_S D\cdot ds</script><p>可得到：</p>
+<script type="math/tex; mode=display">
+\hat{\mathbf{n}}\times(H_2-H_1)=0</script><p>说明磁场强度的切向分量在交界面是连续的。</p>
 <p>磁通密度的法向分量，通过两个介质之间的没有源的界面，是连续的。通过一个界面的磁场强度的法向分量是不连续的。</p>
-<p>如果界面上存在实际的电场源（如电流或电荷），或者其中一种媒质是完美电导体（PEC），边界条件需要进行修改：磁场的切向分量需要包括感应的线性电流密度
-(<span class="math inline">\(\rho_{es}\)</span>)，而电场的法向分量需要包括表面电荷密度
-(<span class="math inline">\(J_s\)</span>)，因为PEC具有理想导体的特性，其表面可能感应电流和电荷。同样，如果界面存在磁场源或其中一种媒质是完美磁导体（PMC），类似地，磁场的法向分量和电场的切向分量也需要根据磁性电流和磁荷的影响进行修正。总体来说，这些特殊条件下的修正对于准确描述电磁波与界面的相互作用（例如在天线设计和电磁屏蔽中）至关重要。</p>
+<p>如果界面上存在实际的电场源（如电流或电荷），或者其中一种媒质是完美电导体（PEC），边界条件需要进行修改：磁场的切向分量需要包括感应的线性电流密度 ($\rho_{es}$)，而电场的法向分量需要包括表面电荷密度 ($J_s$)，因为PEC具有理想导体的特性，其表面可能感应电流和电荷。同样，如果界面存在磁场源或其中一种媒质是完美磁导体（PMC），类似地，磁场的法向分量和电场的切向分量也需要根据磁性电流和磁荷的影响进行修正。总体来说，这些特殊条件下的修正对于准确描述电磁波与界面的相互作用（例如在天线设计和电磁屏蔽中）至关重要。</p>
 <p>修正后的边界条件为：</p>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \begin{aligned}
-    -\hat{n} \times (\mathbf{E}_2 - \mathbf{E}_1) &amp;= \mathbf{M}_s,
-\\
-    \hat{n} \times (\mathbf{H}_2 - \mathbf{H}_1) &amp;= \mathbf{J}_s, \\
-    \hat{n} \cdot (\mathbf{D}_2 - \mathbf{D}_1) &amp;= q_{es}, \\
-    \hat{n} \cdot (\mathbf{B}_2 - \mathbf{B}_1) &amp;= q_{ms}.
-\end{aligned}
-\]</span></p>
-<p>完美磁导体（PMC）是一种理想化的材料，其内部在电磁场作用下没有时间变化的电场和磁场，切向磁场分量在其表面消失，同时磁电荷集中在表面并形成薄层感应磁流密度。虽然
-PMC
-材料在物理上并不存在，但在电磁学中常被用作理论工具，通过等效方法解决实际问题，并且可以在特定频率范围内（如频带间隙）近似实现，用于设计反射器和屏蔽材料等电磁设备。下面这张表格整理了各种边界条件下的电磁变化情况：</p>
+    -\hat{n} \times (\mathbf{E}_2 - \mathbf{E}_1) &= \mathbf{M}_s, \\
+    \hat{n} \times (\mathbf{H}_2 - \mathbf{H}_1) &= \mathbf{J}_s, \\
+    \hat{n} \cdot (\mathbf{D}_2 - \mathbf{D}_1) &= q_{es}, \\
+    \hat{n} \cdot (\mathbf{B}_2 - \mathbf{B}_1) &= q_{ms}.
+\end{aligned}</script><p>完美磁导体（PMC）是一种理想化的材料，其内部在电磁场作用下没有时间变化的电场和磁场，切向磁场分量在其表面消失，同时磁电荷集中在表面并形成薄层感应磁流密度。虽然 PMC 材料在物理上并不存在，但在电磁学中常被用作理论工具，通过等效方法解决实际问题，并且可以在特定频率范围内（如频带间隙）近似实现，用于设计反射器和屏蔽材料等电磁设备。下面这张表格整理了各种边界条件下的电磁变化情况：</p>
+<div class="table-container">
 <table>
-<colgroup>
-<col style="width: 12%">
-<col style="width: 19%">
-<col style="width: 22%">
-<col style="width: 22%">
-<col style="width: 22%">
-</colgroup>
 <thead>
 <tr>
 <th>边界条件</th>
 <th>通用情况</th>
-<th>有限电导率媒质，无源或无电荷 (<span class="math inline">\(\sigma_1,
-\sigma_2 \neq \infty\)</span>)</th>
-<th>介质 1 为无限电导率 (<span class="math inline">\(\sigma_1 = \infty;
-\sigma_2 \neq \infty\)</span>)</th>
-<th>介质 1 为无限磁导率 (<span class="math inline">\(\mathbf{E}_1 =
-\mathbf{H}_1 = 0\)</span>)</th>
+<th>有限电导率媒质，无源或无电荷 ($\sigma_1, \sigma_2 \neq \infty$)</th>
+<th>介质 1 为无限电导率 ($\sigma_1 = \infty; \sigma_2 \neq \infty$)</th>
+<th>介质 1 为无限磁导率 ($\mathbf{E}_1 = \mathbf{H}_1 = 0$)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>切向电场强度</td>
-<td><span class="math inline">\(-\hat{n} \times (\mathbf{E}_2 -
-\mathbf{E}_1) = \mathbf{M}_s\)</span></td>
-<td><span class="math inline">\(\hat{n} \times (\mathbf{E}_2 -
-\mathbf{E}_1) = 0\)</span></td>
-<td><span class="math inline">\(\hat{n} \times \mathbf{E}_2 =
-0\)</span></td>
-<td><span class="math inline">\(-\hat{n} \times \mathbf{E}_2 =
-\mathbf{M}_s\)</span></td>
+<td>$-\hat{n} \times (\mathbf{E}_2 - \mathbf{E}_1) = \mathbf{M}_s$</td>
+<td>$\hat{n} \times (\mathbf{E}_2 - \mathbf{E}_1) = 0$</td>
+<td>$\hat{n} \times \mathbf{E}_2 = 0$</td>
+<td>$-\hat{n} \times \mathbf{E}_2 = \mathbf{M}_s$</td>
 </tr>
 <tr>
 <td>切向磁场强度</td>
-<td><span class="math inline">\(\hat{n} \times (\mathbf{H}_2 -
-\mathbf{H}_1) = \mathbf{J}_s\)</span></td>
-<td><span class="math inline">\(\hat{n} \times (\mathbf{H}_2 -
-\mathbf{H}_1) = 0\)</span></td>
-<td><span class="math inline">\(\hat{n} \times \mathbf{H}_2 =
-\mathbf{J}_s\)</span></td>
-<td><span class="math inline">\(\hat{n} \times \mathbf{H}_2 =
-0\)</span></td>
+<td>$\hat{n} \times (\mathbf{H}_2 - \mathbf{H}_1) = \mathbf{J}_s$</td>
+<td>$\hat{n} \times (\mathbf{H}_2 - \mathbf{H}_1) = 0$</td>
+<td>$\hat{n} \times \mathbf{H}_2 = \mathbf{J}_s$</td>
+<td>$\hat{n} \times \mathbf{H}_2 = 0$</td>
 </tr>
 <tr>
 <td>法向电位移矢量</td>
-<td><span class="math inline">\(\hat{n} \cdot (\mathbf{D}_2 -
-\mathbf{D}_1) = q_{es}\)</span></td>
-<td><span class="math inline">\(\hat{n} \cdot (\mathbf{D}_2 -
-\mathbf{D}_1) = 0\)</span></td>
-<td><span class="math inline">\(\hat{n} \cdot \mathbf{D}_2 =
-q_{es}\)</span></td>
-<td><span class="math inline">\(\hat{n} \cdot \mathbf{D}_2 =
-0\)</span></td>
+<td>$\hat{n} \cdot (\mathbf{D}_2 - \mathbf{D}_1) = q_{es}$</td>
+<td>$\hat{n} \cdot (\mathbf{D}_2 - \mathbf{D}_1) = 0$</td>
+<td>$\hat{n} \cdot \mathbf{D}_2 = q_{es}$</td>
+<td>$\hat{n} \cdot \mathbf{D}_2 = 0$</td>
 </tr>
 <tr>
 <td>法向磁感应矢量</td>
-<td><span class="math inline">\(\hat{n} \cdot (\mathbf{B}_2 -
-\mathbf{B}_1) = q_{ms}\)</span></td>
-<td><span class="math inline">\(\hat{n} \cdot (\mathbf{B}_2 -
-\mathbf{B}_1) = 0\)</span></td>
-<td><span class="math inline">\(\hat{n} \cdot \mathbf{B}_2 =
-0\)</span></td>
-<td><span class="math inline">\(\hat{n} \cdot \mathbf{B}_2 =
-q_{ms}\)</span></td>
+<td>$\hat{n} \cdot (\mathbf{B}_2 - \mathbf{B}_1) = q_{ms}$</td>
+<td>$\hat{n} \cdot (\mathbf{B}_2 - \mathbf{B}_1) = 0$</td>
+<td>$\hat{n} \cdot \mathbf{B}_2 = 0$</td>
+<td>$\hat{n} \cdot \mathbf{B}_2 = q_{ms}$</td>
 </tr>
 </tbody>
 </table>
-<h2 id="功率和能量">功率和能量</h2>
-<p>能量必须与电磁场有关。即使在没有任何干预介质的情况下，这种能量的传输也能完成。</p>
-]]></content>
+</div>
+<h2 id="功率和能量"><a href="#功率和能量" class="headerlink" title="功率和能量"></a>功率和能量</h2><p>能量必须与电磁场有关。即使在没有任何干预介质的情况下，这种能量的传输也能完成。</p>
+<h2 id="时谐电磁场"><a href="#时谐电磁场" class="headerlink" title="时谐电磁场"></a>时谐电磁场</h2><h1 id="物质的电磁性质"><a href="#物质的电磁性质" class="headerlink" title="物质的电磁性质"></a>物质的电磁性质</h1><h2 id="介电质、极化与介电常数"><a href="#介电质、极化与介电常数" class="headerlink" title="介电质、极化与介电常数"></a>介电质、极化与介电常数</h2><h2 id="磁学、磁化与磁导率"><a href="#磁学、磁化与磁导率" class="headerlink" title="磁学、磁化与磁导率"></a>磁学、磁化与磁导率</h2><h2 id="电流、导体与电导率"><a href="#电流、导体与电导率" class="headerlink" title="电流、导体与电导率"></a>电流、导体与电导率</h2><h2 id="半导体和超导体"><a href="#半导体和超导体" class="headerlink" title="半导体和超导体"></a>半导体和超导体</h2><h2 id="超材料"><a href="#超材料" class="headerlink" title="超材料"></a>超材料</h2><h2 id="线性、均匀、各向同性和非色散的材料"><a href="#线性、均匀、各向同性和非色散的材料" class="headerlink" title="线性、均匀、各向同性和非色散的材料"></a>线性、均匀、各向同性和非色散的材料</h2><h2 id="交流材料的变化"><a href="#交流材料的变化" class="headerlink" title="交流材料的变化"></a>交流材料的变化</h2><h1 id="波动方程及其解"><a href="#波动方程及其解" class="headerlink" title="波动方程及其解"></a>波动方程及其解</h1><h2 id="时变电磁场"><a href="#时变电磁场" class="headerlink" title="时变电磁场"></a>时变电磁场</h2><h2 id="时谐电磁场-1"><a href="#时谐电磁场-1" class="headerlink" title="时谐电磁场"></a>时谐电磁场</h2><h2 id="波动方程的解"><a href="#波动方程的解" class="headerlink" title="波动方程的解"></a>波动方程的解</h2><h2 id><a href="#" class="headerlink" title=" "></a> </h2>]]></content>
       <categories>
         <category>课程</category>
       </categories>
