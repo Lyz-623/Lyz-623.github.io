@@ -5,8 +5,7 @@
     <url>/2025/01/02/Master%20Class/Advanced%20Electromagnetics/</url>
     <content><![CDATA[<span id="more"></span>
 <h1 id="时变、时谐电磁场"><a href="#时变、时谐电磁场" class="headerlink" title="时变、时谐电磁场"></a>时变、时谐电磁场</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
-<h2 id="麦克斯韦方程组"><a href="#麦克斯韦方程组" class="headerlink" title="麦克斯韦方程组"></a>麦克斯韦方程组</h2><h3 id="微分形式"><a href="#微分形式" class="headerlink" title="微分形式"></a>微分形式</h3><p>麦克斯韦方程的微分形式是求解边值电磁问题最广泛的表示方法。它用于描述和关联空间中任何时间的任何点的场矢量、电流密度和电荷密度。为了使这些表达式有效，我们假设场向量是<strong>单值的</strong>、<strong>有界的</strong>、<strong>位置和时间的连续函数</strong>，并<strong>连续可导</strong>。</p>
-<div class="table-container">
+<h2 id="麦克斯韦方程组"><a href="#麦克斯韦方程组" class="headerlink" title="麦克斯韦方程组"></a>麦克斯韦方程组</h2><h3 id="微分形式"><a href="#微分形式" class="headerlink" title="微分形式"></a>微分形式</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -25,19 +24,20 @@
 </tr>
 <tr>
 <td>$\nabla \cdot \mathbf{D} = \rho_{ev}$</td>
-<td>$\oiint_S \mathbf{D} \cdot d\mathbf{s} = Q_e$</td>
+<td>$\oint_S \mathbf{D} \cdot d\mathbf{s} = Q_e$</td>
 </tr>
 <tr>
 <td>$\nabla \cdot \mathbf{B} = \rho_{mv}$</td>
-<td>$\oiint_S \mathbf{B} \cdot d\mathbf{s} = Q_m$</td>
+<td>$\oint_S \mathbf{B} \cdot d\mathbf{s} = Q_m$</td>
 </tr>
 <tr>
 <td>$\nabla \cdot \mathbf{J}_{ic} = - \frac{\partial \rho_{ev}}{\partial t}$</td>
-<td>$\oiint_S \mathbf{J}_{ic} \cdot d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V \rho_{ev} \, dv = -\frac{\partial Q_e}{\partial t}$</td>
+<td>$\oint_S \mathbf{J}_{ic} \cdot d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V \rho_{ev} \, dv = -\frac{\partial Q_e}{\partial t}$</td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>麦克斯韦方程的微分形式是求解边值电磁问题最广泛的表示方法。它用于描述和关联空间中任何时间的任何点的场矢量、电流密度和电荷密度。为了使这些表达式有效，我们假设场向量是<strong>单值的</strong>、<strong>有界的</strong>、<strong>位置和时间的连续函数</strong>，并<strong>连续可导</strong>。</p>
 <p>首先是<strong>法拉第电磁感应定律</strong>，描述了电场E的旋度由磁化电流和随时间变化的磁场共同决定： </p>
 <script type="math/tex; mode=display">
 \nabla\times E=-M_i-\frac{\partial B}{\partial t}=-M_i-M_d=-M_t</script><p>公式(1)中$\mathbf{M_i}$是<strong>外加磁流密度(impressed magnetic current density)</strong>，单位伏特/平方米，是一个假设的物理量，用于描述材料中外部强加的磁化流。$\mathbf{M_d}$是<strong>位移磁流密度(displacement magnetic current density)</strong>，对应于时间变化的磁场引起的效应，类似于电场中位移电流的概念。</p>
