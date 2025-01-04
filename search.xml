@@ -15,8 +15,8 @@
 </colgroup>
 <thead>
 <tr>
-<th>Differential form</th>
-<th>Integral form</th>
+<th>微分形式</th>
+<th>积分形式</th>
 </tr>
 </thead>
 <tbody>
@@ -183,6 +183,29 @@ d\mathbf{s}
 <p>这个公式是法拉第电磁感应定律的积分形式，描述了一个闭合路径<span class="math inline">\(C_0\)</span>上的电流环流等于穿过该路径包围的曲面<span class="math inline">\(S_0\)</span>的磁通变化量。电场在两种介质界面上的切向分量是连续的，沿界面边界没有外加的磁电流密度：</p>
 <p><span class="math display">\[
 \hat{\mathbf{n}}\times (E_2-E_1)=0
+\]</span></p>
+<p>假设无自由表面电流<span class="math inline">\(J_i=0\)</span>，即在界面上没有额外的电流流动。根据安培环路定律的积分形式：</p>
+<p><span class="math display">\[
+\oint_C H\cdot dl=\iint_SJ_i\cdot ds+\iint_SJ_c\cdot
+ds+\frac{\partial}{\partial t}\iint_S D\cdot ds
+\]</span></p>
+<p>可得到：</p>
+<p><span class="math display">\[
+\hat{\mathbf{n}}\times(H_2-H_1)=0
+\]</span></p>
+<p>说明磁场强度的切向分量在交界面是连续的。</p>
+<p>磁通密度的法向分量，通过两个介质之间的没有源的界面，是连续的。通过一个界面的磁场强度的法向分量是不连续的。</p>
+<p>如果界面上存在实际的电场源（如电流或电荷），或者其中一种媒质是完美电导体（PEC），边界条件需要进行修改：磁场的切向分量需要包括感应的线性电流密度
+(<span class="math inline">\(\rho_{es}\)</span>)，而电场的法向分量需要包括表面电荷密度
+(<span class="math inline">\(J_s\)</span>)，因为PEC具有理想导体的特性，其表面可能感应电流和电荷。同样，如果界面存在磁场源或其中一种媒质是完美磁导体（PMC），类似地，磁场的法向分量和电场的切向分量也需要根据磁性电流和磁荷的影响进行修正。总体来说，这些特殊条件下的修正对于准确描述电磁波与界面的相互作用（例如在天线设计和电磁屏蔽中）至关重要。</p>
+<p>修正后的边界条件为： <span class="math display">\[
+\begin{aligned}
+    -\hat{n} \times (\mathbf{E}_2 - \mathbf{E}_1) &amp;= \mathbf{M}_s,
+\\
+    \hat{n} \times (\mathbf{H}_2 - \mathbf{H}_1) &amp;= \mathbf{J}_s, \\
+    \hat{n} \cdot (\mathbf{D}_2 - \mathbf{D}_1) &amp;= q_{es}, \\
+    \hat{n} \cdot (\mathbf{B}_2 - \mathbf{B}_1) &amp;= q_{ms}.
+\end{aligned}
 \]</span></p>
 ]]></content>
       <categories>
