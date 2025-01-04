@@ -93,9 +93,9 @@ t\)</span>。</p>
 <p>左侧散度表示磁场的源强度。在经典电磁理论中，<span class="math inline">\(\nabla·\mathbf
 B=0\)</span>，即磁场没有真正的“源”。这里的公式中引入<span class="math inline">\(\mathbf{\rho_{mv}}\)</span>，用于处理磁单极子的假设。磁荷和磁电流密度在传统电磁学中被认为不可实现，这是因为在经典麦克斯韦方程组中，磁荷并没有实际证据支持，例如磁单极子至今尚未被发现。然而，为了<strong>数学上的对称性和平衡性</strong>，在扩展理论中引入了这些概念，使麦克斯韦方程组更加对称。</p>
 <div style="text-align: center;">
-<img src="https://www.jianguoyun.com/c/tblv2/snei3xxwERTPBG7X0JiqwVoZ7rIJbdh5-BbUGimYvocGnsWdmuZrrK1TQsrXHUFc9nnGQLCk/-gFik0Iwargf-3uXppIvZRQXWgcu5ctX-c3WVrYa2no/l" alt style="max-width: 50%; height: auto;">
+<img src="http://www.jianguoyun.com/c/tblv2/snei3xxwERTPBG7X0JiqwVoZ7rIJbdh5-BbUGimYvocGnsWdmuZrrK1TQsrXHUFc9nnGQLCk/-gFik0Iwargf-3uXppIvZRQXWgcu5ctX-c3WVrYa2no/l" alt style="max-width: 50%; height: auto;">
 <p style="text-align: center;">
-<em>图 1:电流和磁流密度类比。(a)电流密度。(b)磁流密度</em>
+<em>图 1:电流和磁流密度类比。(a)电流密度。(b)磁流密度。</em>
 </p>
 </div>
 <p>最后还有一个经典麦克斯韦方程组中往往省略的公式，<strong>电荷守恒方程的微分形式</strong>：</p>
