@@ -167,6 +167,13 @@ distributions）：场量及其导数在整个空间上必须连续（没有突�
 <em>图 1: 边界条件</em>
 </p>
 </div>
+<div style="text-align: center;">
+<img src="https://th.bing.com/th/id/OIP.1cA7H2jeMHNnqxZfLMtEQQHaDe?rs=1&pid=ImgDetMain" alt="边界条件" style="max-width: 100%; height: auto;">
+<p style="text-align: center;">
+<em>图 1: 边界条件</em>
+</p>
+</div>
+<p><a href="https://th.bing.com/th/id/OIP.1cA7H2jeMHNnqxZfLMtEQQHaDe?rs=1&amp;pid=ImgDetMain">text</a></p>
 <p>首先，让我们考虑两个介质之间的界面，如图1所示，在这个界面上没有电荷或源。只要两种介质都不是完美的导体，或者实际的源没有放置在那里，这些条件就可以满足。</p>
 <p>在有限导电率介质（Finite Conductivity
 Media）中，电场边界条件的推导过程如下。首先考虑法拉第电磁感应定律，并且假设没有外部磁化电流(<span class="math inline">\(M_i=0\)</span>):</p>
@@ -174,6 +181,7 @@ Media）中，电场边界条件的推导过程如下。首先考虑法拉第电
 \oint_{C_0}E\cdot dl=-\frac{\partial}{\partial t}\iint_{S_0}B\cdot
 d\mathbf{s}
 \]</span></p>
+<p>这个公式是法拉第电磁感应定律的积分形式</p>
 ]]></content>
       <categories>
         <category>课程</category>
