@@ -86,7 +86,7 @@ B = \mu H\iff \psi_m=Li_L\\
 M_d=\mu\frac{\partial H}{\partial t}\iff v_L=L\frac{\partial i_L}{\partial t}\\
 D=\varepsilon E\iff L_e=Cv_e\\ 
 J_d=\varepsilon\frac{\partial E}{\partial t}\iff i_C=C\frac{\partial v_C}{\partial t}
-\end{aligned}\tag{12}</script>]]></content>
+\end{aligned}\tag{12}</script><h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2>]]></content>
       <categories>
         <category>课程</category>
       </categories>
