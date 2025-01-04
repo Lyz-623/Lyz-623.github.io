@@ -58,34 +58,35 @@ d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V \rho_{ev} \, dv =
 </tbody>
 </table>
 <p>麦克斯韦方程的微分形式是求解边值电磁问题最广泛的表示方法。它用于描述和关联空间中任何时间的任何点的场矢量、电流密度和电荷密度。为了使这些表达式有效，我们假设场向量是<strong>单值的</strong>、<strong>有界的</strong>、<strong>位置和时间的连续函数</strong>，并<strong>连续可导</strong>。</p>
-<ol type="1">
+<ul>
 <li><strong>法拉第电磁感应定律</strong>：</li>
-</ol>
+</ul>
 <p><span class="math display">\[
 \nabla\times \mathbf{E}=-\mathbf{M_i}-\frac{\mathbf{\partial
 B}}{\partial t}=-\mathbf{M_i}-\mathbf{M_d}=-\mathbf{M_t}
 \]</span></p>
-<p>公式(1)描述了电场E的旋度由磁化电流和时变磁场共同决定，其中<span class="math inline">\(\mathbf{M_i}\)</span>是<strong>外加磁流密度(单位：伏特/平方米)</strong>，是一个假设的物理量，用于描述材料中外部强加的磁化流。<span class="math inline">\(\mathbf{M_d}\)</span>是<strong>位移磁流密度</strong>，对应时变磁场引起的电效应，类似于电场中位移电流的概念。</p>
-<p>的</p>
-<ol start="2" type="1">
+<p>公式(1)描述了电场E的旋度由磁化电流和时变磁场共同决定，其中<span class="math inline">\(\mathbf{M_i}\)</span>是<strong>外加磁流密度(单位：伏特/平方米)</strong>，是一个假设的物理量，用于描述材料中外部强加的磁化流。因为麦克斯韦方程组的对称性，在位移电流密度的基础上，引入<span class="math inline">\(\mathbf{M_d}\)</span>是<strong>位移磁流密度</strong>，对应时变磁场引起的电效应，</p>
+<p>类似于电场中位移电流的概念。</p>
+<ul>
 <li><strong>推广的安培环路定律</strong>：</li>
-</ol>
+</ul>
 <p><span class="math display">\[
 \nabla\times \mathbf{H}=\mathbf{J_i}+\mathbf{J_c}+\frac{\partial
 \mathbf{D}}{\partial t}=\mathbf{J_{ic}}+\frac{\partial \mathbf
 D}{\partial t}=\mathbf{J_{ic}}+\mathbf{J_{d}}
 \]</span></p>
-<p>公式(2)描述了电磁场中的一个关键现象：电流和变化的电场会产生环绕的磁效应。其中<span class="math inline">\(\mathbf{J_i}\)</span>表示<strong>自由电流密度</strong>，通常由自由电荷的移动引起。<span class="math inline">\(\mathbf{J_c}\)</span>表示<strong>传导电流密度</strong>，通常由材料中的导电特性引起。<span class="math inline">\(\mathbf{J_d}\)</span>表示<strong>位移电流密度</strong>，描述了电场D随时间变化时引起的效应。即使没有实际的电荷流动，时间变化的电场也会产生类似于电流的效应。</p>
-<ol start="3" type="1">
+<p>公式(2)描述了电磁场中的一个关键现象：电流和变化的电场会产生环绕的磁效应。其中<span class="math inline">\(\mathbf{J_i}\)</span>表示<strong>自由电流密度</strong>，通常由自由电荷的移动引起。<span class="math inline">\(\mathbf{J_c}\)</span>表示<strong>传导电流密度</strong>，通常由材料中的导电特性引起。<span class="math inline">\(\mathbf{J_d}\)</span>表示<strong>位移电流密度</strong>，<span class="math inline">\(\mathbf{J_d}=\partial\mathbf D/\partial
+t\)</span>。麦克斯韦引入位移电流项来修正静电场的安培定律，使其适用于动态电场。即使没有实际的电荷流动，时间变化的电场也会产生类似于电流的效应。在介电质（如绝缘材料）中，电位移电流密度可以解释为绑定电荷的极化运动形成的真实电流。</p>
+<ul>
 <li><strong>高斯电场定律</strong>：</li>
-</ol>
+</ul>
 <p><span class="math display">\[
 \nabla · \mathbf D = \rho_{ev}
 \]</span></p>
 <p>物理含义为：电场的发散性与区域内的电荷密度有关。其中<span class="math inline">\(\mathbf{\rho_{ev}}\)</span>表示<strong>体电荷密度</strong>，电场的发散来源于电荷。正电荷产生电场向外发散，负电荷产生电场向内汇聚。</p>
-<ol start="4" type="1">
+<ul>
 <li><strong>高斯磁定律</strong>：</li>
-</ol>
+</ul>
 <p><span class="math display">\[
 \nabla · \mathbf B = \rho_{mv}
 \]</span></p>
