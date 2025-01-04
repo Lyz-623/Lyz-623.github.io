@@ -180,16 +180,27 @@ s-\frac{\partial}{\partial t}\iint_SB\cdot d\mathbf s
 <p>其中 <span class="math inline">\(\hat{\sigma}\)</span>
 是介质的<strong>时变导电率</strong>，反映了材料中传导电流 <span class="math inline">\(\mathbf{J_C}\)</span> 对电场 <span class="math inline">\(\mathbf E\)</span>
 的动态响应。在时变情况下，卷积描述了电场与导电率随时间变化的相互作用，比如材料的记忆效应或非线性效应。真空被视为理想的绝缘体，其导电率为零。</p>
-<p>在频域或对于频率不随时间变化的本构参数（即时间不变参数），卷积可以简化为乘积。本构参数是位置、场强和频率的函数：</p>
-<p>本构参数用于表征材料的电学性质。材料通常分为介电材料（绝缘体）、磁性材料和导电材料，分别以极化（电位移电流密度）、磁化（磁位移电流密度）或导电（导电电流密度）为主要现象。此外，半导体介于介电材料和导电材料之间，其位移电流和导电电流一般都不占主导地位。</p>
+<p>本构参数用于表征材料的电学性质。材料通常分为介电材料（绝缘体）、磁性材料和导电材料，分别以极化（位移电流密度）、磁化（位移磁流密度）或导电（传导电流密度）为主要现象。此外，半导体介于介电材料和导电材料之间，其位移电流和导电电流一般都不占主导地位。</p>
+<p>在频域或对于频率不随时间变化的本构参数（即时间不变参数），卷积可以简化为乘积。本构参数是位置、场强和频率的函数：根据材料的晶格结构和行为，材料可进一步分类为：</p>
 <ul>
-<li><strong>电磁场的强度</strong>：参数可能随电场强度或磁场强度变化。</li>
-<li><strong>空间位置</strong>：在非均匀介质中，参数可能随位置变化。</li>
-<li><strong>电磁场的方向</strong>：在各向异性介质中，参数可能与场的方向相关。</li>
-<li><strong>操作频率</strong>：在频率依赖的材料（如色散性介质）中，参数通常随频率变化。</li>
+<li><strong>线性与非线性</strong>：线性材料的本构参数不随外加场强度变化，非线性材料则相反。</li>
+<li><strong>均匀与非均匀</strong>：均匀材料的本构参数与位置无关，非均匀材料则随位置变化。</li>
+<li><strong>各向同性与各向异性</strong>：各向同性材料的本构参数与外加场方向无关，各向异性材料则随方向变化（如晶体）。</li>
+<li><strong>色散与非色散</strong>：色散材料的本构参数随频率变化，非色散材料则不变。</li>
 </ul>
 <h2 id="电路场关系">电路场关系</h2>
-<p>麦克斯韦方程是描述电磁场的基本方程，但它也可以用电路量（如电压、电流）来表示，这些对应形式称为<strong>电路方程</strong>。这种电路方程是电路理论中的基本关系，例如基尔霍夫定律，它们实际上是更一般的麦克斯韦场方程的特例。基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式:</p>
+<h3 id="基尔霍夫电压定律">基尔霍夫电压定律</h3>
+<p>麦克斯韦方程是描述电磁场的基本方程，但它也可以用电路量（如电压、电流）来表示，这些对应形式称为电路方程。这种电路方程是电路理论中的基本关系，例如基尔霍夫定律，它们实际上是更一般的麦克斯韦场方程的特例。根据公式(9)可知:</p>
+<p><span class="math display">\[
+\sum v=\oint_C \mathbf E\cdot d\mathbf l\text{(volts)}
+\]</span></p>
+<p>在没有外加磁流密度（<span class="math inline">\(\mathbf{M_i}=0\)</span>）的情况下，公式(9)的右侧可以改写为：</p>
+<p><span class="math display">\[
+-\frac{\partial}{\partial t}\iint_S\mathbf B\cdot d\mathbf
+s=-\frac{\partial\psi_m}{\partial t}=-\frac{\partial}{\partial
+t}(L_si)=-L_s\frac{\partial i}{\partial t}\text{(webers/second = volts)}
+\]</span></p>
+<p>基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式:</p>
 <p><span class="math display">\[
 \oint_C \mathbf{E} \cdot d\mathbf{l} = -\frac{\partial}{\partial t}
 \iint_S \mathbf{B} \cdot d\mathbf{s} = -\frac{\partial \psi_m}{\partial
@@ -199,7 +210,7 @@ i}{\partial t}
 <p>场关系和电路关系分别表示麦克斯韦方程在场量和电路量中的等效形式。再看看下面的公式:</p>
 <p><span class="math display">\[
 \begin{aligned}
-{\oiint}_{S} J_{ic}·\cdot d\mathbf{s} = -\frac{\partial}{\partial t}
+{\oint}_{S} J_{ic}·\cdot d\mathbf{s} = -\frac{\partial}{\partial t}
 \iiint_S \rho_{ev} d\mathbf{v} = -\frac{\partial L_e}{\partial t} \iff
 \sum i=-\frac{\partial L_e}{\partial t}=-C_s\frac{\partial v}{\partial
 t}
