@@ -109,21 +109,26 @@ B = \hat{\mu} * H\tag{8}
 J_c = \hat{\sigma} * E\tag{9}
 \]</span></p>
 <p>其中<span class="math inline">\(\hat{\sigma}\)</span>是介质的时变导电率，反映了材料对电场的动态响应。在时变情况下，卷积描述了电场与导电率随时间变化的相互作用，比如材料的记忆效应或非线性效应。真空被视为理想的绝缘体，其导电率为零。</p>
-<p>在频域或对于频率不随时间变化的本构参数（即时间不变参数），上述关系简化为直接的乘积。本构参数是位置、场强和频率的函数。
-- 电磁场的强度（applied field
-strength）：参数可能随电场强度或磁场强度变化。 - 空间位置（position
-within the medium）：在非均匀介质中，参数可能随位置变化。 -
-电磁场的方向（direction of the applied
-field）：在各向异性介质中，参数可能与场的方向相关。 -
-操作频率（frequency of
-operation）：在频率依赖的材料（如色散性介质）中，参数通常随频率变化。</p>
-<h2 id="电路域关系">电路域关系</h2>
+<p>在频域或对于频率不随时间变化的本构参数（即时间不变参数），上述关系简化为直接的乘积。本构参数是位置、场强和频率的函数：</p>
+<ul>
+<li><strong>电磁场的强度（applied field
+strength）</strong>：参数可能随电场强度或磁场强度变化。</li>
+<li><strong>空间位置（position within the
+medium）</strong>：在非均匀介质中，参数可能随位置变化。</li>
+<li><strong>电磁场的方向（direction of the applied
+field）</strong>：在各向异性介质中，参数可能与场的方向相关。</li>
+<li><strong>操作频率（frequency of
+operation）</strong>：在频率依赖的材料（如色散性介质）中，参数通常随频率变化。</li>
+</ul>
+<h2 id="电路场关系">电路场关系</h2>
+<p>麦克斯韦方程是描述电磁场的基本方程，但它也可以用电路量（如电压、电流）来表示，这些对应形式称为<strong>电路方程</strong>。这种电路方程是电路理论中的基本关系，例如基尔霍夫定律，它们实际上是更一般的麦克斯韦场方程的特例。基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式。场关系和电路关系分别表示麦克斯韦方程在场量和电路量中的等效形式。</p>
 ]]></content>
       <categories>
         <category>课程</category>
       </categories>
       <tags>
         <tag>物理</tag>
+        <tag>电磁学</tag>
       </tags>
   </entry>
 </search>
