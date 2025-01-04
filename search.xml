@@ -81,14 +81,15 @@
 <li><strong>散度定理</strong></li>
 </ul>
 <script type="math/tex; mode=display">
-\iint_S \mathbf{A} \cdot d\mathbf{s} = \iiint_V (\nabla \cdot \mathbf{A}) \,dv</script><p>散度定理表明，对于任意向量 $A$ ，向量 $A$ 的法向分量在曲面 $S$ 上的闭曲面积分等于 $A$ 在被 $S$ 所包围的体积 $V$ 上的散度的体积积分。(Ps: 转换结果参考开头的表格。)</p>
+\iint_S \mathbf{A} \cdot d\mathbf{s} = \iiint_V (\nabla \cdot \mathbf{A}) \,dv</script><p>散度定理表明，对于任意向量 $A$ ，向量 $A$ 的法向分量在曲面 $S$ 上的闭曲面积分等于 $A$ 在被 $S$ 所包围的体积 $V$ 上的散度的体积积分。</p>
 <p>对法拉第电磁感应定律公式两侧进行面积分，可以得到：</p>
 <script type="math/tex; mode=display">
 \iint_S (\nabla\times\mathbf{E})\cdot=-\iint_S \mathbf{M_i}\cdot d\mathbf{s}-\iint_S\frac{\partial \mathbf B}{\partial t}\cdot d\mathbf{s}=-\iint_S \mathbf{M_i}\cdot d\mathbf{s}-\frac{\partial}{\partial t}\iint_S \mathbf{B_i}\cdot d\mathbf{s}</script><p>对上式应用Stoke定理，简化为：</p>
 <script type="math/tex; mode=display">
-\oint_C \mathbf{E}\cdot d\mathbf l=-\iint_S\mathbf{M_i}\cdot d\mathbf s-\frac{\partial}{\partial t}\iint_SB\cdot d\mathbf s</script><h2 id="本构参数及关系"><a href="#本构参数及关系" class="headerlink" title="本构参数及关系"></a>本构参数及关系</h2><p>材料中含有带电粒子，当这些材料受到电磁场的作用时，它们的带电粒子与电磁场矢量相互作用，产生电流，并改变电磁波在这些介质中的传播。为了在宏观尺度上解释这些带电粒子的存在和行为，而不需要在微观晶格结构中引入它们，我们给出了一组有关电磁场矢量的三个表达式。这些表达式被称为本构关系，第一个本构关系式为：</p>
+\oint_C \mathbf{E}\cdot d\mathbf l=-\iint_S\mathbf{M_i}\cdot d\mathbf s-\frac{\partial}{\partial t}\iint_SB\cdot d\mathbf s</script><p>公式(9)即为麦克斯韦方程组中的法拉第电磁感应定律的积分形式，其表明在一个环路开端上的电动势等于连接该环的磁通量减少的时间速率。采用类似的方法（面积分、体积分）可以得到另外几个麦克斯韦方程的积分形式，转换结果参考开头的表格。</p>
+<h2 id="本构参数及关系"><a href="#本构参数及关系" class="headerlink" title="本构参数及关系"></a>本构参数及关系</h2><p>材料中含有带电粒子，当这些材料受到电磁场的作用时，它们的带电粒子与电磁场矢量相互作用，产生电流，并改变电磁波在这些介质中的传播。我们给出了一组有关电磁场矢量的三个表达式，这些表达式被称为<strong><span style="color:red">本构关系（物质方程）</span></strong>，第一个本构关系式为：</p>
 <script type="math/tex; mode=display">
-D = \hat{\varepsilon} * E</script><p>其中$\hat{\varepsilon}$是介质的时变介电常数(farads/meter)，卷积*的引入是为了处理时变效应。在自由空间中介电常数是一个固定值，而不随时间变化：$\hat{\varepsilon}=\varepsilon_0=8.854\times10^{-12}(\text{farads/meter})$。</p>
+\mathbf D = \hat{\varepsilon} * \mathbf E</script><p>其中$\hat{\varepsilon}$是介质的时变介电常数(farads/meter)，卷积*的引入是为了处理时变效应。在自由空间中介电常数是一个固定值，而不随时间变化：$\hat{\varepsilon}=\varepsilon_0=8.854\times10^{-12}(\text{farads/meter})$。</p>
 <p>第二个本构关系式为：</p>
 <script type="math/tex; mode=display">
 B = \hat{\mu} * H</script><p>其中$\hat{\mu}$是介质的时变磁导率，用于描述材料对磁场的响应能力，单位为henries/meter。在真空中，$\hat{\mu}=\mu_0=4\pi\times10^{-7}\text{henries/meter}$。</p>
