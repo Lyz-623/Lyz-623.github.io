@@ -122,6 +122,14 @@ operation）</strong>：在频率依赖的材料（如色散性介质）中，�
 </ul>
 <h2 id="电路场关系">电路场关系</h2>
 <p>麦克斯韦方程是描述电磁场的基本方程，但它也可以用电路量（如电压、电流）来表示，这些对应形式称为<strong>电路方程</strong>。这种电路方程是电路理论中的基本关系，例如基尔霍夫定律，它们实际上是更一般的麦克斯韦场方程的特例。基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式。场关系和电路关系分别表示麦克斯韦方程在场量和电路量中的等效形式。</p>
+<p><span class="math display">\[
+J_c = \hat{\sigma} * E\tag{9}
+\]</span></p>
+<p>[ _C d = - _S d = - ]</p>
+<p><strong>Field Relation:</strong></p>
+<p>[ _C d = - _S d = - ]</p>
+<p><strong>Circuit Relation:</strong></p>
+<p>[ v = - = -L_s ]</p>
 ]]></content>
       <categories>
         <category>课程</category>
