@@ -213,52 +213,73 @@ PMC
 材料在物理上并不存在，但在电磁学中常被用作理论工具，通过等效方法解决实际问题，并且可以在特定频率范围内（如频带间隙）近似实现，用于设计反射器和屏蔽材料等电磁设备。下面这张表格整理了各种边界条件下的电磁变化情况：</p>
 <table>
 <colgroup>
-<col style="width: 4%">
-<col style="width: 4%">
-<col style="width: 30%">
-<col style="width: 29%">
-<col style="width: 29%">
+<col style="width: 12%">
+<col style="width: 19%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
 </colgroup>
 <thead>
 <tr>
 <th>边界条件</th>
 <th>通用情况</th>
-<th>有限电导率媒质，无源或无电荷 (( _1, _2 ))</th>
-<th>介质 1 为无限电导率 (( _1 = ; _2 ))</th>
-<th>介质 1 为无限磁导率 (( _1 = _1 = 0 ))</th>
+<th>有限电导率媒质，无源或无电荷 (<span class="math inline">\(\sigma_1,
+\sigma_2 \neq \infty\)</span>)</th>
+<th>介质 1 为无限电导率 (<span class="math inline">\(\sigma_1 = \infty;
+\sigma_2 \neq \infty\)</span>)</th>
+<th>介质 1 为无限磁导率 (<span class="math inline">\(\mathbf{E}_1 =
+\mathbf{H}_1 = 0\)</span>)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>切向电场强度</td>
-<td>( - (_2 - _1) = _s )</td>
-<td>( (_2 - _1) = 0 )</td>
-<td>( _2 = 0 )</td>
-<td>( - _2 = _s )</td>
+<td><span class="math inline">\(-\hat{n} \times (\mathbf{E}_2 -
+\mathbf{E}_1) = \mathbf{M}_s\)</span></td>
+<td><span class="math inline">\(\hat{n} \times (\mathbf{E}_2 -
+\mathbf{E}_1) = 0\)</span></td>
+<td><span class="math inline">\(\hat{n} \times \mathbf{E}_2 =
+0\)</span></td>
+<td><span class="math inline">\(-\hat{n} \times \mathbf{E}_2 =
+\mathbf{M}_s\)</span></td>
 </tr>
 <tr>
 <td>切向磁场强度</td>
-<td>( (_2 - _1) = _s )</td>
-<td>( (_2 - _1) = 0 )</td>
-<td>( _2 = _s )</td>
-<td>( _2 = 0 )</td>
+<td><span class="math inline">\(\hat{n} \times (\mathbf{H}_2 -
+\mathbf{H}_1) = \mathbf{J}_s\)</span></td>
+<td><span class="math inline">\(\hat{n} \times (\mathbf{H}_2 -
+\mathbf{H}_1) = 0\)</span></td>
+<td><span class="math inline">\(\hat{n} \times \mathbf{H}_2 =
+\mathbf{J}_s\)</span></td>
+<td><span class="math inline">\(\hat{n} \times \mathbf{H}_2 =
+0\)</span></td>
 </tr>
 <tr>
 <td>法向电位移矢量</td>
-<td>( (_2 - <em>1) = q</em>{es} )</td>
-<td>( (_2 - _1) = 0 )</td>
-<td>( <em>2 = q</em>{es} )</td>
-<td>( _2 = 0 )</td>
+<td><span class="math inline">\(\hat{n} \cdot (\mathbf{D}_2 -
+\mathbf{D}_1) = q_{es}\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot (\mathbf{D}_2 -
+\mathbf{D}_1) = 0\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot \mathbf{D}_2 =
+q_{es}\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot \mathbf{D}_2 =
+0\)</span></td>
 </tr>
 <tr>
 <td>法向磁感应矢量</td>
-<td>( (_2 - <em>1) = q</em>{ms} )</td>
-<td>( (_2 - _1) = 0 )</td>
-<td>( _2 = 0 )</td>
-<td>( <em>2 = q</em>{ms} )</td>
+<td><span class="math inline">\(\hat{n} \cdot (\mathbf{B}_2 -
+\mathbf{B}_1) = q_{ms}\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot (\mathbf{B}_2 -
+\mathbf{B}_1) = 0\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot \mathbf{B}_2 =
+0\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot \mathbf{B}_2 =
+q_{ms}\)</span></td>
 </tr>
 </tbody>
 </table>
+<h2 id="功率和能量">功率和能量</h2>
+<p>能量必须与电磁场有关。即使在没有任何干预介质的情况下，这种能量的传输也能完成。</p>
 ]]></content>
       <categories>
         <category>课程</category>
