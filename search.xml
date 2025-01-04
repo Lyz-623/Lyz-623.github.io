@@ -122,8 +122,32 @@ operation）</strong>：在频率依赖的材料（如色散性介质）中，�
 </ul>
 <h2 id="电路场关系">电路场关系</h2>
 <p>麦克斯韦方程是描述电磁场的基本方程，但它也可以用电路量（如电压、电流）来表示，这些对应形式称为<strong>电路方程</strong>。这种电路方程是电路理论中的基本关系，例如基尔霍夫定律，它们实际上是更一般的麦克斯韦场方程的特例。基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式:</p>
-<p>[ _C d = - _S d = - v=-=-L_s ]</p>
-<p>场关系和电路关系分别表示麦克斯韦方程在场量和电路量中的等效形式。</p>
+<p><span class="math display">\[
+\oint_C \mathbf{E} \cdot d\mathbf{l} = -\frac{\partial}{\partial t}
+\iint_S \mathbf{B} \cdot d\mathbf{s} = -\frac{\partial \psi_m}{\partial
+t} \iff \sum v=-\frac{\partial \psi_m}{\partial t}=-L_s\frac{\partial
+i}{\partial t}\tag{10}
+\]</span></p>
+<p>场关系和电路关系分别表示麦克斯韦方程在场量和电路量中的等效形式。再看看下面的公式:</p>
+<p><span class="math display">\[
+\oiint_S J_{ic}·\cdot d\mathbf{s} = -\frac{\partial}{\partial t}
+\iiint_S \rho_{ev} d\mathbf{v} = -\frac{\partial L_e}{\partial t} \iff
+\sum i=-\frac{\partial L_e}{\partial t}=-C_s\frac{\partial v}{\partial
+t}\tag{11}
+\]</span></p>
+<p>左侧是电荷守恒的场表达，右侧是其在电路中的表达形式。同样电路中的基本公式都可以在电磁场中找到对应的公式，左侧是Field
+Relation，右侧是Circuit Relation：</p>
+<p><span class="math display">\[
+\begin{aligned}
+J_c = \sigma E \iff i_R=\frac 1Rv_R=Gv_R\\
+B = \mu H\iff \psi_m=Li_L\\
+M_d=\mu\frac{\partial H}{\partial t}\iff v_L=L\frac{\partial
+i_L}{\partial t}\\
+D=\varepsilon E\iff L_e=Cv_e\\ \tag{12}
+J_d=\varepsilon\frac{\partial E}{\partial t}\iff i_C=C\frac{\partial
+v_C}{\partial t}
+\end{aligned}
+\]</span></p>
 ]]></content>
       <categories>
         <category>课程</category>
