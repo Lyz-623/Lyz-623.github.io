@@ -162,12 +162,18 @@ distributions）：场量及其导数在整个空间上必须连续（没有突�
 边界条件
 来描述场矢量在边界两侧的变化，直接分析场量本身，而不是其导数。这种方法是研究电磁场跨越边界行为的关键。</p>
 <div style="text-align: center;">
-<img src="https://files.mtstatic.com/site_4539/18075/0?Expires=1735973065&Signature=WOA6CKFwhvkofOJ47J62zAVtPHwrM3Jp-VFQ9UrDy698NGcXeHSdlorX2XPsGVoue~rWq0v8V21o77yLezpbDjyNjRVSaKHyV~MYE2F~lEXThU-GpAPd1Y9CtbtY8Kjcqpa0XJmgQcWxv6l95McUP8-KqoauoEmN3VaWDUJdV~w_&Key-Pair-Id=APKAJ5Y6AV4GI7A555NA" alt="边界条件" style="max-width: 100%; height: auto;">
+<img src="https://www.jianguoyun.com/c/tblv2/wpgJtSRgwkw_4XJH1MUbsBublav9HPEcxl0LP1qoHwlmZGtiRmXd7c7AMhCknv2INwzVIa9i/oVv36HV37RPOzSGIdFvd_UL_oBCeFgi1IMcA32h2l4c/l" alt="边界条件" style="max-width: 100%; height: auto;">
 <p style="text-align: center;">
 <em>图 1: 边界条件</em>
 </p>
 </div>
 <p>首先，让我们考虑两个介质之间的界面，如图1所示，在这个界面上没有电荷或源。只要两种介质都不是完美的导体，或者实际的源没有放置在那里，这些条件就可以满足。</p>
+<p>在有限导电率介质（Finite Conductivity
+Media）中，电场边界条件的推导过程如下。首先考虑法拉第电磁感应定律，并且假设没有外部磁化电流(<span class="math inline">\(M_i=0\)</span>):</p>
+<p><span class="math display">\[
+\oint_{C_0}E\cdot dl=-\frac{\partial}{\partial t}\iint_{S_0}B\cdot
+d\mathbf{s}
+\]</span></p>
 ]]></content>
       <categories>
         <category>课程</category>
