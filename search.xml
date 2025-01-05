@@ -211,7 +211,7 @@ i}{\partial t}
 <h3 id="基尔霍夫电流定理">基尔霍夫电流定理</h3>
 <p>电荷守恒公式的积分形式可以写为：</p>
 <p><span class="math display">\[
-\sum i=\oint_S \mathbf{J_{ic}}\cdot d\mathbf s
+\sum i=\oiint_S \mathbf{J_{ic}}\cdot d\mathbf s
 \]</span></p>
 <p>再看看下面的公式:</p>
 <p><span class="math display">\[
