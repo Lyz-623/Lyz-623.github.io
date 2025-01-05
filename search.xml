@@ -120,7 +120,10 @@
 <script type="math/tex; mode=display">
 \oint_C \mathbf{E} \cdot d\mathbf{l} = -\frac{\partial}{\partial t} \iint_S \mathbf{B} \cdot d\mathbf{s} = -\frac{\partial \psi_m}{\partial t} \iff \sum v=-\frac{\partial \psi_m}{\partial t}=-L_s\frac{\partial i}{\partial t}</script><h3 id="基尔霍夫电流定理"><a href="#基尔霍夫电流定理" class="headerlink" title="基尔霍夫电流定理"></a>基尔霍夫电流定理</h3><p>电荷守恒公式的积分形式可以写为：</p>
 <script type="math/tex; mode=display">
-\sum i=\oiint_S \mathbf{J_{ic}}\cdot d\mathbf s</script><p>再看看下面的公式:</p>
+\sum i=\oint_S \mathbf{J_{ic}}\cdot d\mathbf s</script><p>同时，总电流可以用电荷变化率表示：</p>
+<script type="math/tex; mode=display">
+\sum i=-\frac{\partial Q_e}{\partial t}=-\frac{\partial C_s v}{\partial t}=-C_s\frac{\partial v}{\partial t}</script><p>其中，$C_s$ 表示电容，$Q_e$ 表示电荷。</p>
+<p>再看看下面的公式:</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
 {\oint}_{S} J_{ic}\cdot d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_S \rho_{ev} d\mathbf{v} = -\frac{\partial L_e}{\partial t} \iff \sum i=-\frac{\partial L_e}{\partial t}=-C_s\frac{\partial v}{\partial t}
