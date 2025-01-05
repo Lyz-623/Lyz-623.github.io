@@ -267,7 +267,7 @@ t}\iint_{S_0}\mathbf B\cdot d\mathbf{s}
 \]</span></p>
 <p>这个公式是法拉第电磁感应定律的积分形式，描述了一个闭合路径 <span class="math inline">\(C_0\)</span> 上的电流环流等于穿过该路径包围的曲面
 <span class="math inline">\(S_0\)</span>
-的磁通变化量。如果跨越界面交界处的矩形高度 <span class="math inline">\(\Delta y\)</span> 足够小，公式</p>
+的磁通变化量。如果跨越界面交界处的矩形高度 <span class="math inline">\(\Delta y\)</span> 足够小，公式()可以</p>
 <p>电场在两种介质界面上的切向分量是连续的，沿界面边界没有外加的磁电流密度：</p>
 <p><span class="math display">\[
 \hat{\mathbf{n}}\times (E_2-E_1)=0
