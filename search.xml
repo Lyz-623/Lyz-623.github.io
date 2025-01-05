@@ -230,8 +230,7 @@ v}{\partial t}
 \]</span></p>
 <p>公式(18)的左侧是电荷守恒的场表达，右侧是其在电路中的表达形式。</p>
 <h3 id="基本定律">基本定律</h3>
-<p>电路中的其它基本定律，例如<strong>欧姆定律</strong>等都可以在电磁场中找到对应的表达式，左侧是Field
-Relation，右侧是Circuit Relation：</p>
+<p>电路中的其它基本定律，例如<strong>欧姆定律</strong>等都可以在电磁场中找到对应的表达式，左侧是场域，右侧是电路域：</p>
 <p><span class="math display">\[
 \begin{aligned}
 J_c = \sigma E &amp;\iff i_R=\frac 1Rv_R=Gv_R\\
@@ -254,12 +253,12 @@ i_C=C\frac{\partial v_C}{\partial t}
 <h3 id="有限电导率介质">有限电导率介质</h3>
 <p>在介质的边界处（如不同介质的交界面或存在电荷、电流的边界），由于介质电学性质的不连续性，场量可能发生跳跃。在这种情况下，微分形式的方程不再适用，必须通过边界条件来描述场矢量在边界两侧的变化，直接分析场量本身，而不是其导数。这种方法是研究电磁场跨越边界行为的关键。</p>
 <div style="text-align: center;">
-<img src="https://www.freeimg.cn/i/2025/01/05/677a114ddc34c.webp" alt="切向边界条件" style="max-width: 100%; height: auto;">
+<img src="https://www.freeimg.cn/i/2025/01/05/677a114ddc34c.webp" alt="切向边界条件" style="max-width: 80%; height: auto;">
 <p style="text-align: center;">
 <em>图 3: 切向边界条件</em>
 </p>
 </div>
-<p>首先，让我们考虑两个介质之间的界面，如图3所示，在这个界面上没有电荷或源（只要两种介质都不是完美导体，或者实际的源没有放置在那里，这些条件就可以满足）。首先考虑边界处的法拉第电磁感应定律，并且假设没有外部磁化电流(
+<p>首先，让我们考虑两个介质之间的界面。如图3所示，界面上没有电荷或源（只要两种介质都不是完美导体，或者实际的源没有放置在那里，这些条件就可以满足）。首先考虑边界处的法拉第电磁感应定律，并且假设没有外部磁化电流(
 <span class="math inline">\(\mathbf{M_i}=0\)</span> )：</p>
 <p><span class="math display">\[
 \oint_{C_0}\mathbf E\cdot dl=-\frac{\partial}{\partial
@@ -267,11 +266,21 @@ t}\iint_{S_0}\mathbf B\cdot d\mathbf{s}
 \]</span></p>
 <p>这个公式是法拉第电磁感应定律的积分形式，描述了一个闭合路径 <span class="math inline">\(C_0\)</span> 上的电流环流等于穿过该路径包围的曲面
 <span class="math inline">\(S_0\)</span>
-的磁通变化量。如果跨越界面交界处的矩形高度 <span class="math inline">\(\Delta y\)</span> 足够小，公式()可以</p>
-<p>电场在两种介质界面上的切向分量是连续的，沿界面边界没有外加的磁电流密度：</p>
+的磁通变化量。如果跨越界面交界处的矩形高度 <span class="math inline">\(\Delta y\)</span>
+趋近于0，公式(20)可以简化为：</p>
 <p><span class="math display">\[
-\hat{\mathbf{n}}\times (E_2-E_1)=0
+\begin{aligned}
+\mathbf {E_1}\cdot \hat{\mathbf{a}}_x\Delta x-\mathbf {E_2}\cdot
+\hat{\mathbf{a}}_x\Delta x=0\\
+E_{1t}-E_{2t}=0\Rightarrow E_{1t}=E_{2t}
+\end{aligned}
 \]</span></p>
+<p>公式(21)也可以等效于： <span class="math display">\[
+\hat{\mathbf{n}}\times (\mathbf{E_2}-\mathbf{E_1})=0\quad
+\sigma_1,\sigma_2\text{ 是有限的}
+\]</span></p>
+<p><strong><span style="color:red">本构关系（物质方程）</span></strong>。
+说明在沿界面边界没有外加的磁流密度时，电场在界面上的切向分量是连续的。</p>
 <p>假设无自由表面电流<span class="math inline">\(J_i=0\)</span>，即在界面上没有额外的电流流动。根据安培环路定律的积分形式：</p>
 <p><span class="math display">\[
 \oint_C H\cdot dl=\iint_SJ_i\cdot ds+\iint_SJ_c\cdot
