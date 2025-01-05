@@ -200,17 +200,23 @@ s-\frac{\partial}{\partial t}\iint_SB\cdot d\mathbf s
 s=-\frac{\partial\psi_m}{\partial t}=-\frac{\partial}{\partial
 t}(L_si)=-L_s\frac{\partial i}{\partial t}\text{(webers/second = volts)}
 \]</span></p>
-<p>基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式:</p>
+<p>基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式。场关系和电路关系分别表示麦克斯韦方程在场域和电路域中的等效形式，其中
+<span class="math inline">\(L_s\)</span> 表示电感，<span class="math inline">\(\psi_m=L_s i\)</span>，因此可以得到：</p>
 <p><span class="math display">\[
 \oint_C \mathbf{E} \cdot d\mathbf{l} = -\frac{\partial}{\partial t}
 \iint_S \mathbf{B} \cdot d\mathbf{s} = -\frac{\partial \psi_m}{\partial
 t} \iff \sum v=-\frac{\partial \psi_m}{\partial t}=-L_s\frac{\partial
 i}{\partial t}
 \]</span></p>
-<p>场关系和电路关系分别表示麦克斯韦方程在场量和电路量中的等效形式。再看看下面的公式:</p>
+<h3 id="基尔霍夫电流定理">基尔霍夫电流定理</h3>
+<p>电荷守恒公式的积分形式可以写为：</p>
+<p><span class="math display">\[
+\sum i=\oint_S \mathbf{J_{ic}}\cdot d\mathbf s
+\]</span></p>
+<p>再看看下面的公式:</p>
 <p><span class="math display">\[
 \begin{aligned}
-{\oint}_{S} J_{ic}·\cdot d\mathbf{s} = -\frac{\partial}{\partial t}
+{\oint}_{S} J_{ic}\cdot d\mathbf{s} = -\frac{\partial}{\partial t}
 \iiint_S \rho_{ev} d\mathbf{v} = -\frac{\partial L_e}{\partial t} \iff
 \sum i=-\frac{\partial L_e}{\partial t}=-C_s\frac{\partial v}{\partial
 t}
