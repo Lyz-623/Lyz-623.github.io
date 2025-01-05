@@ -116,7 +116,7 @@ B=0\)</span>，即磁场没有真正的“源”。这里的公式中引入 <spa
 <p>除了四个经典的麦克斯韦方程外，还有另外一个方程涉及电流密度 <span class="math inline">\(\mathbf{J_{ic}}\)</span> 和电荷密度 <span class="math inline">\(q_{ev}\)</span>
 的变化，这个方程与其它四个麦克斯韦方程并不独立（可以从法拉第电磁感应定律和位移磁流密度的定义推导得到）：</p>
 <p><span class="math display">\[
-\nabla · \mathbf{J_{ic}} = -\frac{\partialq_{ev}}{\partial t}
+\nabla · \mathbf{J_{ic}} = -\frac{\partial q_{ev}}{\partial t}
 \]</span></p>
 <p>公式左侧是电流密度 <span class="math inline">\(\mathbf{J_{ic}}\)</span>
 的散度，表示某一区域中电流的“流出速率”。右侧表示体电荷密度<span class="math inline">\(q_{ev}\)</span>随时间的变化率，负号表示电荷流出。公式(5)的核心思想是：<strong><span style="color:red">一个区域内电荷的减少必须由净电流流出该区域决定</span></strong>。</p>
@@ -433,17 +433,25 @@ q_{ms}\)</span></td>
 </div>
 <h1 id="物质的电磁性质">物质的电磁性质</h1>
 <h2 id="介电质极化与介电常数">介电质、极化与介电常数</h2>
+<p><strong>介电质（Dielectrics）</strong>是一种材料，其原子和分子中的主要电荷是负电荷，由原子和分子的力固定，它们不能自由移动。因此，理想的电介质不包含任何自由电荷（如在导体中），它们的原子和分子在宏观上是中性的。</p>
+<p>对于介电质，电偶极子的形成通常被称为定向极化。每个电偶极子的影响可以用一个偶极子来表示，偶极矩为：</p>
+<p><span class="math display">\[
+d\mathbf{p_i}=Ql_i
+\]</span></p>
+<div style="text-align: center;">
+<img src="https://www.freeimg.cn/i/2025/01/05/677a2c228d6bf.webp" alt="切向边界条件" style="max-width: 100%; height: auto;">
+<p style="text-align: center;">
+<em>图 6: 偶极子</em>
+</p>
+</div>
 <h2 id="磁学磁化与磁导率">磁学、磁化与磁导率</h2>
 <h2 id="电流导体与电导率">电流、导体与电导率</h2>
 <h2 id="半导体和超导体">半导体和超导体</h2>
-<h2 id="超材料">超材料</h2>
 <h2 id="线性均匀各向同性和非色散的材料">线性、均匀、各向同性和非色散的材料</h2>
-<h2 id="交流材料的变化">交流材料的变化</h2>
 <h1 id="波动方程及其解">波动方程及其解</h1>
 <h2 id="时变电磁场">时变电磁场</h2>
 <h2 id="时谐电磁场-1">时谐电磁场</h2>
 <h2 id="波动方程的解">波动方程的解</h2>
-<h2 id="section"></h2>
 ]]></content>
       <categories>
         <category>课程</category>
