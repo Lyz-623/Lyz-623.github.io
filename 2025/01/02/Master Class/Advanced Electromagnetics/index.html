@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>高等电磁学复习 | Yunze's Blog</title><meta name="author" content="Yunze"><meta name="copyright" content="Yunze"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="时变、时谐电磁场概述电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。 麦克斯韦方程组微分形式    微分形式 积分形式     $\nabla \times \mat">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>高等电磁学复习 | Yunze's Blog</title><meta name="author" content="Yunze"><meta name="copyright" content="Yunze"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="时变、时谐电磁场 概述 电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。 麦克斯韦方程组 微分形式        微分形式 积分形式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高等电磁学复习">
 <meta property="og:url" content="https://lyz-623.github.io/2025/01/02/Master%20Class/Advanced%20Electromagnetics/index.html">
 <meta property="og:site_name" content="Yunze&#39;s Blog">
-<meta property="og:description" content="时变、时谐电磁场概述电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。 麦克斯韦方程组微分形式    微分形式 积分形式     $\nabla \times \mat">
+<meta property="og:description" content="时变、时谐电磁场 概述 电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。 麦克斯韦方程组 微分形式        微分形式 积分形式">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://lyz-623.github.io/img/avatar.jpg">
 <meta property="article:published_time" content="2025-01-02T08:50:20.000Z">
-<meta property="article:modified_time" content="2025-01-06T04:02:41.457Z">
+<meta property="article:modified_time" content="2025-01-06T07:15:32.612Z">
 <meta property="article:author" content="Yunze">
 <meta property="article:tag" content="物理">
 <meta property="article:tag" content="电磁学">
@@ -158,10 +158,17 @@ btf.addGlobalFn('pjaxComplete', () => {
   isToc: true,
   isShuoshuo: false
 }</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Yunze's Blog" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/banner1.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Yunze's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">高等电磁学复习</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">高等电磁学复习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-02T08:50:20.000Z" title="发表于 2025-01-02 16:50:20">2025-01-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-06T04:02:41.457Z" title="更新于 2025-01-06 12:02:41">2025-01-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B/">课程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><span id="more"></span>
-<h1 id="时变、时谐电磁场"><a href="#时变、时谐电磁场" class="headerlink" title="时变、时谐电磁场"></a>时变、时谐电磁场</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<span style="background-color:lightgreen"><strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong></span>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
-<h2 id="麦克斯韦方程组"><a href="#麦克斯韦方程组" class="headerlink" title="麦克斯韦方程组"></a>麦克斯韦方程组</h2><h3 id="微分形式"><a href="#微分形式" class="headerlink" title="微分形式"></a>微分形式</h3><div class="table-container">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/banner1.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Yunze's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">高等电磁学复习</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">高等电磁学复习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-02T08:50:20.000Z" title="发表于 2025-01-02 16:50:20">2025-01-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-06T07:15:32.612Z" title="更新于 2025-01-06 15:15:32">2025-01-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B/">课程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><span id="more"></span>
+<h1 id="时变时谐电磁场">时变、时谐电磁场</h1>
+<h2 id="概述">概述</h2>
+<p>电磁学的基础概念起源于19世纪，通过诸多科学家的实验与发现逐步形成，包括<span style="background-color:lightgreen"><strong>安培定律、法拉第电磁感应定律、高斯定律和高斯磁定律</strong></span>。这些重要的实验成果最终由麦克斯韦整合为一组统一的矢量方程，即著名的麦克斯韦方程组。这些方程不仅奠定了经典电磁理论的基石，更在电磁波传播等领域提供了理论支持。</p>
+<h2 id="麦克斯韦方程组">麦克斯韦方程组</h2>
+<h3 id="微分形式">微分形式</h3>
 <table>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 78%">
+</colgroup>
 <thead>
 <tr>
 <th>微分形式</th>
@@ -170,95 +177,164 @@ btf.addGlobalFn('pjaxComplete', () => {
 </thead>
 <tbody>
 <tr>
-<td>$\nabla \times \mathbf{E} = - \mathbf{M}_i - \frac{\partial \mathbf{B}}{\partial t}$</td>
-<td>$\oint_C \mathbf{E} \cdot d\mathbf{l} = - \iint_S \mathbf{M}_i \cdot d\mathbf{s} - \frac{\partial}{\partial t} \iint_S \mathbf{B} \cdot d\mathbf{s}$</td>
+<td><span class="math inline">\(\nabla \times \mathbf{E} = -
+\mathbf{M}_i - \frac{\partial \mathbf{B}}{\partial t}\)</span></td>
+<td><span class="math inline">\(\oint_C \mathbf{E} \cdot d\mathbf{l} = -
+\iint_S \mathbf{M}_i \cdot d\mathbf{s} - \frac{\partial}{\partial t}
+\iint_S \mathbf{B} \cdot d\mathbf{s}\)</span></td>
 </tr>
 <tr>
-<td>$\nabla \times \mathbf{H} = \mathbf{J}_i + \mathbf{J}_c + \frac{\partial \mathbf{D}}{\partial t}$</td>
-<td>$\oint_C \mathbf{H} \cdot d\mathbf{l} = \iint_S \mathbf{J}_i \cdot d\mathbf{s} + \iint_S \mathbf{J}_c \cdot d\mathbf{s} + \frac{\partial}{\partial t} \iint_S \mathbf{D} \cdot d\mathbf{s}$</td>
+<td><span class="math inline">\(\nabla \times \mathbf{H} = \mathbf{J}_i
++ \mathbf{J}_c + \frac{\partial \mathbf{D}}{\partial t}\)</span></td>
+<td><span class="math inline">\(\oint_C \mathbf{H} \cdot d\mathbf{l} =
+\iint_S \mathbf{J}_i \cdot d\mathbf{s} + \iint_S \mathbf{J}_c \cdot
+d\mathbf{s} + \frac{\partial}{\partial t} \iint_S \mathbf{D} \cdot
+d\mathbf{s}\)</span></td>
 </tr>
 <tr>
-<td>$\nabla \cdot \mathbf{D} = q_{ev}$</td>
-<td>$\oint_S \mathbf{D} \cdot d\mathbf{s} = Q_e$</td>
+<td><span class="math inline">\(\nabla \cdot \mathbf{D} =
+q_{ev}\)</span></td>
+<td><span class="math inline">\(\oint_S \mathbf{D} \cdot d\mathbf{s} =
+Q_e\)</span></td>
 </tr>
 <tr>
-<td>$\nabla \cdot \mathbf{B} = q_{mv}$</td>
-<td>$\oint_S \mathbf{B} \cdot d\mathbf{s} = Q_m$</td>
+<td><span class="math inline">\(\nabla \cdot \mathbf{B} =
+q_{mv}\)</span></td>
+<td><span class="math inline">\(\oint_S \mathbf{B} \cdot d\mathbf{s} =
+Q_m\)</span></td>
 </tr>
 <tr>
-<td>$\nabla \cdot \mathbf{J}_{ic} = - \frac{\partial q_{ev}}{\partial t}$</td>
-<td>$\oint_S \mathbf{J}_{ic} \cdot d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V q_{ev} \, dv = -\frac{\partial Q_e}{\partial t}$</td>
+<td><span class="math inline">\(\nabla \cdot \mathbf{J}_{ic} = -
+\frac{\partial q_{ev}}{\partial t}\)</span></td>
+<td><span class="math inline">\(\oint_S \mathbf{J}_{ic} \cdot
+d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_V q_{ev} \, dv =
+-\frac{\partial Q_e}{\partial t}\)</span></td>
 </tr>
 </tbody>
 </table>
-</div>
 <p>麦克斯韦方程的微分形式是求解边值电磁问题最广泛的表示方法。它用于描述和关联空间中任何时间的任何点的场矢量、电流密度和电荷密度。为了使这些表达式有效，我们假设场向量是<strong>单值的</strong>、<strong>有界的</strong>、<strong>位置和时间的连续函数</strong>，且<strong>连续可导</strong>。</p>
 <ul>
 <li><strong>法拉第电磁感应定律</strong></li>
 </ul>
-<script type="math/tex; mode=display">
-\nabla\times \mathbf{E}=-\mathbf{M_i}-\frac{\mathbf{\partial B}}{\partial t}=-\mathbf{M_i}-\mathbf{M_d}=-\mathbf{M_t}</script><p>公式(1)描述了电场 $E$ 的旋度由磁化电流和时变磁场共同决定，其中 $\mathbf{M_i}$ 是<strong>外加磁流密度(单位：伏特/平方米)</strong>，是一个假设的物理量，用于描述材料中外部强加的磁化流。因为麦克斯韦方程组的对称性，在位移电流密度的基础上，引入 $\mathbf{M_d}$ <strong>位移磁流密度</strong>，对应时变磁场引起的电效应。</p>
+<p><span class="math display">\[
+\nabla\times \mathbf{E}=-\mathbf{M_i}-\frac{\mathbf{\partial
+B}}{\partial t}=-\mathbf{M_i}-\mathbf{M_d}=-\mathbf{M_t}
+\]</span></p>
+<p>公式(1)描述了电场 <span class="math inline">\(E\)</span>
+的旋度由磁化电流和时变磁场共同决定，其中 <span class="math inline">\(\mathbf{M_i}\)</span>
+是<strong>外加磁流密度(单位：伏特/平方米)</strong>，是一个假设的物理量，用于描述材料中外部强加的磁化流。因为麦克斯韦方程组的对称性，在位移电流密度的基础上，引入
+<span class="math inline">\(\mathbf{M_d}\)</span>
+<strong>位移磁流密度</strong>，对应时变磁场引起的电效应。</p>
 <ul>
 <li><strong>推广的安培环路定律</strong></li>
 </ul>
-<script type="math/tex; mode=display">
-\nabla\times \mathbf{H}=\mathbf{J_i}+\mathbf{J_c}+\frac{\partial \mathbf{D}}{\partial t}=\mathbf{J_{ic}}+\frac{\partial \mathbf D}{\partial t}=\mathbf{J_{ic}}+\mathbf{J_{d}}</script><p>公式(2)描述了电磁场中的一个关键现象：电流和变化的电场会产生环绕的磁效应。其中 $\mathbf{J_i}$ 表示<strong><span style="color:red">自由电流密度</span></strong>，通常由自由电荷的移动引起。$\mathbf{J_c}$ 表示<strong><span style="color:red">传导电流密度</span></strong>，通常由材料中的导电特性引起。$\mathbf{J_d}$ 表示<strong><span style="color:red">位移电流密度</span></strong>，$\mathbf{J_d}=\partial\mathbf D/\partial t$。</p>
+<p><span class="math display">\[
+\nabla\times \mathbf{H}=\mathbf{J_i}+\mathbf{J_c}+\frac{\partial
+\mathbf{D}}{\partial t}=\mathbf{J_{ic}}+\frac{\partial \mathbf
+D}{\partial t}=\mathbf{J_{ic}}+\mathbf{J_{d}}
+\]</span></p>
+<p>公式(2)描述了电磁场中的一个关键现象：电流和变化的电场会产生环绕的磁效应。其中
+<span class="math inline">\(\mathbf{J_i}\)</span> 表示<strong><span style="color:red">自由电流密度</span></strong>，通常由自由电荷的移动引起。<span class="math inline">\(\mathbf{J_c}\)</span> 表示<strong><span style="color:red">传导电流密度</span></strong>，通常由材料中的导电特性引起。<span class="math inline">\(\mathbf{J_d}\)</span> 表示<strong><span style="color:red">位移电流密度</span></strong>，<span class="math inline">\(\mathbf{J_d}=\partial\mathbf D/\partial
+t\)</span>。</p>
 <p>麦克斯韦引入位移电流项来修正静电场的安培定律，使其适用于动态电场。在介电质（如绝缘材料）中，位移电流密度可以解释为绑定电荷的极化运动形成的真实电流。</p>
 <ul>
 <li><strong>高斯电场定律</strong></li>
 </ul>
-<script type="math/tex; mode=display">
-\nabla · \mathbf D = q_{ev}</script><p>物理含义为：电场的发散性与区域内的电荷密度有关，$\mathbf{q_{ev}}$ 表示<strong>体电荷密度</strong>。正电荷产生电场向外发散，负电荷产生电场向内汇聚。</p>
+<p><span class="math display">\[
+\nabla · \mathbf D = q_{ev}
+\]</span></p>
+<p>物理含义为：电场的发散性与区域内的电荷密度有关，<span class="math inline">\(\mathbf{q_{ev}}\)</span>
+表示<strong>体电荷密度</strong>。正电荷产生电场向外发散，负电荷产生电场向内汇聚。</p>
 <ul>
 <li><strong>高斯磁定律</strong></li>
 </ul>
-<script type="math/tex; mode=display">
-\nabla · \mathbf B = q_{mv}</script><p>左侧散度表示磁场的源强度。在经典电磁理论中，$\nabla·\mathbf B=0$，即磁场没有真正的“源”。这里的公式中引入 $\mathbf{q_{mv}}$，用于处理磁单极子的假设。磁荷和磁电流密度在传统电磁学中被认为不可实现，这是因为在经典麦克斯韦方程组中，磁荷并没有实际证据支持，例如磁单极子至今尚未被发现。然而，为了<strong><span style="color:red">数学上的对称性和平衡性</span></strong>，在扩展理论中引入了这些概念，使麦克斯韦方程组更加对称。</p>
+<p><span class="math display">\[
+\nabla · \mathbf B = q_{mv}
+\]</span></p>
+<p>左侧散度表示磁场的源强度。在经典电磁理论中，<span class="math inline">\(\nabla·\mathbf
+B=0\)</span>，即磁场没有真正的“源”。这里的公式中引入 <span class="math inline">\(\mathbf{q_{mv}}\)</span>，用于处理磁单极子的假设。磁荷和磁电流密度在传统电磁学中被认为不可实现，这是因为在经典麦克斯韦方程组中，磁荷并没有实际证据支持，例如磁单极子至今尚未被发现。然而，为了<strong><span style="color:red">数学上的对称性和平衡性</span></strong>，在扩展理论中引入了这些概念，使麦克斯韦方程组更加对称。</p>
 <div style="text-align: center;">
-  <img src="https://www.freeimg.cn/i/2025/01/04/67793bb081725.webp" alt style="max-width: 50%; height: auto;">
-  <p style="text-align: center;"><em>图 1:电流和磁流密度类比。(a)电流密度。(b)磁流密度。</em></p>
+<img src="https://www.freeimg.cn/i/2025/01/04/67793bb081725.webp" alt style="max-width: 50%; height: auto;">
+<p style="text-align: center;">
+<em>图 1:电流和磁流密度类比。(a)电流密度。(b)磁流密度。</em>
+</p>
 </div>
-
-<p>图1a描述了一个电流源通过电阻和平行板电容器组成的电路，其中总电流密度 $\mathbf{J_i}$ 由电流源提供，并分为两部分：一部分是流经电阻的传导电流密度 $\mathbf{J_c}$，其来源于导体内电荷的实际移动；另一部分是通过电容器中介电材料的位移电流密度 $\mathbf{J_d}$，这是由电容器中电场随时间的变化产生的。图1b则展示了一个电压源连接到缠绕有高磁导率磁芯的导线电路，其中电压源可以视为产生附加磁流密度 $\mathbf{M_i}$ 的电源，$\mathbf{M_i}$ 进一步导致了磁芯材料中的位移磁流密度。这两种电路分别展示了电流与磁流的动态特性，位移电流的概念在两种场景中均起到了重要作用，用于描述电场或磁场随时间的变化如何影响电路行为。</p>
+<p>图1a描述了一个电流源通过电阻和平行板电容器组成的电路，其中总电流密度
+<span class="math inline">\(\mathbf{J_i}\)</span>
+由电流源提供，并分为两部分：一部分是流经电阻的传导电流密度 <span class="math inline">\(\mathbf{J_c}\)</span>，其来源于导体内电荷的实际移动；另一部分是通过电容器中介电材料的位移电流密度
+<span class="math inline">\(\mathbf{J_d}\)</span>，这是由电容器中电场随时间的变化产生的。图1b则展示了一个电压源连接到缠绕有高磁导率磁芯的导线电路，其中电压源可以视为产生附加磁流密度
+<span class="math inline">\(\mathbf{M_i}\)</span> 的电源，<span class="math inline">\(\mathbf{M_i}\)</span>
+进一步导致了磁芯材料中的位移磁流密度。这两种电路分别展示了电流与磁流的动态特性，位移电流的概念在两种场景中均起到了重要作用，用于描述电场或磁场随时间的变化如何影响电路行为。</p>
 <ul>
 <li><strong>电荷守恒方程的微分形式</strong>：</li>
 </ul>
-<p>除了四个经典的麦克斯韦方程外，还有另外一个方程涉及电流密度 $\mathbf{J_{ic}}$ 和电荷密度 $q_{ev}$ 的变化，这个方程与其它四个麦克斯韦方程并不独立（可以从法拉第电磁感应定律和位移磁流密度的定义推导得到）：</p>
-<script type="math/tex; mode=display">
-\nabla · \mathbf{J_{ic}} = -\frac{\partial q_{ev}}{\partial t}</script><p>公式左侧是电流密度 $\mathbf{J_{ic}}$ 的散度，表示某一区域中电流的“流出速率”。右侧表示体电荷密度$q_{ev}$随时间的变化率，负号表示电荷流出。公式(5)的核心思想是：<strong><span style="color:red">一个区域内电荷的减少必须由净电流流出该区域决定</span></strong>。</p>
-<h3 id="积分形式"><a href="#积分形式" class="headerlink" title="积分形式"></a>积分形式</h3><p>微分形式要求电磁场在局部是<strong>平滑可导</strong>的，因为它描述的是场在一个点或小范围内的变化。积分形式描述了在一个扩展的空间区域上的场向量、电荷密度和电流密度之间的关系。它们的应用有限，通常只用于解决具有完全对称性的电磁边值问题（如矩形、圆柱形、球形等对称性）。然而，所讨论的场及其导数并不需要具有连续的分布。利用<strong>Stokes定理</strong>和<strong>散度定理</strong>，可以实现微分形式和积分形式的互相转换。</p>
+<p>除了四个经典的麦克斯韦方程外，还有另外一个方程涉及电流密度 <span class="math inline">\(\mathbf{J_{ic}}\)</span> 和电荷密度 <span class="math inline">\(q_{ev}\)</span>
+的变化，这个方程与其它四个麦克斯韦方程并不独立（可以从法拉第电磁感应定律和位移磁流密度的定义推导得到）：</p>
+<p><span class="math display">\[
+\nabla · \mathbf{J_{ic}} = -\frac{\partial q_{ev}}{\partial t}
+\]</span></p>
+<p>公式左侧是电流密度 <span class="math inline">\(\mathbf{J_{ic}}\)</span>
+的散度，表示某一区域中电流的“流出速率”。右侧表示体电荷密度<span class="math inline">\(q_{ev}\)</span>随时间的变化率，负号表示电荷流出。公式(5)的核心思想是：<strong><span style="color:red">一个区域内电荷的减少必须由净电流流出该区域决定</span></strong>。</p>
+<h3 id="积分形式">积分形式</h3>
+<p>微分形式要求电磁场在局部是<strong>平滑可导</strong>的，因为它描述的是场在一个点或小范围内的变化。积分形式描述了在一个扩展的空间区域上的场向量、电荷密度和电流密度之间的关系。它们的应用有限，通常只用于解决具有完全对称性的电磁边值问题（如矩形、圆柱形、球形等对称性）。然而，所讨论的场及其导数并不需要具有连续的分布。利用<strong>Stokes定理</strong>和<strong>散度定理</strong>，可以实现微分形式和积分形式的互相转换。</p>
 <ul>
 <li><strong>Stokes定理</strong></li>
 </ul>
-<script type="math/tex; mode=display">
-\oint_C \mathbf{A} \cdot d\mathbf{l} = \iint_S (\nabla \times \mathbf{A}) \cdot d\mathbf{s}</script><p>对于任意向量，Stokes定理指出沿封闭路径 $C$ 的向量 $\mathbf{A}$ 的线积分等于向量 $\mathbf{A}$ 的旋度与曲面 $S$ 的法向量点积的积分，其中曲面 $S$ 的边界是路径 $C$。</p>
+<p><span class="math display">\[
+\oint_C \mathbf{A} \cdot d\mathbf{l} = \iint_S (\nabla \times
+\mathbf{A}) \cdot d\mathbf{s}
+\]</span></p>
+<p>对于任意向量，Stokes定理指出沿封闭路径 <span class="math inline">\(C\)</span> 的向量 <span class="math inline">\(\mathbf{A}\)</span> 的线积分等于向量 <span class="math inline">\(\mathbf{A}\)</span> 的旋度与曲面 <span class="math inline">\(S\)</span> 的法向量点积的积分，其中曲面 <span class="math inline">\(S\)</span> 的边界是路径 <span class="math inline">\(C\)</span>。</p>
 <ul>
 <li><strong>散度定理</strong></li>
 </ul>
-<script type="math/tex; mode=display">
-\iint_S \mathbf{A} \cdot d\mathbf{s} = \iiint_V (\nabla \cdot \mathbf{A}) \,dv</script><p>散度定理表明，对于任意向量 $A$ ，向量 $A$ 的法向分量在曲面 $S$ 上的闭曲面积分等于 $A$ 在被 $S$ 所包围的体积 $V$ 上的散度的体积积分。</p>
+<p><span class="math display">\[
+\iint_S \mathbf{A} \cdot d\mathbf{s} = \iiint_V (\nabla \cdot
+\mathbf{A}) \,dv
+\]</span></p>
+<p>散度定理表明，对于任意向量 <span class="math inline">\(A\)</span>
+，向量 <span class="math inline">\(A\)</span> 的法向分量在曲面 <span class="math inline">\(S\)</span> 上的闭曲面积分等于 <span class="math inline">\(A\)</span> 在被 <span class="math inline">\(S\)</span> 所包围的体积 <span class="math inline">\(V\)</span> 上的散度的体积积分。</p>
 <p>对法拉第电磁感应定律公式两侧进行面积分，可以得到：</p>
-<script type="math/tex; mode=display">
-\iint_S (\nabla\times\mathbf{E})\cdot=-\iint_S \mathbf{M_i}\cdot d\mathbf{s}-\iint_S\frac{\partial \mathbf B}{\partial t}\cdot d\mathbf{s}=-\iint_S \mathbf{M_i}\cdot d\mathbf{s}-\frac{\partial}{\partial t}\iint_S \mathbf{B_i}\cdot d\mathbf{s}</script><p>对上式应用Stoke定理，简化为：</p>
-<script type="math/tex; mode=display">
-\oint_C \mathbf{E}\cdot d\mathbf l=-\iint_S\mathbf{M_i}\cdot d\mathbf s-\frac{\partial}{\partial t}\iint_SB\cdot d\mathbf s</script><p>公式(9)即为麦克斯韦方程组中的法拉第电磁感应定律的积分形式，其表明在一个环路开端上的电动势等于连接该环的磁通量减少的时间速率。采用类似的方法（面积分、体积分）可以得到另外几个麦克斯韦方程的积分形式，转换结果参考开头的表格。</p>
-<h2 id="本构参数及关系"><a href="#本构参数及关系" class="headerlink" title="本构参数及关系"></a>本构参数及关系</h2><p>材料中含有带电粒子，当这些材料受到电磁场的作用时，它们的带电粒子与电磁场矢量相互作用，产生电流，并改变电磁波在这些介质中的传播。我们给出了一组有关电磁场矢量的三个表达式，这些表达式被称为<strong><span style="color:red">本构关系（物质方程）</span></strong>。</p>
+<p><span class="math display">\[
+\iint_S (\nabla\times\mathbf{E})\cdot=-\iint_S \mathbf{M_i}\cdot
+d\mathbf{s}-\iint_S\frac{\partial \mathbf B}{\partial t}\cdot
+d\mathbf{s}=-\iint_S \mathbf{M_i}\cdot
+d\mathbf{s}-\frac{\partial}{\partial t}\iint_S \mathbf{B_i}\cdot
+d\mathbf{s}
+\]</span></p>
+<p>对上式应用Stoke定理，简化为：</p>
+<p><span class="math display">\[
+\oint_C \mathbf{E}\cdot d\mathbf l=-\iint_S\mathbf{M_i}\cdot d\mathbf
+s-\frac{\partial}{\partial t}\iint_SB\cdot d\mathbf s
+\]</span></p>
+<p>公式(9)即为麦克斯韦方程组中的法拉第电磁感应定律的积分形式，其表明在一个环路开端上的电动势等于连接该环的磁通量减少的时间速率。采用类似的方法（面积分、体积分）可以得到另外几个麦克斯韦方程的积分形式，转换结果参考开头的表格。</p>
+<h2 id="本构参数及关系">本构参数及关系</h2>
+<p>材料中含有带电粒子，当这些材料受到电磁场的作用时，它们的带电粒子与电磁场矢量相互作用，产生电流，并改变电磁波在这些介质中的传播。我们给出了一组有关电磁场矢量的三个表达式，这些表达式被称为<strong><span style="color:red">本构关系（物质方程）</span></strong>。</p>
 <ul>
 <li><strong>介电常数</strong></li>
 </ul>
-<script type="math/tex; mode=display">
-\mathbf D = \hat{\varepsilon} * \mathbf E</script><p>其中 $\hat{\varepsilon}$ 是介质的<strong>时变介电常数</strong>，单位是farads/meter。介电常数描述了介质在电场中的极化效应，即介质中电荷分布随电场而重新排列的能力。介电常数越大，材料在电场中越容易被极化，电场在介质中的作用被削弱得更多。介电常数也反映了介质存储电能的能力。更大的介电常数意味着材料能够存储更多的电能。</p>
-<p>卷积*的引入是为了处理时变效应。在真空中介电常数是一个固定值，不随时间变化：$\hat{\varepsilon}=\varepsilon_0=8.854\times10^{-12}(\text{farads/meter})$。在高频（如微波或光学波段）下，介电常数可能会随频率变化，这是因为材料的极化响应时间受到限制。这种频率依赖性是电磁学和材料科学研究的重要内容。</p>
+<p><span class="math display">\[
+\mathbf D = \hat{\varepsilon} * \mathbf E
+\]</span></p>
+<p>其中 <span class="math inline">\(\hat{\varepsilon}\)</span>
+是介质的<strong>时变介电常数</strong>，单位是farads/meter。介电常数描述了介质在电场中的极化效应，即介质中电荷分布随电场而重新排列的能力。介电常数越大，材料在电场中越容易被极化，电场在介质中的作用被削弱得更多。介电常数也反映了介质存储电能的能力。更大的介电常数意味着材料能够存储更多的电能。</p>
+<p>卷积*的引入是为了处理时变效应。在真空中介电常数是一个固定值，不随时间变化：<span class="math inline">\(\hat{\varepsilon}=\varepsilon_0=8.854\times10^{-12}(\text{farads/meter})\)</span>。在高频（如微波或光学波段）下，介电常数可能会随频率变化，这是因为材料的极化响应时间受到限制。这种频率依赖性是电磁学和材料科学研究的重要内容。</p>
 <ul>
 <li><strong>磁导率</strong></li>
 </ul>
-<script type="math/tex; mode=display">
-\mathbf{B} = \hat{\mu} * \mathbf H</script><p>其中$\hat{\mu}$是介质的<strong>时变磁导率</strong>，用于描述材料对磁场的响应能力，单位为henries/meter。在真空中，$\hat{\mu}=\mu_0=4\pi\times10^{-7}\text{henries/meter}$。</p>
+<p><span class="math display">\[
+\mathbf{B} = \hat{\mu} * \mathbf H
+\]</span></p>
+<p>其中<span class="math inline">\(\hat{\mu}\)</span>是介质的<strong>时变磁导率</strong>，用于描述材料对磁场的响应能力，单位为henries/meter。在真空中，<span class="math inline">\(\hat{\mu}=\mu_0=4\pi\times10^{-7}\text{henries/meter}\)</span>。</p>
 <ul>
 <li><strong>电导率</strong></li>
 </ul>
-<script type="math/tex; mode=display">
-\mathbf{J_c} = \hat{\sigma} * \mathbf E</script><p>其中 $\hat{\sigma}$ 是介质的<strong>时变导电率</strong>，反映了材料中传导电流 $\mathbf{J_C}$ 对电场 $\mathbf E$ 的动态响应。在时变情况下，卷积描述了电场与导电率随时间变化的相互作用，比如材料的记忆效应或非线性效应。真空被视为理想的绝缘体，其导电率为零。</p>
+<p><span class="math display">\[
+\mathbf{J_c} = \hat{\sigma} * \mathbf E
+\]</span></p>
+<p>其中 <span class="math inline">\(\hat{\sigma}\)</span>
+是介质的<strong>时变导电率</strong>，反映了材料中传导电流 <span class="math inline">\(\mathbf{J_C}\)</span> 对电场 <span class="math inline">\(\mathbf E\)</span>
+的动态响应。在时变情况下，卷积描述了电场与导电率随时间变化的相互作用，比如材料的记忆效应或非线性效应。真空被视为理想的绝缘体，其导电率为零。</p>
 <p>本构参数用于表征材料的电学性质。材料通常分为介电材料（绝缘体）、磁性材料和导电材料，分别以极化（位移电流密度）、磁化（位移磁流密度）或导电（传导电流密度）为主要现象。此外，半导体介于介电材料和导电材料之间，其位移电流和导电电流一般都不占主导地位。</p>
 <p>在频域或对于频率不随时间变化的本构参数（即时间不变参数），卷积可以简化为乘积。本构参数是位置、场强和频率的函数：根据材料的晶格结构和行为，材料可进一步分类为：</p>
 <ul>
@@ -267,198 +343,418 @@ btf.addGlobalFn('pjaxComplete', () => {
 <li><strong>各向同性与各向异性</strong>：各向同性材料的本构参数与外加场方向无关，各向异性材料则随方向变化（如晶体）。</li>
 <li><strong>色散与非色散</strong>：色散材料的本构参数随频率变化，非色散材料则不变。</li>
 </ul>
-<h2 id="电路场关系"><a href="#电路场关系" class="headerlink" title="电路场关系"></a>电路场关系</h2><h3 id="基尔霍夫电压定律"><a href="#基尔霍夫电压定律" class="headerlink" title="基尔霍夫电压定律"></a>基尔霍夫电压定律</h3><p>麦克斯韦方程是描述电磁场的基本方程，但它也可以用电路量（如电压、电流）来表示，这些对应形式称为电路方程。这种电路方程是电路理论中的基本关系，例如基尔霍夫定律，它们实际上是更一般的麦克斯韦场方程的特例。根据公式(9)可知:</p>
-<script type="math/tex; mode=display">
-\sum v=\oint_C \mathbf E\cdot d\mathbf l\text{(volts)}</script><p>在没有外加磁流密度（$\mathbf{M_i}=0$）的情况下，公式(9)的右侧可以改写为：</p>
-<script type="math/tex; mode=display">
--\frac{\partial}{\partial t}\iint_S\mathbf B\cdot d\mathbf s=-\frac{\partial\psi_m}{\partial t}=-\frac{\partial}{\partial t}(L_si)=-L_s\frac{\partial i}{\partial t}\text{(webers/second = volts)}</script><p>基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式。场关系和电路关系分别表示麦克斯韦方程在场域和电路域中的等效形式，其中 $L_s$ 表示电感，$\psi_m=L_s i$，因此可以得到：</p>
-<script type="math/tex; mode=display">
-\oint_C \mathbf{E} \cdot d\mathbf{l} = -\frac{\partial}{\partial t} \iint_S \mathbf{B} \cdot d\mathbf{s} = -\frac{\partial \psi_m}{\partial t} \iff \sum v=-\frac{\partial \psi_m}{\partial t}=-L_s\frac{\partial i}{\partial t}</script><h3 id="基尔霍夫电流定理"><a href="#基尔霍夫电流定理" class="headerlink" title="基尔霍夫电流定理"></a>基尔霍夫电流定理</h3><p>电荷守恒公式的积分形式可以写为：</p>
-<script type="math/tex; mode=display">
-\sum i=\oint_S \mathbf{J_{ic}}\cdot d\mathbf s</script><p>同时，总电流可以用电荷变化率表示：</p>
-<script type="math/tex; mode=display">
-\sum i=-\frac{\partial Q_e}{\partial t}=-\frac{\partial C_s v}{\partial t}=-C_s\frac{\partial v}{\partial t}</script><p>其中，$C_s$ 表示电容，$Q_e$ 表示电荷。将公式(16)和(17)联立可以得到：</p>
-<script type="math/tex; mode=display">
+<h2 id="电路场关系">电路场关系</h2>
+<h3 id="基尔霍夫电压定律">基尔霍夫电压定律</h3>
+<p>麦克斯韦方程是描述电磁场的基本方程，但它也可以用电路量（如电压、电流）来表示，这些对应形式称为电路方程。这种电路方程是电路理论中的基本关系，例如基尔霍夫定律，它们实际上是更一般的麦克斯韦场方程的特例。根据公式(9)可知:</p>
+<p><span class="math display">\[
+\sum v=\oint_C \mathbf E\cdot d\mathbf l\text{(volts)}
+\]</span></p>
+<p>在没有外加磁流密度（<span class="math inline">\(\mathbf{M_i}=0\)</span>）的情况下，公式(9)的右侧可以改写为：</p>
+<p><span class="math display">\[
+-\frac{\partial}{\partial t}\iint_S\mathbf B\cdot d\mathbf
+s=-\frac{\partial\psi_m}{\partial t}=-\frac{\partial}{\partial
+t}(L_si)=-L_s\frac{\partial i}{\partial t}\text{(webers/second = volts)}
+\]</span></p>
+<p>基尔霍夫电压定律（KVL）在这里被看作是麦克斯韦方程中法拉第定律的电路形式。场关系和电路关系分别表示麦克斯韦方程在场域和电路域中的等效形式，其中
+<span class="math inline">\(L_s\)</span> 表示电感，<span class="math inline">\(\psi_m=L_s i\)</span>，因此可以得到：</p>
+<p><span class="math display">\[
+\oint_C \mathbf{E} \cdot d\mathbf{l} = -\frac{\partial}{\partial t}
+\iint_S \mathbf{B} \cdot d\mathbf{s} = -\frac{\partial \psi_m}{\partial
+t} \iff \sum v=-\frac{\partial \psi_m}{\partial t}=-L_s\frac{\partial
+i}{\partial t}
+\]</span></p>
+<h3 id="基尔霍夫电流定理">基尔霍夫电流定理</h3>
+<p>电荷守恒公式的积分形式可以写为：</p>
+<p><span class="math display">\[
+\sum i=\oint_S \mathbf{J_{ic}}\cdot d\mathbf s
+\]</span></p>
+<p>同时，总电流可以用电荷变化率表示：</p>
+<p><span class="math display">\[
+\sum i=-\frac{\partial Q_e}{\partial t}=-\frac{\partial C_s v}{\partial
+t}=-C_s\frac{\partial v}{\partial t}
+\]</span></p>
+<p>其中，<span class="math inline">\(C_s\)</span> 表示电容，<span class="math inline">\(Q_e\)</span>
+表示电荷。将公式(16)和(17)联立可以得到：</p>
+<p><span class="math display">\[
 \begin{aligned}
-{\oint}_{S} \mathbf{J_{ic}}\cdot d\mathbf{s} = -\frac{\partial}{\partial t} \iiint_S q_{ev} d\mathbf{v} = -\frac{\partial L_e}{\partial t} \iff \sum i=-\frac{\partial L_e}{\partial t}=-C_s\frac{\partial v}{\partial t}
-\end{aligned}</script><p>公式(18)的左侧是电荷守恒的场表达，右侧是其在电路中的表达形式。</p>
-<h3 id="基本定律"><a href="#基本定律" class="headerlink" title="基本定律"></a>基本定律</h3><p>电路中的其它基本定律，例如<strong>欧姆定律</strong>等都可以在电磁场中找到对应的表达式，左侧是场域，右侧是电路域：</p>
-<script type="math/tex; mode=display">
+{\oint}_{S} \mathbf{J_{ic}}\cdot d\mathbf{s} = -\frac{\partial}{\partial
+t} \iiint_S q_{ev} d\mathbf{v} = -\frac{\partial L_e}{\partial t} \iff
+\sum i=-\frac{\partial L_e}{\partial t}=-C_s\frac{\partial v}{\partial
+t}
+\end{aligned}
+\]</span></p>
+<p>公式(18)的左侧是电荷守恒的场表达，右侧是其在电路中的表达形式。</p>
+<h3 id="基本定律">基本定律</h3>
+<p>电路中的其它基本定律，例如<strong>欧姆定律</strong>等都可以在电磁场中找到对应的表达式，左侧是场域，右侧是电路域：</p>
+<p><span class="math display">\[
 \begin{aligned}
-J_c = \sigma E &\iff i_R=\frac 1Rv_R=Gv_R\\
-B = \mu H &\iff \psi_m=Li_L\\
-M_d=\mu\frac{\partial H}{\partial t} &\iff v_L=L\frac{\partial i_L}{\partial t}\\
-D=\varepsilon E &\iff L_e=Cv_e\\ 
-J_d=\varepsilon\frac{\partial E}{\partial t} &\iff i_C=C\frac{\partial v_C}{\partial t}
-\end{aligned}</script><p>图2总结了场理论和电路理论的关系：</p>
+J_c = \sigma E &amp;\iff i_R=\frac 1Rv_R=Gv_R\\
+B = \mu H &amp;\iff \psi_m=Li_L\\
+M_d=\mu\frac{\partial H}{\partial t} &amp;\iff v_L=L\frac{\partial
+i_L}{\partial t}\\
+D=\varepsilon E &amp;\iff L_e=Cv_e\\
+J_d=\varepsilon\frac{\partial E}{\partial t} &amp;\iff
+i_C=C\frac{\partial v_C}{\partial t}
+\end{aligned}
+\]</span></p>
+<p>图2总结了场理论和电路理论的关系：</p>
 <div style="text-align: center;">
-  <img src="https://www.freeimg.cn/i/2025/01/05/677a0f71b48ca.webp" alt="场理论和电路理论" style="max-width: 100%; height: auto;">
-  <p style="text-align: center;"><em>图 2: 场理论和电路理论</em></p>
+<img src="https://www.freeimg.cn/i/2025/01/05/677a0f71b48ca.webp" alt="场理论和电路理论" style="max-width: 100%; height: auto;">
+<p style="text-align: center;">
+<em>图 2: 场理论和电路理论</em>
+</p>
 </div>
-
-<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><h3 id="有限电导率介质"><a href="#有限电导率介质" class="headerlink" title="有限电导率介质"></a>有限电导率介质</h3><ul>
+<h2 id="边界条件">边界条件</h2>
+<h3 id="有限电导率介质">有限电导率介质</h3>
+<ul>
 <li><strong>切向关系</strong></li>
 </ul>
 <p>在介质的边界处（如不同介质的交界面或存在电荷、电流的边界），由于介质电学性质的不连续性，场量可能发生跳跃。在这种情况下，微分形式的方程不再适用，必须通过边界条件来描述场矢量在边界两侧的变化，直接分析场量本身，而不是其导数。这种方法是研究电磁场跨越边界行为的关键。</p>
 <div style="text-align: center;">
-  <img src="https://www.freeimg.cn/i/2025/01/05/677a114ddc34c.webp" alt="切向边界条件" style="max-width: 80%; height: auto;">
-  <p style="text-align: center;"><em>图 3: 切向边界条件</em></p>
+<img src="https://www.freeimg.cn/i/2025/01/05/677a114ddc34c.webp" alt="切向边界条件" style="max-width: 80%; height: auto;">
+<p style="text-align: center;">
+<em>图 3: 切向边界条件</em>
+</p>
 </div>
-
-<p>首先，让我们考虑两个介质之间的界面。如图3所示，界面上没有电荷或源（只要两种介质都不是完美导体，或者实际的源没有放置在那里，这些条件就可以满足）。首先考虑边界处的法拉第电磁感应定律，并且假设没有外部磁化电流( $\mathbf{M_i}=0$ )：</p>
-<script type="math/tex; mode=display">
-\oint_{C_0}\mathbf E\cdot dl=-\frac{\partial}{\partial t}\iint_{S_0}\mathbf B\cdot d\mathbf{s}</script><p>这个公式是法拉第电磁感应定律的积分形式，描述了一个闭合路径 $C_0$ 上的电流环流等于穿过该路径包围的曲面 $S_0$ 的磁通变化量。如果跨越界面交界处的矩形高度 $\Delta y$ 趋近于0，公式(20)可以简化为：</p>
-<script type="math/tex; mode=display">
+<p>首先，让我们考虑两个介质之间的界面。如图3所示，界面上没有电荷或源（只要两种介质都不是完美导体，或者实际的源没有放置在那里，这些条件就可以满足）。首先考虑边界处的法拉第电磁感应定律，并且假设没有外部磁化电流(
+<span class="math inline">\(\mathbf{M_i}=0\)</span> )：</p>
+<p><span class="math display">\[
+\oint_{C_0}\mathbf E\cdot dl=-\frac{\partial}{\partial
+t}\iint_{S_0}\mathbf B\cdot d\mathbf{s}
+\]</span></p>
+<p>这个公式是法拉第电磁感应定律的积分形式，描述了一个闭合路径 <span class="math inline">\(C_0\)</span> 上的电流环流等于穿过该路径包围的曲面
+<span class="math inline">\(S_0\)</span>
+的磁通变化量。如果跨越界面交界处的矩形高度 <span class="math inline">\(\Delta y\)</span>
+趋近于0，公式(20)可以简化为：</p>
+<p><span class="math display">\[
 \begin{aligned}
-\mathbf {E_1}\cdot \hat{\mathbf{a}}_x\Delta x-\mathbf {E_2}\cdot \hat{\mathbf{a}}_x\Delta x=0\\
+\mathbf {E_1}\cdot \hat{\mathbf{a}}_x\Delta x-\mathbf {E_2}\cdot
+\hat{\mathbf{a}}_x\Delta x=0\\
 E_{1t}-E_{2t}=0\Rightarrow E_{1t}=E_{2t}
-\end{aligned}</script><p>公式(21)也可以等效于：</p>
-<script type="math/tex; mode=display">
-\hat{\mathbf{n}}\times (\mathbf{E_2}-\mathbf{E_1})=0\quad \sigma_1,\sigma_2\text{ 是有限的}</script><p><strong><span style="color:red">说明在沿界面边界没有外加的磁流密度时，电场在界面上的切向分量是连续的</span></strong>。</p>
+\end{aligned}
+\]</span></p>
+<p>公式(21)也可以等效于： <span class="math display">\[
+\hat{\mathbf{n}}\times (\mathbf{E_2}-\mathbf{E_1})=0\quad
+\sigma_1,\sigma_2\text{ 是有限的}
+\]</span></p>
+<p><strong><span style="color:red">说明在沿界面边界没有外加的磁流密度时，电场在界面上的切向分量是连续的</span></strong>。</p>
 <blockquote>
 <p>这里要求电导率有限的原因是，如果电导率无穷大（完美导体），此时导体内部拥有无限多的自由电荷，当外部电场施加到导体时，这些自由电荷会立即在导体内部移动以中和外加电场的作用。导体中不允许存在静电场，这是完美导体的重要特性。</p>
 </blockquote>
-<p>对于如图3中同样的矩形区域，假设介质表面没有自由移动电流 $\mathbf{J_i}=0$，根据安培环路定律的积分形式：</p>
-<script type="math/tex; mode=display">
-\oint_C \mathbf H\cdot dl=\iint_S\mathbf{J_i}\cdot ds+\iint_S\mathbf{J_c}\cdot ds+\frac{\partial}{\partial t}\iint_S \mathbf D\cdot ds</script><p>可得到：</p>
-<script type="math/tex; mode=display">
-\hat{\mathbf{n}}\times(\mathbf{H_2}-\mathbf{H_1})=0\quad \sigma_1,\sigma_2\text{ 是有限的}</script><p>说明磁场强度的切向分量在介质交界面也是连续的。电场和磁场除了在切向上满足上述关系，在法向上也存在类似的关系。</p>
+<p>对于如图3中同样的矩形区域，假设介质表面没有自由移动电流 <span class="math inline">\(\mathbf{J_i}=0\)</span>，根据安培环路定律的积分形式：</p>
+<p><span class="math display">\[
+\oint_C \mathbf H\cdot dl=\iint_S\mathbf{J_i}\cdot
+ds+\iint_S\mathbf{J_c}\cdot ds+\frac{\partial}{\partial t}\iint_S
+\mathbf D\cdot ds
+\]</span></p>
+<p>可得到：</p>
+<p><span class="math display">\[
+\hat{\mathbf{n}}\times(\mathbf{H_2}-\mathbf{H_1})=0\quad
+\sigma_1,\sigma_2\text{ 是有限的}
+\]</span></p>
+<p>说明磁场强度的切向分量在介质交界面也是连续的。电场和磁场除了在切向上满足上述关系，在法向上也存在类似的关系。</p>
 <ul>
 <li><strong>法向关系</strong></li>
 </ul>
 <div style="text-align: center;">
-  <img src="https://www.freeimg.cn/i/2025/01/05/677a1d4c36be1.webp" alt="切向边界条件" style="max-width: 80%; height: auto;">
-  <p style="text-align: center;"><em>图 4: 法向边界条件</em></p>
+<img src="https://www.freeimg.cn/i/2025/01/05/677a1d4c36be1.webp" alt="切向边界条件" style="max-width: 80%; height: auto;">
+<p style="text-align: center;">
+<em>图 4: 法向边界条件</em>
+</p>
 </div>
-
-<p>考虑如图4中的跨越两种介质分界面的圆柱体，其上没有电荷分布 $Q_e=0$。因此高斯的电场公式可以改写为：</p>
-<script type="math/tex; mode=display">
-\oint_{A_0,A_1}\mathbf D\cdot ds=0</script><p>当圆柱体高度 $\Delta y$ 趋近于0时，侧面积 $A_1$ 也同样趋近于0。此时再考虑公式(25)，发现可以忽略侧面积 $A_1$ 的作用，将公式简化为：</p>
-<script type="math/tex; mode=display">
+<p>考虑如图4中的跨越两种介质分界面的圆柱体，其上没有电荷分布 <span class="math inline">\(Q_e=0\)</span>。因此高斯的电场公式可以改写为：</p>
+<p><span class="math display">\[
+\oint_{A_0,A_1}\mathbf D\cdot ds=0
+\]</span></p>
+<p>当圆柱体高度 <span class="math inline">\(\Delta y\)</span>
+趋近于0时，侧面积 <span class="math inline">\(A_1\)</span>
+也同样趋近于0。此时再考虑公式(25)，发现可以忽略侧面积 <span class="math inline">\(A_1\)</span> 的作用，将公式简化为：</p>
+<p><span class="math display">\[
 \begin{aligned}
-&\mathbf{D}_2\cdot\hat{\mathbf{a}}_yA_0-\mathbf{D}_1\cdot\hat{\mathbf{a}}_yA_0=0\\
-&D_{2n}-D{1n}=0\Rightarrow D_{2n}=D_{1n}
-\end{aligned}</script><p>最终得到：</p>
-<script type="math/tex; mode=display">
-\hat{\mathbf{n}}\cdot(\mathbf{D_2}-\mathbf{D_1})=0\quad \sigma_1,\sigma_2\text{ 是有限的}</script><p>说明电通量密度 $\mathbf D$ 在介质边界处的法向分量是连续的。但是根据本构关系 $\mathbf D=\varepsilon\mathbf E$，可以将上式改写为：</p>
-<script type="math/tex; mode=display">
-\hat{\mathbf{n}}\cdot(\varepsilon_2\mathbf E_2-\varepsilon_1\mathbf E_1)=0\quad \sigma_1,\sigma_2\text{ 是有限的}</script><p>公式(27)说明电场强度 $\mathbf E$ 的法向分量是不连续的，这和其电通量密度的关系相反，本质原因是两侧介质的介电常数不一致，<strong>介质的极化会影响电场响应，导致不连续</strong>。</p>
+&amp;\mathbf{D}_2\cdot\hat{\mathbf{a}}_yA_0-\mathbf{D}_1\cdot\hat{\mathbf{a}}_yA_0=0\\
+&amp;D_{2n}-D{1n}=0\Rightarrow D_{2n}=D_{1n}
+\end{aligned}
+\]</span></p>
+<p>最终得到：</p>
+<p><span class="math display">\[
+\hat{\mathbf{n}}\cdot(\mathbf{D_2}-\mathbf{D_1})=0\quad
+\sigma_1,\sigma_2\text{ 是有限的}
+\]</span></p>
+<p>说明电通量密度 <span class="math inline">\(\mathbf D\)</span>
+在介质边界处的法向分量是连续的。但是根据本构关系 <span class="math inline">\(\mathbf D=\varepsilon\mathbf
+E\)</span>，可以将上式改写为：</p>
+<p><span class="math display">\[
+\hat{\mathbf{n}}\cdot(\varepsilon_2\mathbf E_2-\varepsilon_1\mathbf
+E_1)=0\quad \sigma_1,\sigma_2\text{ 是有限的}
+\]</span></p>
+<p>公式(27)说明电场强度 <span class="math inline">\(\mathbf E\)</span>
+的法向分量是不连续的，这和其电通量密度的关系相反，本质原因是两侧介质的介电常数不一致，<strong>介质的极化会影响电场响应，导致不连续</strong>。</p>
 <p>采用类似的分析方式，我们可以得到：</p>
-<script type="math/tex; mode=display">
-\hat{\mathbf{n}}\cdot(\mathbf{B_2}-\mathbf{B_1})=0\quad \sigma_1,\sigma_2\text{ 是有限的}</script><p>同样可以推导得到磁通量密度 $\mathbf B$ 的法向分量连续，但是磁场强度 $\mathbf H$ 的法向分量不连续。原因是介质的磁化率不一致，对磁场的响应不一致。</p>
-<h3 id="无限电导率介质"><a href="#无限电导率介质" class="headerlink" title="无限电导率介质"></a>无限电导率介质</h3><p>如果界面上存在实际的电场源（如电流或电荷），上述的边界条件需要进行修正。修正后的边界条件为，推导过程省略：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
+\hat{\mathbf{n}}\cdot(\mathbf{B_2}-\mathbf{B_1})=0\quad
+\sigma_1,\sigma_2\text{ 是有限的}
+\]</span></p>
+<p>同样可以推导得到磁通量密度 <span class="math inline">\(\mathbf
+B\)</span> 的法向分量连续，但是磁场强度 <span class="math inline">\(\mathbf H\)</span>
+的法向分量不连续。原因是介质的磁化率不一致，对磁场的响应不一致。</p>
+<h3 id="无限电导率介质">无限电导率介质</h3>
+<p>如果界面上存在实际的电场源（如电流或电荷），上述的边界条件需要进行修正。修正后的边界条件为，推导过程省略：</p>
+<p><span class="math display">\[
 \begin{aligned}
-    -\hat{n} \times (\mathbf{E}_2 - \mathbf{E}_1) &= \mathbf{M}_s, \\
-    \hat{n} \times (\mathbf{H}_2 - \mathbf{H}_1) &= \mathbf{J}_s, \\
-    \hat{n} \cdot (\mathbf{D}_2 - \mathbf{D}_1) &= q_{es}, \\
-    \hat{n} \cdot (\mathbf{B}_2 - \mathbf{B}_1) &= q_{ms}.
-\end{aligned}</script><p>完美磁导体（PMC）是一种理想化的材料，其内部在电磁场作用下没有时间变化的电场和磁场，切向磁场分量在其表面消失，同时磁电荷集中在表面并形成薄层感应磁流密度。</p>
-<div class="table-container">
+    -\hat{n} \times (\mathbf{E}_2 - \mathbf{E}_1) &amp;= \mathbf{M}_s,
+\\
+    \hat{n} \times (\mathbf{H}_2 - \mathbf{H}_1) &amp;= \mathbf{J}_s, \\
+    \hat{n} \cdot (\mathbf{D}_2 - \mathbf{D}_1) &amp;= q_{es}, \\
+    \hat{n} \cdot (\mathbf{B}_2 - \mathbf{B}_1) &amp;= q_{ms}.
+\end{aligned}
+\]</span></p>
+<p>完美磁导体（PMC）是一种理想化的材料，其内部在电磁场作用下没有时间变化的电场和磁场，切向磁场分量在其表面消失，同时磁电荷集中在表面并形成薄层感应磁流密度。</p>
 <table>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 19%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
 <thead>
 <tr>
 <th>边界条件</th>
 <th>通用情况</th>
-<th>有限电导率，无源、无电荷 $\sigma_1, \sigma_2 \neq \infty$</th>
-<th>介质 1 为无限电导率 $\sigma_1 = \infty; \sigma_2 \neq \infty$</th>
-<th>介质 1 为无限磁导率 $\mathbf{E}_1 = \mathbf{H}_1 = 0$</th>
+<th>有限电导率，无源、无电荷 <span class="math inline">\(\sigma_1,
+\sigma_2 \neq \infty\)</span></th>
+<th>介质 1 为无限电导率 <span class="math inline">\(\sigma_1 = \infty;
+\sigma_2 \neq \infty\)</span></th>
+<th>介质 1 为无限磁导率 <span class="math inline">\(\mathbf{E}_1 =
+\mathbf{H}_1 = 0\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>切向电场强度</td>
-<td>$-\hat{n} \times (\mathbf{E}_2 - \mathbf{E}_1) = \mathbf{M}_s$</td>
-<td>$\hat{n} \times (\mathbf{E}_2 - \mathbf{E}_1) = 0$</td>
-<td>$\hat{n} \times \mathbf{E}_2 = 0$</td>
-<td>$-\hat{n} \times \mathbf{E}_2 = \mathbf{M}_s$</td>
+<td><span class="math inline">\(-\hat{n} \times (\mathbf{E}_2 -
+\mathbf{E}_1) = \mathbf{M}_s\)</span></td>
+<td><span class="math inline">\(\hat{n} \times (\mathbf{E}_2 -
+\mathbf{E}_1) = 0\)</span></td>
+<td><span class="math inline">\(\hat{n} \times \mathbf{E}_2 =
+0\)</span></td>
+<td><span class="math inline">\(-\hat{n} \times \mathbf{E}_2 =
+\mathbf{M}_s\)</span></td>
 </tr>
 <tr>
 <td>切向磁场强度</td>
-<td>$\hat{n} \times (\mathbf{H}_2 - \mathbf{H}_1) = \mathbf{J}_s$</td>
-<td>$\hat{n} \times (\mathbf{H}_2 - \mathbf{H}_1) = 0$</td>
-<td>$\hat{n} \times \mathbf{H}_2 = \mathbf{J}_s$</td>
-<td>$\hat{n} \times \mathbf{H}_2 = 0$</td>
+<td><span class="math inline">\(\hat{n} \times (\mathbf{H}_2 -
+\mathbf{H}_1) = \mathbf{J}_s\)</span></td>
+<td><span class="math inline">\(\hat{n} \times (\mathbf{H}_2 -
+\mathbf{H}_1) = 0\)</span></td>
+<td><span class="math inline">\(\hat{n} \times \mathbf{H}_2 =
+\mathbf{J}_s\)</span></td>
+<td><span class="math inline">\(\hat{n} \times \mathbf{H}_2 =
+0\)</span></td>
 </tr>
 <tr>
 <td>法向电通量密度</td>
-<td>$\hat{n} \cdot (\mathbf{D}_2 - \mathbf{D}_1) = q_{es}$</td>
-<td>$\hat{n} \cdot (\mathbf{D}_2 - \mathbf{D}_1) = 0$</td>
-<td>$\hat{n} \cdot \mathbf{D}_2 = q_{es}$</td>
-<td>$\hat{n} \cdot \mathbf{D}_2 = 0$</td>
+<td><span class="math inline">\(\hat{n} \cdot (\mathbf{D}_2 -
+\mathbf{D}_1) = q_{es}\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot (\mathbf{D}_2 -
+\mathbf{D}_1) = 0\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot \mathbf{D}_2 =
+q_{es}\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot \mathbf{D}_2 =
+0\)</span></td>
 </tr>
 <tr>
 <td>法向磁通量密度</td>
-<td>$\hat{n} \cdot (\mathbf{B}_2 - \mathbf{B}_1) = q_{ms}$</td>
-<td>$\hat{n} \cdot (\mathbf{B}_2 - \mathbf{B}_1) = 0$</td>
-<td>$\hat{n} \cdot \mathbf{B}_2 = 0$</td>
-<td>$\hat{n} \cdot \mathbf{B}_2 = q_{ms}$</td>
+<td><span class="math inline">\(\hat{n} \cdot (\mathbf{B}_2 -
+\mathbf{B}_1) = q_{ms}\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot (\mathbf{B}_2 -
+\mathbf{B}_1) = 0\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot \mathbf{B}_2 =
+0\)</span></td>
+<td><span class="math inline">\(\hat{n} \cdot \mathbf{B}_2 =
+q_{ms}\)</span></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="功率和能量"><a href="#功率和能量" class="headerlink" title="功率和能量"></a>功率和能量</h2><ul>
+<h2 id="功率和能量">功率和能量</h2>
+<ul>
 <li><strong>坡印廷矢量</strong></li>
 </ul>
-<p><strong>坡印廷矢量（Poynting Vector）</strong>是一个矢量物理量，用于描述电磁场中能量流密度的方向和大小。它的核心概念是，电磁场携带能量，并以一定的速度和方向在空间中传播。为了推导能量相关的表达式，我们首先定义一个由闭合曲面 $S$ 包围的体积为 $V$ 的区域，其中的电磁性质参数为 $\varepsilon,\mu,\sigma$。</p>
+<p><strong>坡印廷矢量（Poynting
+Vector）</strong>是一个矢量物理量，用于描述电磁场中能量流密度的方向和大小。它的核心概念是，电磁场携带能量，并以一定的速度和方向在空间中传播。为了推导能量相关的表达式，我们首先定义一个由闭合曲面
+<span class="math inline">\(S\)</span> 包围的体积为 <span class="math inline">\(V\)</span> 的区域，其中的电磁性质参数为 <span class="math inline">\(\varepsilon,\mu,\sigma\)</span>。</p>
 <div style="text-align: center;">
-  <img src="https://www.freeimg.cn/i/2025/01/05/677a521794b54.webp" alt="切向边界条件" style="max-width: 100%; height: auto;">
-  <p style="text-align: center;"><em>能量</em></p>
+<img src="https://www.freeimg.cn/i/2025/01/05/677a521794b54.webp" alt="切向边界条件" style="max-width: 100%; height: auto;">
+<p style="text-align: center;">
+<em>能量</em>
+</p>
 </div>
-
 <p>坡印廷矢量的表达式为：</p>
-<script type="math/tex; mode=display">
-S=E\times H \text{(watts/square meter)}</script><p>其具有能量密度相关的单位（瓦/平方米）。</p>
-<h2 id="时谐电磁场"><a href="#时谐电磁场" class="headerlink" title="时谐电磁场"></a>时谐电磁场</h2><p>在许多涉及电磁波的实际系统中，时间变化是正弦形式的，被称为<strong>时谐(time-harmonic)</strong>。一般来说，时谐可以用 $e^{j\omega t}$来表示，而瞬时电磁场矢量可以用一种非常简单的方式与它们的复数形式联系起来</p>
+<p><span class="math display">\[
+S=E\times H \text{(watts/square meter)}
+\]</span></p>
+<p>其具有能量密度相关的单位（瓦/平方米）。 ## 时谐电磁场</p>
+<p>在许多涉及电磁波的实际系统中，时间变化是正弦形式的，被称为<strong>时谐(time-harmonic)</strong>。一般来说，时谐可以用
+<span class="math inline">\(e^{j\omega
+t}\)</span>来表示，而瞬时电磁场矢量可以用一种非常简单的方式与它们的复数形式联系起来</p>
 <div style="text-align: center;">
-  <img src="https://www.freeimg.cn/i/2025/01/05/677a294057346.webp" alt="切向边界条件" style="max-width: 100%; height: auto;">
-  <p style="text-align: center;"><em> 瞬时和时谐电磁场公式</em></p>
+<img src="https://www.freeimg.cn/i/2025/01/05/677a294057346.webp" alt="切向边界条件" style="max-width: 100%; height: auto;">
+<p style="text-align: center;">
+<em> 瞬时和时谐电磁场公式</em>
+</p>
 </div>
-
 <p>如果在时谐的情况下：</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-E(x,y,z;t)&=Re[\mathbf E(x,y,z;t)e^{j\omega t}]=\frac12[\mathbf Ee^{j\omega t}+(\mathbf Ee^{j\omega t})^*]\\
-H(x,y,z;t)&=Re[\mathbf H(x,y,z;t)e^{j\omega t}]=\frac12[\mathbf He^{j\omega t}+(\mathbf He^{j\omega t})^*]\\
-S&=\frac12[Re(\mathbf E\times\mathbf H^*)+Re(\mathbf E\times\mathbf He^{j\omega t})]
-\end{aligned}</script><h1 id="物质的电磁性质"><a href="#物质的电磁性质" class="headerlink" title="物质的电磁性质"></a>物质的电磁性质</h1><h2 id="介电质、极化与介电常数"><a href="#介电质、极化与介电常数" class="headerlink" title="介电质、极化与介电常数"></a>介电质、极化与介电常数</h2><p><strong>介电质（Dielectrics）</strong>是一种材料，其原子和分子中的主要电荷是负电荷，由原子和分子的力固定，它们不能自由移动。因此，理想的介电质不包含任何自由电荷（如在导体中），它们的原子和分子在宏观上是中性的。</p>
+E(x,y,z;t)&amp;=Re[\mathbf E(x,y,z;t)e^{j\omega t}]=\frac12[\mathbf
+Ee^{j\omega t}+(\mathbf Ee^{j\omega t})^*]\\
+H(x,y,z;t)&amp;=Re[\mathbf H(x,y,z;t)e^{j\omega t}]=\frac12[\mathbf
+He^{j\omega t}+(\mathbf He^{j\omega t})^*]\\
+S&amp;=\frac12[Re(\mathbf E\times\mathbf H^*)+Re(\mathbf E\times\mathbf
+He^{j\omega t})]
+\end{aligned}
+\]</span></p>
+<h1 id="物质的电磁性质">物质的电磁性质</h1>
+<h2 id="介电质极化与介电常数">介电质、极化与介电常数</h2>
+<p><strong>介电质（Dielectrics）</strong>是一种材料，其原子和分子中的主要电荷是负电荷，由原子和分子的力固定，它们不能自由移动。因此，理想的介电质不包含任何自由电荷（如在导体中），它们的原子和分子在宏观上是中性的。</p>
 <p>对于介电质，电偶极子的形成通常被称为定向极化。每个电偶极子的影响可以用一个偶极子来表示，偶极矩为：</p>
-<script type="math/tex; mode=display">
-d\mathbf{p_i}=Ql_i</script><div style="text-align: center;">
-  <img src="https://www.freeimg.cn/i/2025/01/05/677a2c228d6bf.webp" alt="切向边界条件" style="max-width: 100%; height: auto;">
-  <p style="text-align: center;"><em>图 6: 偶极子</em></p>
-</div>
-
-<p>总偶极矩由所有偶极子的和组成：</p>
-<script type="math/tex; mode=display">
-\mathbf p_t=\sum_{i=1}^{N_e\Delta v}d\mathbf p_i</script><p>电极化矢量 $\mathbf P$ 被定义为<strong>单位体积内的偶极矩</strong>:</p>
-<script type="math/tex; mode=display">
-\mathbf P=\lim_{\Delta v\to0}\left[\frac{1}{\Delta v}\mathbf p_t\right]=\lim_{\Delta v\to0}\left[\frac{1}{\Delta v}\sum_{i=1}^{N_e\Delta v}d\mathbf p_i\right](C/m^2)</script><p>介电质的<strong>电极化（Electric polarization）</strong>是指介电质在外电场作用下，其内部电荷重新分布或取向，从而产生电偶极矩的现象。这种电极化现象可以通过以下三种机制之一或多种机制来实现。</p>
+<p><span class="math display">\[
+d\mathbf{p_i}=Ql_i
+\]</span></p>
 <div style="text-align: center;">
-  <img src="https://www.freeimg.cn/i/2025/01/06/677b4cb254a44.webp" alt="切向边界条件" style="max-width: 80%; height: auto;">
-  <p style="text-align: center;"><em>介电质中产生电极化的机制</em></p>
+<img src="https://www.freeimg.cn/i/2025/01/05/677a2c228d6bf.webp" alt="切向边界条件" style="max-width: 100%; height: auto;">
+<p style="text-align: center;">
+<em>图 6: 偶极子</em>
+</p>
 </div>
-
-<ol>
+<p>总偶极矩由所有偶极子的和组成：</p>
+<p><span class="math display">\[
+\mathbf p_t=\sum_{i=1}^{N_e\Delta v}d\mathbf p_i
+\]</span></p>
+<p>电极化矢量 <span class="math inline">\(\mathbf P\)</span>
+被定义为<strong>单位体积内的偶极矩</strong>:</p>
+<p><span class="math display">\[
+\mathbf P=\lim_{\Delta v\to0}\left[\frac{1}{\Delta v}\mathbf
+p_t\right]=\lim_{\Delta v\to0}\left[\frac{1}{\Delta
+v}\sum_{i=1}^{N_e\Delta v}d\mathbf p_i\right](C/m^2)
+\]</span></p>
+<p>介电质的<strong>电极化（Electric
+polarization）</strong>是指介电质在外电场作用下，其内部电荷重新分布或取向，从而产生电偶极矩的现象。这种电极化现象可以通过以下三种机制之一或多种机制来实现。</p>
+<div style="text-align: center;">
+<img src="https://www.freeimg.cn/i/2025/01/06/677b4cb254a44.webp" alt="切向边界条件" style="max-width: 80%; height: auto;">
+<p style="text-align: center;">
+<em>介电质中产生电极化的机制</em>
+</p>
+</div>
+<ol type="1">
 <li><strong>偶极或去向极化</strong>：某些材料在没有外加电场的情况下，由于其内部结构，具有永久的电偶极矩，这些偶极矩在无电场时是随机取向的，也就是说，它们的方向杂乱无章，不呈现特定的排列。取向极化描述了在外加电场作用下，极性材料内部的永久偶极矩从无序排列变为与电场对齐的过程</li>
 <li><strong>离子或分子极化</strong>：在外加电场作用下，材料中的正负离子因受到电场力而发生相对位移，从而引起极化的过程。离子极化的特性在许多含离子键的化合物中较为显著，例如氯化钠（NaCl）等晶体材料</li>
 <li><strong>电子极化</strong>：由于外加电场使得原子的电子云相对于原子核发生位移，从而产生偶极矩的过程。</li>
 </ol>
 <div style="text-align: center;">
-  <img src="https://www.freeimg.cn/i/2025/01/06/677b501654100.webp" alt="切向边界条件" style="max-width: 80%; height: auto;">
-  <p style="text-align: center;"><em>材料的宏观尺度模型。(a)非极性的。(b)极性。</em></p>
+<img src="https://www.freeimg.cn/i/2025/01/06/677b501654100.webp" alt="切向边界条件" style="max-width: 80%; height: auto;">
+<p style="text-align: center;">
+<em>材料的宏观尺度模型。(a)非极性的。(b)极性。</em>
+</p>
 </div>
-
 <p>从宏观角度分析材料，非极性材料在无外加电场的情况下，材料内部没有偶极，因此没有极性。而极性材料的分子天然具有永久偶极矩，只是由于分子的随机取向，偶极之间彼此抵消，导致宏观上表现为极化强度为0。</p>
-<p>在材料两侧加上外加电场 $E_a$，导致内部出现极化现象。总电位移矢量 $D$ 包括外加电场 $E_a$和极化效应 $P$ 的叠加：</p>
-<script type="math/tex; mode=display">
+<p>在材料两侧加上外加电场 <span class="math inline">\(E_a\)</span>，导致内部出现极化现象。总电位移矢量
+<span class="math inline">\(D\)</span> 包括外加电场 <span class="math inline">\(E_a\)</span>和极化效应 <span class="math inline">\(P\)</span> 的叠加：</p>
+<p><span class="math display">\[
 \begin{aligned}
-\mathbf D&=\varepsilon_0\mathbf E_a+ \mathbf P\\
-\mathbf P&=\varepsilon_0\chi_e\mathbf E_a
-\end{aligned}</script><p>其中 $\chi_e$ 是<strong>电极化率</strong>，表示材料响应电场时的极化能力。将上述公式合并可以得到：</p>
-<script type="math/tex; mode=display">
-\mathbf D=\varepsilon_0\mathbf E_a+\varepsilon_0\chi_e\mathbf E_a=\varepsilon_0(1+\chi_e)\mathbf{E_a}=\varepsilon_s\mathbf{E_a}</script><p>$\varepsilon_s=\varepsilon_0(1+\chi_e)$ 表示材料的总介电常数，包括真空的贡献。</p>
-<h2 id="磁学、磁化与磁导率"><a href="#磁学、磁化与磁导率" class="headerlink" title="磁学、磁化与磁导率"></a>磁学、磁化与磁导率</h2><h2 id="电流、导体与电导率"><a href="#电流、导体与电导率" class="headerlink" title="电流、导体与电导率"></a>电流、导体与电导率</h2><h2 id="半导体和超导体"><a href="#半导体和超导体" class="headerlink" title="半导体和超导体"></a>半导体和超导体</h2><h2 id="线性、均匀、各向同性和非色散的材料"><a href="#线性、均匀、各向同性和非色散的材料" class="headerlink" title="线性、均匀、各向同性和非色散的材料"></a>线性、均匀、各向同性和非色散的材料</h2><h1 id="波动方程及其解"><a href="#波动方程及其解" class="headerlink" title="波动方程及其解"></a>波动方程及其解</h1><h2 id="时变电磁场"><a href="#时变电磁场" class="headerlink" title="时变电磁场"></a>时变电磁场</h2><h2 id="时谐电磁场-1"><a href="#时谐电磁场-1" class="headerlink" title="时谐电磁场"></a>时谐电磁场</h2><h2 id="波动方程的解"><a href="#波动方程的解" class="headerlink" title="波动方程的解"></a>波动方程的解</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://Lyz-623.github.io">Yunze</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://lyz-623.github.io/2025/01/02/Master%20Class/Advanced%20Electromagnetics/">https://lyz-623.github.io/2025/01/02/Master%20Class/Advanced%20Electromagnetics/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://Lyz-623.github.io" target="_blank">Yunze's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="post-meta__tags" href="/tags/%E7%94%B5%E7%A3%81%E5%AD%A6/">电磁学</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>给作者赏个鸡腿🍗</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yunze</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%B6%E5%8F%98%E3%80%81%E6%97%B6%E8%B0%90%E7%94%B5%E7%A3%81%E5%9C%BA"><span class="toc-number">1.</span> <span class="toc-text">时变、时谐电磁场</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-number">1.2.</span> <span class="toc-text">麦克斯韦方程组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.2.1.</span> <span class="toc-text">微分形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">积分形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%9E%84%E5%8F%82%E6%95%B0%E5%8F%8A%E5%85%B3%E7%B3%BB"><span class="toc-number">1.3.</span> <span class="toc-text">本构参数及关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E8%B7%AF%E5%9C%BA%E5%85%B3%E7%B3%BB"><span class="toc-number">1.4.</span> <span class="toc-text">电路场关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E5%B0%94%E9%9C%8D%E5%A4%AB%E7%94%B5%E5%8E%8B%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">基尔霍夫电压定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E5%B0%94%E9%9C%8D%E5%A4%AB%E7%94%B5%E6%B5%81%E5%AE%9A%E7%90%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">基尔霍夫电流定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.4.3.</span> <span class="toc-text">基本定律</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.5.</span> <span class="toc-text">边界条件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E9%99%90%E7%94%B5%E5%AF%BC%E7%8E%87%E4%BB%8B%E8%B4%A8"><span class="toc-number">1.5.1.</span> <span class="toc-text">有限电导率介质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E7%94%B5%E5%AF%BC%E7%8E%87%E4%BB%8B%E8%B4%A8"><span class="toc-number">1.5.2.</span> <span class="toc-text">无限电导率介质</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E7%8E%87%E5%92%8C%E8%83%BD%E9%87%8F"><span class="toc-number">1.6.</span> <span class="toc-text">功率和能量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E8%B0%90%E7%94%B5%E7%A3%81%E5%9C%BA"><span class="toc-number">1.7.</span> <span class="toc-text">时谐电磁场</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%A9%E8%B4%A8%E7%9A%84%E7%94%B5%E7%A3%81%E6%80%A7%E8%B4%A8"><span class="toc-number">2.</span> <span class="toc-text">物质的电磁性质</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%94%B5%E8%B4%A8%E3%80%81%E6%9E%81%E5%8C%96%E4%B8%8E%E4%BB%8B%E7%94%B5%E5%B8%B8%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">介电质、极化与介电常数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A3%81%E5%AD%A6%E3%80%81%E7%A3%81%E5%8C%96%E4%B8%8E%E7%A3%81%E5%AF%BC%E7%8E%87"><span class="toc-number">2.2.</span> <span class="toc-text">磁学、磁化与磁导率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E6%B5%81%E3%80%81%E5%AF%BC%E4%BD%93%E4%B8%8E%E7%94%B5%E5%AF%BC%E7%8E%87"><span class="toc-number">2.3.</span> <span class="toc-text">电流、导体与电导率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%92%8C%E8%B6%85%E5%AF%BC%E4%BD%93"><span class="toc-number">2.4.</span> <span class="toc-text">半导体和超导体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E3%80%81%E5%9D%87%E5%8C%80%E3%80%81%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E5%92%8C%E9%9D%9E%E8%89%B2%E6%95%A3%E7%9A%84%E6%9D%90%E6%96%99"><span class="toc-number">2.5.</span> <span class="toc-text">线性、均匀、各向同性和非色散的材料</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E5%8F%8A%E5%85%B6%E8%A7%A3"><span class="toc-number">3.</span> <span class="toc-text">波动方程及其解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E5%8F%98%E7%94%B5%E7%A3%81%E5%9C%BA"><span class="toc-number">3.1.</span> <span class="toc-text">时变电磁场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E8%B0%90%E7%94%B5%E7%A3%81%E5%9C%BA-1"><span class="toc-number">3.2.</span> <span class="toc-text">时谐电磁场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3"><span class="toc-number">3.3.</span> <span class="toc-text">波动方程的解</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/01/02/Master%20Class/Advanced%20Electromagnetics/" title="高等电磁学复习">高等电磁学复习</a><time datetime="2025-01-02T08:50:20.000Z" title="发表于 2025-01-02 16:50:20">2025-01-02</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 By Yunze</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>(() => {
+\mathbf D&amp;=\varepsilon_0\mathbf E_a+ \mathbf P\\
+\mathbf P&amp;=\varepsilon_0\chi_e\mathbf E_a
+\end{aligned}
+\]</span></p>
+<p>其中 <span class="math inline">\(\chi_e\)</span>
+是<strong>电极化率</strong>，表示材料响应电场时的极化能力。将上述公式合并可以得到：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf D=\varepsilon_0\mathbf E_a+\varepsilon_0\chi_e\mathbf
+E_a&amp;=\varepsilon_0(1+\chi_e)\mathbf{E_a}=\varepsilon_s\mathbf{E_a}\\
+\varepsilon_s&amp;=\varepsilon_0(1+\chi_e)
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\varepsilon_s\)</span>
+表示材料的总介电常数，包括真空的贡献。</p>
+<h2 id="磁化与磁导率">磁化与磁导率</h2>
+<p>磁性材料是指在外加磁场作用下表现出<strong>磁极化现象（magnetic
+polarization）</strong>的材料。
+这种现象是由于材料内部的磁偶极子（magnetic
+dipoles）在外加磁场的影响下趋于排列整齐的结果。磁化现象（magnetization）可以通过磁偶极子的排列与外加磁场方向一致来描述。</p>
+<div style="text-align: center;">
+<img src="https://www.freeimg.cn/i/2025/01/06/677b6213e8539.webp" alt style="max-width: 80%; height: auto;">
+<p style="text-align: center;">
+<em>磁化模型：(a)轨道电子 (b)等效环形电路 (c)等效方形电路</em>
+</p>
+</div>
+<p>单一磁矩为：</p>
+<p><span class="math display">\[
+d\mathbf m_i=I_id\mathbf s_i=I_i\hat{\mathbf n}_ids_i=\hat{\mathbf
+n}_iI_ids_i \quad(A\text{-m}^2)
+\]</span></p>
+<p>材料中的总磁矩为：</p>
+<p><span class="math display">\[
+\mathbf m_t=\sum_{i=1}^{N_m\Delta v}d\mathbf m_i=\sum_{i=1}^{N_m\Delta
+v}\hat{\mathbf n}_iI_ids_i
+\]</span></p>
+<p>进一步推导得到磁化矢量强度 <span class="math inline">\(\mathbf
+M\)</span>为：</p>
+<p><span class="math display">\[
+\mathbf M=\lim_{\Delta v\to0}\left[ \frac1{\Delta v}\mathbf
+m_t\right]=\lim_{\Delta v\to0}\left[ \frac1{\Delta
+v}\sum_{i=1}^{N_m\Delta v}d\mathbf m_i\right]=\lim_{\Delta v\to0}\left[
+\frac1{\Delta v}\sum_{i=1}^{N_m\Delta v}\hat{\mathbf{n}}_iI_ids_i\right]
+(\text{A/m})
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf B&amp;=\mu_0(\mathbf H_a+\mathbf M)\\
+\mathbf M&amp;=\chi_m\mathbf H_a
+\end{aligned}
+\]</span></p>
+<p>结合 <span class="math inline">\(\mathbf M\)</span>
+的表达式，磁感应强度 <span class="math inline">\(\mathbf B\)</span>
+可以进一步表示为:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf B&amp;=\mu_0(\mathbf H_a+\chi_m\mathbf
+H_a)=\mu_0(1+\chi_m)\mathbf H_a=\mu_s\mathbf H_a
+\end{aligned}
+\]</span></p>
+<p>其中 <span class="math inline">\(\mu_s\)</span> 是材料的磁导率，<span class="math inline">\(\chi_m\)</span> 是磁化率，<span class="math inline">\(H_a\)</span> 是外加磁场强度。</p>
+<p>在材料内部，由于此话作用会产生束缚磁流密度<span class="math inline">\(\mathbf J_m\)</span>：</p>
+<p><span class="math display">\[
+\mathbf J_m=\nabla\times\mathbf M
+\]</span></p>
+<p>磁场强度 <span class="math inline">\(\mathbf
+H\)</span>可以表达为：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\nabla\times H&amp;=\mathbf J_i+\mathbf J_c+\mathbf J_m+\mathbf J_d\\
+&amp;=\mathbf J_i+\sigma\mathbf E+\nabla\times\mathbf
+M+j\omega\varepsilon\mathbf E
+\end{aligned}
+\]</span></p>
+<p>根据净磁化矢量 <span class="math inline">\(\mathbf M\)</span>
+的方向（是否增强或削弱外加磁场），磁性材料可以分为两类：</p>
+<ul>
+<li><p><strong>抗磁性材料</strong>：抗磁性的定义为当外加磁场作用时，材料内部的磁化方向与外加磁场方向相反。特征是磁化率
+<span class="math inline">\(\chi_m\)</span>
+为负值。，且对磁场的反应较弱。</p></li>
+<li><p><strong>顺磁性及其他磁性材料</strong>：顺磁性的定义为磁化方向与外加磁场方向一致，磁化率
+<span class="math inline">\(\chi_m\)</span>
+为正值，响应也较弱。铁磁性材料能够强烈地响应外加磁场，表现出强磁性，磁化率很高。其他磁性：反铁磁性、亚铁磁性。</p></li>
+</ul>
+<h2 id="导体与电导率">导体与电导率</h2>
+<p>导体材料的特征是允许自由电子的移动并产生电流。</p>
+<h2 id="半导体和超导体">半导体和超导体</h2>
+<h2 id="线性均匀各向同性和非色散的材料">线性、均匀、各向同性和非色散的材料</h2>
+<h1 id="波动方程及其解">波动方程及其解</h1>
+<h2 id="时变电磁场">时变电磁场</h2>
+<h2 id="时谐电磁场">时谐电磁场</h2>
+<h2 id="波动方程的解">波动方程的解</h2>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://Lyz-623.github.io">Yunze</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://lyz-623.github.io/2025/01/02/Master%20Class/Advanced%20Electromagnetics/">https://lyz-623.github.io/2025/01/02/Master%20Class/Advanced%20Electromagnetics/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://Lyz-623.github.io" target="_blank">Yunze's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="post-meta__tags" href="/tags/%E7%94%B5%E7%A3%81%E5%AD%A6/">电磁学</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>给作者赏个鸡腿🍗</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yunze</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%B6%E5%8F%98%E6%97%B6%E8%B0%90%E7%94%B5%E7%A3%81%E5%9C%BA"><span class="toc-number">1.</span> <span class="toc-text">时变、时谐电磁场</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-number">1.2.</span> <span class="toc-text">麦克斯韦方程组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.2.1.</span> <span class="toc-text">微分形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">积分形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%9E%84%E5%8F%82%E6%95%B0%E5%8F%8A%E5%85%B3%E7%B3%BB"><span class="toc-number">1.3.</span> <span class="toc-text">本构参数及关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E8%B7%AF%E5%9C%BA%E5%85%B3%E7%B3%BB"><span class="toc-number">1.4.</span> <span class="toc-text">电路场关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E5%B0%94%E9%9C%8D%E5%A4%AB%E7%94%B5%E5%8E%8B%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">基尔霍夫电压定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E5%B0%94%E9%9C%8D%E5%A4%AB%E7%94%B5%E6%B5%81%E5%AE%9A%E7%90%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">基尔霍夫电流定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%AE%9A%E5%BE%8B"><span class="toc-number">1.4.3.</span> <span class="toc-text">基本定律</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.5.</span> <span class="toc-text">边界条件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E9%99%90%E7%94%B5%E5%AF%BC%E7%8E%87%E4%BB%8B%E8%B4%A8"><span class="toc-number">1.5.1.</span> <span class="toc-text">有限电导率介质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E7%94%B5%E5%AF%BC%E7%8E%87%E4%BB%8B%E8%B4%A8"><span class="toc-number">1.5.2.</span> <span class="toc-text">无限电导率介质</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E7%8E%87%E5%92%8C%E8%83%BD%E9%87%8F"><span class="toc-number">1.6.</span> <span class="toc-text">功率和能量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%A9%E8%B4%A8%E7%9A%84%E7%94%B5%E7%A3%81%E6%80%A7%E8%B4%A8"><span class="toc-number">2.</span> <span class="toc-text">物质的电磁性质</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%94%B5%E8%B4%A8%E6%9E%81%E5%8C%96%E4%B8%8E%E4%BB%8B%E7%94%B5%E5%B8%B8%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">介电质、极化与介电常数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A3%81%E5%8C%96%E4%B8%8E%E7%A3%81%E5%AF%BC%E7%8E%87"><span class="toc-number">2.2.</span> <span class="toc-text">磁化与磁导率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E4%BD%93%E4%B8%8E%E7%94%B5%E5%AF%BC%E7%8E%87"><span class="toc-number">2.3.</span> <span class="toc-text">导体与电导率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%92%8C%E8%B6%85%E5%AF%BC%E4%BD%93"><span class="toc-number">2.4.</span> <span class="toc-text">半导体和超导体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%9D%87%E5%8C%80%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E5%92%8C%E9%9D%9E%E8%89%B2%E6%95%A3%E7%9A%84%E6%9D%90%E6%96%99"><span class="toc-number">2.5.</span> <span class="toc-text">线性、均匀、各向同性和非色散的材料</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E5%8F%8A%E5%85%B6%E8%A7%A3"><span class="toc-number">3.</span> <span class="toc-text">波动方程及其解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E5%8F%98%E7%94%B5%E7%A3%81%E5%9C%BA"><span class="toc-number">3.1.</span> <span class="toc-text">时变电磁场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E8%B0%90%E7%94%B5%E7%A3%81%E5%9C%BA"><span class="toc-number">3.2.</span> <span class="toc-text">时谐电磁场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3"><span class="toc-number">3.3.</span> <span class="toc-text">波动方程的解</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/01/02/Master%20Class/Advanced%20Electromagnetics/" title="高等电磁学复习">高等电磁学复习</a><time datetime="2025-01-02T08:50:20.000Z" title="发表于 2025-01-02 16:50:20">2025-01-02</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 By Yunze</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>(() => {
   const panguFn = () => {
     if (typeof pangu === 'object') pangu.autoSpacingPage()
     else {
