@@ -1,0 +1,50 @@
+name: Yunze Li
+role: Researcher in Microscopy and Computational Imaging
+affiliation: Southern University of Science and Technology (SUSTech)
+location: Shenzhen, China
+hero_image: /images/microscopy-hero.png
+logo: /images/logo.svg
+summary: >
+  I work on microscopy, hyperspectral imaging, and computational methods for
+  biomedical image analysis. My interests center on optical measurement,
+  data-driven reconstruction, and microscopy workflows that make biological
+  structure easier to observe, quantify, and understand.
+keywords:
+  - Microscopy
+  - Computational Imaging
+  - Hyperspectral Imaging
+  - Biomedical Image Analysis
+  - Deep Learning for Imaging
+links:
+  - label: Google Scholar
+    url: https://scholar.google.com/scholar?q=Yunze+Li+SUSTech+microscopy
+  - label: GitHub
+    url: https://github.com/Lyz-623
+  - label: OpenAlex Search
+    url: https://openalex.org/authors?page=1&filter=default.search%3AYunze%20Li
+research:
+  - title: Optical Microscopy
+    body: Designing and using microscopy systems to capture rich spatial and spectral information from biological samples.
+  - title: Computational Reconstruction
+    body: Combining optics, signal processing, and learning-based methods to improve image quality and extract quantitative measurements.
+  - title: Biomedical Imaging Analysis
+    body: Applying hyperspectral and microscopic image analysis to pathology and tissue-level biomedical questions.
+publications:
+  - year: 2026
+    type: Preprint
+    title: Hyperspectral Pathological Imaging for Molecular Subtyping of Breast Cancer Tissues
+    authors: Qize Lv, Ruili Zhou, Chongxuan Tian, Jinlin Deng, Yifei Liu, YunZe Li, Wei Li, and Cuijuan Zhang
+    venue: SSRN Electronic Journal
+    doi: https://doi.org/10.2139/ssrn.6303001
+  - year: 2024
+    type: Journal Article
+    title: Unveiling Thymoma Typing Through Hyperspectral Imaging and Deep Learning
+    authors: Qize Lv, Ke Liang, Chongxuan Tian, Yanhai Zhang, YunZe Li, Jinlin Deng, Weiming Yue, and Wei Li
+    venue: Journal of Biophotonics
+    doi: https://doi.org/10.1002/jbio.202400325
+  - year: 2024
+    type: Journal Article
+    title: Accurate Classification of Glomerular Diseases by Hyperspectral Imaging and Transformer
+    authors: Chongxuan Tian, Yuzhuo Chen, Yelin Liu, Xin Wang, Qize Lv, Yunze Li, Jinlin Deng, Yifei Liu, and Wei Li
+    venue: Computer Methods and Programs in Biomedicine
+    doi: https://doi.org/10.1016/j.cmpb.2024.108285

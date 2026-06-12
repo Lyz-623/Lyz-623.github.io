@@ -1,0 +1,86 @@
+- const profile = site.data.profile || {}
+- const themeNav = theme.nav || []
+- const pageTitle = `${profile.name || 'Yunze Li'} Academic Homepage`
+- const pageDescription = profile.summary || config.description || ''
+- const heroStyle = profile.hero_image ? `--hero-image: url('${url_for(profile.hero_image)}')` : ''
+doctype html
+html(lang=config.language || 'en')
+  include includes/head.pug
+  body
+    a.skip-link(href='#main') Skip to content
+    header.site-header
+      a.brand(href=url_for('/'))
+        if profile.logo
+          img.brand-logo(src=url_for(profile.logo), alt='', width='40', height='40')
+        span= profile.name || config.title
+      nav.site-nav(aria-label='Main navigation')
+        each item in themeNav
+          a(href=item.href)= item.label
+    main#main
+      section.hero(style=heroStyle)
+        .hero-inner
+          p.kicker= profile.affiliation
+          h1= profile.name
+          p.hero-role= profile.role
+          p.hero-summary= profile.summary
+          .hero-actions
+            a.primary-action(href='#publications') View Publications
+            a.secondary-action(href='#contact') Contact
+          if profile.keywords
+            ul.keyword-list(aria-label='Research keywords')
+              each keyword in profile.keywords
+                li= keyword
+      section#about.section
+        .section-header
+          p.eyebrow Profile
+          h2 About
+        .about-grid
+          .about-copy
+            p= profile.summary
+            p I am building this page as a concise academic profile for research updates, publication records, and collaboration links.
+          .quick-facts
+            .fact
+              span.fact-label Affiliation
+              span.fact-value= profile.affiliation
+            .fact
+              span.fact-label Location
+              span.fact-value= profile.location
+            .fact
+              span.fact-label Focus
+              span.fact-value Microscopy and computational imaging
+      section#research.section.section-muted
+        .section-header
+          p.eyebrow Research
+          h2 Research Interests
+        .research-grid
+          each item in profile.research || []
+            article.research-item
+              h3= item.title
+              p= item.body
+      section#publications.section
+        .section-header
+          p.eyebrow Publications
+          h2 Publication List
+          p.section-note Selected imaging and microscopy-related works cross-checked against public scholarly metadata.
+        .publication-list
+          each pub in profile.publications || []
+            article.publication
+              .publication-year= pub.year
+              .publication-body
+                p.publication-type= pub.type
+                h3= pub.title
+                p.authors= pub.authors
+                p.venue= pub.venue
+                if pub.doi
+                  a.doi-link(href=pub.doi, target='_blank', rel='noopener') DOI
+      section#contact.section.section-muted
+        .section-header
+          p.eyebrow Contact
+          h2 Links
+        .link-grid
+          each link in profile.links || []
+            a.profile-link(href=link.url, target='_blank', rel='noopener')
+              span= link.label
+              small Open
+    footer.site-footer
+      p © #{new Date().getFullYear()} #{profile.name}. Built with Hexo for GitHub Pages.

@@ -1,0 +1,23 @@
+- const profile = site.data.profile || {}
+- const pageTitle = `${page.title || config.title} | ${profile.name || config.author || config.title}`
+- const pageDescription = page.description || config.description || ''
+doctype html
+html(lang=config.language || 'en')
+  include includes/head.pug
+  body
+    header.site-header
+      a.brand(href=url_for('/'))
+        if profile.logo
+          img.brand-logo(src=url_for(profile.logo), alt='', width='40', height='40')
+        span= profile.name || config.title
+      nav.site-nav(aria-label='Main navigation')
+        a(href=url_for('/#about')) About
+        a(href=url_for('/#research')) Research
+        a(href=url_for('/#publications')) Publications
+        a(href=url_for('/#contact')) Contact
+    main.page-shell
+      article.page-content
+        h1= page.title
+        != page.content
+    footer.site-footer
+      p © #{new Date().getFullYear()} #{profile.name || config.author}.

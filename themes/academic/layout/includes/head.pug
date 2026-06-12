@@ -1,0 +1,18 @@
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='description', content=pageDescription || config.description || '')
+  meta(name='author', content=(profile && profile.name) || config.author || '')
+  meta(name='keywords', content=((profile && profile.keywords) ? profile.keywords.join(', ') : config.keywords || ''))
+  meta(property='og:title', content=pageTitle || config.title)
+  meta(property='og:description', content=pageDescription || config.description || '')
+  meta(property='og:type', content='website')
+  if profile && profile.hero_image
+    meta(property='og:image', content=url_for(profile.hero_image))
+  title= pageTitle || config.title
+  if profile && profile.logo
+    link(rel='icon', href=url_for(profile.logo), type='image/svg+xml')
+  link(rel='preconnect', href='https://fonts.googleapis.com')
+  link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap')
+  != css('css/main')

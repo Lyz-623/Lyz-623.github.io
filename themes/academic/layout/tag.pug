@@ -1,0 +1,16 @@
+- const profile = site.data.profile || {}
+- const pageTitle = `Tag | ${profile.name || config.title}`
+- const pageDescription = config.description || ''
+doctype html
+html(lang=config.language || 'en')
+  include includes/head.pug
+  body
+    header.site-header
+      a.brand(href=url_for('/'))
+        if profile.logo
+          img.brand-logo(src=url_for(profile.logo), alt='', width='40', height='40')
+        span= profile.name || config.title
+    main.page-shell
+      article.page-content
+        h1 Tag
+        p This academic homepage no longer uses course tags.

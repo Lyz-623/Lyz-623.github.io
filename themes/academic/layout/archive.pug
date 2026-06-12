@@ -1,0 +1,21 @@
+- const profile = site.data.profile || {}
+- const pageTitle = `Archive | ${profile.name || config.title}`
+- const pageDescription = config.description || ''
+doctype html
+html(lang=config.language || 'en')
+  include includes/head.pug
+  body
+    header.site-header
+      a.brand(href=url_for('/'))
+        if profile.logo
+          img.brand-logo(src=url_for(profile.logo), alt='', width='40', height='40')
+        span= profile.name || config.title
+      nav.site-nav(aria-label='Main navigation')
+        a(href=url_for('/#publications')) Publications
+        a(href=url_for('/#contact')) Contact
+    main.page-shell
+      article.page-content
+        h1 Archive
+        p This academic homepage no longer uses a course-blog archive.
+    footer.site-footer
+      p © #{new Date().getFullYear()} #{profile.name || config.author}.
