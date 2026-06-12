@@ -15,3 +15,6 @@ assets/logo.svg
 
 The site follows a simple academic homepage style: short biography, research
 interests, publication list, and academic links.
+
+Publication entries should only be added after they are verified against Yunze
+Li's Google Scholar profile.

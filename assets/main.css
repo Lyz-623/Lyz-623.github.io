@@ -129,13 +129,19 @@ h2 {
   padding: 0;
 }
 
+.education-list,
 .interest-list {
   margin: 0;
   padding-left: 1.25rem;
 }
 
+.education-list li,
 .interest-list li {
   margin: 0.18rem 0;
+}
+
+.degree {
+  font-weight: 600;
 }
 
 .publication-list {
@@ -162,6 +168,10 @@ h2 {
 
 .paper-venue {
   color: var(--ink);
+}
+
+.publication-note {
+  color: var(--muted);
 }
 
 .plain-links {
