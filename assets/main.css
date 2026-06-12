@@ -119,11 +119,6 @@ h2 {
   line-height: 1.25;
 }
 
-.affiliation {
-  margin-bottom: 1.05rem;
-  color: var(--muted);
-}
-
 .section {
   padding: 0;
 }
@@ -157,7 +152,7 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #ffffff;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
 }
 
 .publication-media img {
@@ -237,10 +232,6 @@ h2 {
 
   .publication-media {
     max-width: 440px;
-  }
-
-  .affiliation {
-    text-align: left;
   }
 
   h1 {
