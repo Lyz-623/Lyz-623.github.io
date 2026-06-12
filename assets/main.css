@@ -86,8 +86,7 @@ hr {
   gap: 0.25rem 0.45rem;
 }
 
-.profile-links a::before,
-.plain-links a:not(:first-child)::before {
+.profile-links a::before {
   color: var(--muted);
 }
 
@@ -144,42 +143,29 @@ h2 {
   font-weight: 600;
 }
 
-.research-list {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.research-entry h3 {
-  margin: 0 0 0.25rem;
-  font-size: 1.02rem;
-  line-height: 1.35;
-}
-
-.entry-meta {
-  margin-bottom: 0.5rem;
-  color: var(--muted);
-}
-
 .publication {
   display: grid;
-  grid-template-columns: 270px minmax(0, 1fr);
-  gap: 26px;
+  grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+  gap: 42px;
   align-items: start;
-  margin-bottom: 0.85rem;
+  margin: 1.05rem 0 0.85rem;
 }
 
 .publication-media {
   display: block;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--soft);
+  border-radius: 14px;
+  background: #ffffff;
+  aspect-ratio: 16 / 9;
 }
 
 .publication-media img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .publication-body {
@@ -210,25 +196,8 @@ h2 {
   color: var(--muted);
 }
 
-.skill-list {
-  margin: 0;
-  padding-left: 1.25rem;
-}
-
-.skill-list li {
-  margin: 0.18rem 0;
-}
-
-.skill-label {
-  font-weight: 600;
-}
-
 .publication-note {
   color: var(--muted);
-}
-
-.plain-links {
-  margin: 0;
 }
 
 .footer {
@@ -267,7 +236,7 @@ h2 {
   }
 
   .publication-media {
-    max-width: 360px;
+    max-width: 440px;
   }
 
   .affiliation {
