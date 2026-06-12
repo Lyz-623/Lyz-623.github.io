@@ -140,8 +140,8 @@ h2 {
 
 .publication {
   display: grid;
-  grid-template-columns: 252px minmax(0, 1fr);
-  gap: 34px;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 28px;
   align-items: start;
   margin: 1.05rem 0 0.85rem;
 }
@@ -231,7 +231,7 @@ h2 {
   }
 
   .publication-media {
-    max-width: 252px;
+    max-width: 150px;
   }
 
   h1 {
