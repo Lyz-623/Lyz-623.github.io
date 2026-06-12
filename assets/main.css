@@ -132,6 +132,20 @@ h2 {
   margin: 0.18rem 0;
 }
 
+.project-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.project-title {
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.project-note {
+  color: var(--muted);
+}
+
 .publication {
   display: grid;
   grid-template-columns: 200px minmax(0, 1fr);
