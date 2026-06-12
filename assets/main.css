@@ -148,6 +148,8 @@ h2 {
 .project-media {
   display: block;
   overflow: hidden;
+  width: 200px;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #ffffff;
@@ -196,6 +198,8 @@ h2 {
 .publication-media {
   display: block;
   overflow: hidden;
+  width: 200px;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #ffffff;
