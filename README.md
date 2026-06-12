@@ -10,11 +10,13 @@ Deployment files:
 index.html
 assets/main.css
 assets/logo.svg
+assets/publications/li-2024-optics-letters-fig1.png
 .nojekyll
 ```
 
 The site follows a simple academic homepage style: short biography, research
-interests, publication list, and academic links.
+interests, selected research, publication list, technical skills, and academic
+links.
 
 Publication entries should only be added after they are verified against Yunze
 Li's Google Scholar profile.

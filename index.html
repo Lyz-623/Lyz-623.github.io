@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic homepage of Yunze Li, focused on microscopy and computational biomedical imaging.">
+  <meta name="description" content="Academic homepage of Yunze Li, focused on fluorescence microscopy, Raman microscopy, and computational imaging.">
   <meta name="author" content="Yunze Li">
-  <meta name="keywords" content="Yunze Li, SUSTech, microscopy, hyperspectral imaging, computational imaging, biomedical imaging">
+  <meta name="keywords" content="Yunze Li, SUSTech, microscopy, super-resolution imaging, Raman microscopy, computational imaging, biomedical engineering">
   <meta property="og:title" content="Yunze Li">
-  <meta property="og:description" content="Academic homepage of Yunze Li. Research interests include microscopy, hyperspectral imaging, and computational biomedical imaging.">
+  <meta property="og:description" content="Academic homepage of Yunze Li. Research interests include fluorescence microscopy, Raman microscopy, and computational imaging.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/logo.svg">
   <title>Yunze Li</title>
@@ -30,12 +30,13 @@
         <section class="profile-copy" aria-label="Biography">
           <p class="affiliation">Southern University of Science and Technology (SUSTech), Shenzhen, China</p>
           <p>
-            I work on microscopy, hyperspectral imaging, and computational methods for biomedical image analysis.
-            My interests center on optical measurement, data-driven reconstruction, and microscopy workflows that
-            make biological structure easier to observe, quantify, and understand.
+            I am a master's student in Electronic Science and Technology at SUSTech, with a background in
+            Biomedical Engineering. My research focuses on optical microscopy systems and computational methods
+            for biomedical imaging, especially super-resolution fluorescence microscopy and Raman microscopy.
           </p>
           <p>
-            This homepage keeps a concise record of my research interests, publications, and academic links.
+            I am interested in building microscopy workflows that combine optical instrumentation, signal
+            processing, and learning-based reconstruction to improve image stability, throughput, and data quality.
           </p>
         </section>
       </div>
@@ -47,14 +48,14 @@
       <h2>Education</h2>
       <ul class="education-list">
         <li>
-          <span class="degree">M.S.</span>,
+          <span class="degree">M.S. in Electronic Science and Technology</span>,
           <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="noopener">Southern University of Science and Technology (SUSTech)</a>,
-          Shenzhen, China.
+          Shenzhen, China. September 2023 - expected July 2026. GPA: 3.46/4.00.
         </li>
         <li>
-          <span class="degree">B.S.</span>,
+          <span class="degree">B.S. in Biomedical Engineering</span>,
           <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="noopener">Southern University of Science and Technology (SUSTech)</a>,
-          Shenzhen, China.
+          Shenzhen, China. September 2019 - June 2023. GPA: 3.56/4.00.
         </li>
       </ul>
     </section>
@@ -64,24 +65,92 @@
     <section class="section" id="research">
       <h2>Research Interests</h2>
       <ul class="interest-list">
-        <li>Optical microscopy and biomedical imaging</li>
-        <li>Hyperspectral pathological imaging</li>
-        <li>Computational reconstruction and image analysis</li>
-        <li>Deep learning methods for microscopy data</li>
+        <li>Super-resolution fluorescence microscopy and single-molecule localization microscopy (SMLM)</li>
+        <li>Raman microscopy systems for high-throughput, label-free chemical imaging</li>
+        <li>Optical path alignment, focus stabilization, and drift correction for microscopy platforms</li>
+        <li>Deep learning-based spectral denoising, reconstruction, and unmixing</li>
       </ul>
+    </section>
+
+    <hr>
+
+    <section class="section" id="projects">
+      <h2>Selected Research</h2>
+      <div class="research-list">
+        <article class="research-entry">
+          <h3>Line-scan Raman microscopy and denoising algorithms</h3>
+          <p class="entry-meta">Master's thesis, supervised by Prof. Perry Ping Shum and Prof. Jinna Chen</p>
+          <p>
+            Built and studied a line-scan Raman microscopic imaging system for high-throughput, label-free
+            chemical imaging. The platform combines line-shaped parallel excitation, scanning control, and an
+            area-array CCD detector, allowing spatial information and Raman spectra along one line to be recorded
+            simultaneously.
+          </p>
+          <p>
+            Developed a CCD-noise-model-based deep learning denoising method using simulated noisy/clean spectral
+            pairs, and designed an end-to-end framework combining denoising and spectral unmixing for low-SNR
+            mixed spectra.
+          </p>
+        </article>
+        <article class="research-entry">
+          <h3>3D drift correction for super-resolution imaging</h3>
+          <p class="entry-meta">Super-resolution fluorescence microscopy / SMLM</p>
+          <p>
+            Worked on a 3D drift correction strategy for SMLM using a single near-infrared laser. The method uses
+            reflected light for axial focus stabilization and speckle images for lateral drift estimation, improving
+            robustness when localization events are sparse.
+          </p>
+        </article>
+      </div>
     </section>
 
     <hr>
 
     <section class="section" id="publications">
       <h2>Publications</h2>
-      <p>
-        The verified publication list is maintained on
-        <a href="https://scholar.google.com/citations?hl=en&amp;view_op=search_authors&amp;mauthors=Yunze+Li+Southern+University+of+Science+and+Technology+Microscopy" target="_blank" rel="noopener">Google Scholar</a>.
-      </p>
+      <article class="publication">
+        <a class="publication-media" href="https://doi.org/10.1364/OL.519290" target="_blank" rel="noopener" aria-label="Open publication DOI">
+          <img src="assets/publications/li-2024-optics-letters-fig1.png" alt="Schematic of the optical setup for 3D drift correction in super-resolution imaging">
+        </a>
+        <div class="publication-body">
+          <p class="paper-title">
+            <a href="https://doi.org/10.1364/OL.519290" target="_blank" rel="noopener">
+              3D drift correction for super-resolution imaging with a single laser light
+            </a>
+          </p>
+          <p class="paper-meta">
+            <strong>Yunze Li</strong><sup>†</sup>, Yingchuan He<sup>†</sup>, Ke Fang, Lulu Zhou, Zhen Wang,
+            Wei Shi, and Yiming Li.
+          </p>
+          <p class="paper-venue">Optics Letters, 49(10), 2785-2788, 2024.</p>
+          <p class="paper-summary">
+            A single-laser strategy for simultaneous axial focus stabilization and lateral drift estimation in
+            single-molecule localization microscopy.
+          </p>
+          <p class="paper-links">
+            <a href="https://doi.org/10.1364/OL.519290" target="_blank" rel="noopener">DOI</a> |
+            <a href="https://doi.org/10.5281/zenodo.10824433" target="_blank" rel="noopener">Data</a>
+          </p>
+          <p class="publication-note"><sup>†</sup> Equal contribution.</p>
+        </div>
+      </article>
       <p class="publication-note">
-        Unverified entries have been removed from this page to avoid incorrect attribution.
+        Publication information is summarized from the attached CV and should be consistent with the verified
+        Google Scholar record.
       </p>
+    </section>
+
+    <hr>
+
+    <section class="section" id="skills">
+      <h2>Technical Skills</h2>
+      <ul class="skill-list">
+        <li><span class="skill-label">Programming:</span> Python, PyTorch, MATLAB</li>
+        <li><span class="skill-label">Optical systems:</span> optical path adjustment, fluorescence microscopy, Raman microscopy</li>
+        <li><span class="skill-label">Laboratory:</span> cell culture procedures and sample preparation experience</li>
+        <li><span class="skill-label">CAD:</span> SolidWorks</li>
+        <li><span class="skill-label">Language:</span> TOEFL iBT 102</li>
+      </ul>
     </section>
 
     <hr>
