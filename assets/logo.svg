@@ -1,27 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
-  <title id="title">Yunze Li academic logo</title>
-  <desc id="desc">YL monogram with a microscope objective and spectral imaging lines.</desc>
-  <defs>
-    <linearGradient id="disc" x1="20" y1="18" x2="138" y2="142" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f7fbfb"/>
-      <stop offset="0.48" stop-color="#dff2ef"/>
-      <stop offset="1" stop-color="#cfe7e3"/>
-    </linearGradient>
-    <linearGradient id="spectrum" x1="28" y1="120" x2="132" y2="36" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2a9da7"/>
-      <stop offset="0.35" stop-color="#27b579"/>
-      <stop offset="0.66" stop-color="#d0a73b"/>
-      <stop offset="1" stop-color="#c45b4d"/>
-    </linearGradient>
-  </defs>
-  <circle cx="80" cy="80" r="74" fill="url(#disc)" stroke="#13242b" stroke-width="7"/>
-  <path d="M42 48l28 39v26h17V87l28-39H95L79 72 62 48H42z" fill="#13242b"/>
-  <path d="M92 47h18v52h31v15H92V47z" fill="#13242b"/>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M36 116c18-13 32-20 48-25 16-4 29-13 42-31" stroke="url(#spectrum)" stroke-width="8"/>
-    <path d="M29 124c26-3 51-9 77-24" stroke="#2a9da7" stroke-width="4" opacity=".58"/>
-    <path d="M114 31l16 10-19 30-16-10 19-30z" fill="#ffffff" stroke="#13242b" stroke-width="5"/>
-    <path d="M108 71l-10 15" stroke="#13242b" stroke-width="5"/>
-    <circle cx="95" cy="90" r="7" fill="#ffffff" stroke="#13242b" stroke-width="4"/>
+  <title id="title">Yunze Li logo</title>
+  <desc id="desc">A simple YL monogram with a microscopy mark.</desc>
+  <rect x="8" y="8" width="144" height="144" rx="18" fill="#f7f7f7" stroke="#222222" stroke-width="5"/>
+  <text x="80" y="83" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="56" font-weight="700" fill="#222222">YL</text>
+  <g fill="none" stroke="#1772d0" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43 110c17-11 32-16 48-16 15 0 25-5 34-16" stroke-width="5"/>
+    <path d="M101 43h24l-18 30h-24z" stroke-width="4"/>
+    <path d="M96 73l-10 16" stroke-width="4"/>
+    <circle cx="84" cy="92" r="6" fill="#ffffff" stroke-width="4"/>
   </g>
 </svg>

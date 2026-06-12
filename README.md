@@ -10,9 +10,8 @@ Deployment files:
 index.html
 assets/main.css
 assets/logo.svg
-assets/microscopy-hero.svg
 .nojekyll
 ```
 
-The site presents Yunze Li's microscopy and computational imaging profile,
-research interests, publication list, and academic links.
+The site follows a simple academic homepage style: short biography, research
+interests, publication list, and academic links.
