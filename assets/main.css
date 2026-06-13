@@ -173,10 +173,23 @@ h2 {
   font-weight: 600;
 }
 
-.repo-star-badge {
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-row-primary {
+  min-width: 0;
+}
+
+.metric-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.32rem;
+  margin-left: auto;
   color: var(--ink);
   font-size: 0.92rem;
   font-weight: 600;
@@ -184,13 +197,13 @@ h2 {
   vertical-align: middle;
 }
 
-.repo-star-badge:focus,
-.repo-star-badge:hover {
+.metric-badge:focus,
+.metric-badge:hover {
   color: var(--ink);
 }
 
-.repo-star-label,
-.repo-star-count {
+.metric-label,
+.metric-count {
   display: inline-flex;
   align-items: center;
   min-height: 1.45rem;
@@ -200,17 +213,17 @@ h2 {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-.repo-star-label {
+.metric-label {
   gap: 0.28rem;
   padding: 0.12rem 0.42rem;
 }
 
-.repo-star-count {
+.metric-count {
   padding: 0.12rem 0.38rem;
   background: #ffffff;
 }
 
-.repo-star-icon {
+.metric-icon {
   flex: 0 0 auto;
   fill: currentColor;
 }
