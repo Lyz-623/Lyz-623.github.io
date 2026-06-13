@@ -12,7 +12,7 @@
   <meta property="og:image" content="assets/logo.svg">
   <title>Yunze Li</title>
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/main.css?v=20260613-thumb">
+  <link rel="stylesheet" href="assets/main.css?v=20260613-stars">
 </head>
 <body>
   <main class="page">
@@ -109,6 +109,10 @@
           <div class="project-body">
             <p class="project-title">
               <a href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener">JournalLens</a>
+              <span class="repo-star-tag" data-github-stars="Lyz-623/JournalLens" aria-label="2 GitHub stars">
+                <span aria-hidden="true">&#9733;</span>
+                <span data-star-count>2</span>
+              </span>
             </p>
             <p class="project-meta">Zotero plugin for journal following and recent-paper scanning.</p>
             <p class="project-summary">
@@ -129,5 +133,53 @@
       <p>Last updated: June 2026.</p>
     </footer>
   </main>
+  <script>
+    (() => {
+      const tags = document.querySelectorAll("[data-github-stars]");
+
+      if (!tags.length || !window.fetch) {
+        return;
+      }
+
+      const formatter = new Intl.NumberFormat("en", {
+        notation: "compact",
+        maximumFractionDigits: 1
+      });
+
+      const updateTag = (tag, count) => {
+        const formattedCount = formatter.format(count);
+        const countNode = tag.querySelector("[data-star-count]");
+
+        if (countNode) {
+          countNode.textContent = formattedCount;
+        }
+
+        tag.setAttribute("aria-label", `${formattedCount} GitHub stars`);
+      };
+
+      const repos = [...new Set([...tags].map((tag) => tag.dataset.githubStars).filter(Boolean))];
+
+      repos.forEach((repo) => {
+        fetch(`https://api.github.com/repos/${repo}`, {
+          headers: {
+            Accept: "application/vnd.github+json"
+          }
+        })
+          .then((response) => (response.ok ? response.json() : null))
+          .then((data) => {
+            if (!data || typeof data.stargazers_count !== "number") {
+              return;
+            }
+
+            tags.forEach((tag) => {
+              if (tag.dataset.githubStars === repo) {
+                updateTag(tag, data.stargazers_count);
+              }
+            });
+          })
+          .catch(() => {});
+      });
+    })();
+  </script>
 </body>
 </html>
