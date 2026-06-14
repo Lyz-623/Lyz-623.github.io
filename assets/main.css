@@ -157,10 +157,6 @@ hr {
   grid-area: rednote;
 }
 
-.profile-link-rednote svg {
-  color: #ff2442;
-}
-
 .profile-copy {
   text-align: justify;
 }
