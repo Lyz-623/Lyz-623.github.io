@@ -86,8 +86,8 @@ hr {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-areas:
     "email github"
-    "scholar scholar"
-    "twitter rednote";
+    "twitter rednote"
+    "scholar scholar";
   gap: 0.42rem;
   width: min(100%, 218px);
   margin: 0.75rem auto 0;
@@ -130,9 +130,9 @@ hr {
   stroke-linejoin: round;
 }
 
-.profile-links a:nth-child(3) svg,
-.profile-links a:nth-child(4) svg,
-.profile-links a:nth-child(5) svg {
+.profile-link-github svg,
+.profile-link-twitter svg,
+.profile-link-rednote svg {
   fill: currentColor;
   stroke: none;
 }
