@@ -191,6 +191,72 @@ h2 {
   padding: 0;
 }
 
+.filterable-section {
+  display: grid;
+  grid-template-columns: 142px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding-top: 1.05rem;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+  width: 100%;
+  min-height: 2rem;
+  padding: 0.34rem 0.58rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--soft);
+  font: inherit;
+  font-size: 0.78rem;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.filter-chip:focus,
+.filter-chip:hover,
+.filter-chip.is-active {
+  color: var(--ink);
+  border-color: #d6cabd;
+  background: #fffaf4;
+}
+
+.filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.15rem;
+  height: 1.15rem;
+  padding: 0 0.25rem;
+  border-radius: 999px;
+  color: var(--muted);
+  background: #f1ede8;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.filter-chip.is-active .filter-count {
+  color: var(--link-hover);
+  background: #f8e8dc;
+}
+
+.filter-item.is-hidden {
+  display: none;
+}
+
 .interest-list {
   margin: 0;
   padding-left: 1.25rem;
@@ -397,6 +463,22 @@ h2 {
 
   .profile-copy {
     text-align: left;
+  }
+
+  .filterable-section {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .filter-panel {
+    flex-flow: row wrap;
+    gap: 0.45rem;
+    padding-top: 0;
+  }
+
+  .filter-chip {
+    width: auto;
+    min-width: 6.2rem;
   }
 
   .publication {
