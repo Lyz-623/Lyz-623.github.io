@@ -5,8 +5,13 @@
   --line: #e6e2dc;
   --link: #b5651d;
   --link-hover: #8b2e2e;
+  --accent: #2f6f73;
+  --accent-soft: #e7f0ef;
   --paper: #fafaf8;
   --soft: #ffffff;
+  --shadow-soft: 0 10px 24px rgba(28, 27, 26, 0.07);
+  --shadow-hover: 0 16px 34px rgba(28, 27, 26, 0.1);
+  --motion: 180ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 * {
@@ -20,7 +25,8 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background:
+    linear-gradient(180deg, #fbfbfa 0%, var(--paper) 46%, #f6f3ee 100%);
   font-family: "Lora", Georgia, "Times New Roman", serif;
   font-size: 16.5px;
   line-height: 1.68;
@@ -31,11 +37,40 @@ body {
 a {
   color: var(--link);
   text-decoration: none;
+  transition: color var(--motion);
 }
 
 a:focus,
 a:hover {
   color: var(--link-hover);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(47, 111, 115, 0.32);
+  outline-offset: 3px;
+}
+
+.profile-copy a,
+.paper-title a,
+.project-title a,
+.link-row-primary a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: color var(--motion), background-size var(--motion);
+}
+
+.profile-copy a:focus,
+.profile-copy a:hover,
+.paper-title a:focus,
+.paper-title a:hover,
+.project-title a:focus,
+.project-title a:hover,
+.link-row-primary a:focus,
+.link-row-primary a:hover {
+  background-size: 100% 1px;
 }
 
 p {
@@ -53,11 +88,13 @@ hr {
   width: min(900px, calc(100% - 32px));
   margin: 0 auto;
   padding: 34px 0 42px;
+  animation: page-in 520ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .profile {
   display: grid;
   gap: 22px;
+  animation: rise-in 520ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .profile-grid {
@@ -77,8 +114,16 @@ hr {
   height: auto;
   margin: 0 auto 0.9rem;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 8px;
   background: var(--soft);
+  box-shadow: 0 8px 20px rgba(28, 27, 26, 0.06);
+  transition: transform var(--motion), box-shadow var(--motion), border-color var(--motion);
+}
+
+.profile-card:hover .profile-logo {
+  transform: translateY(-2px);
+  border-color: #d6cabd;
+  box-shadow: var(--shadow-soft);
 }
 
 .profile-links {
@@ -109,7 +154,12 @@ hr {
   line-height: 1;
   white-space: nowrap;
   box-shadow: 0 1px 2px rgba(28, 27, 26, 0.025);
-  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  transition:
+    color var(--motion),
+    border-color var(--motion),
+    background-color var(--motion),
+    box-shadow var(--motion),
+    transform var(--motion);
 }
 
 .profile-links a:focus,
@@ -117,6 +167,8 @@ hr {
   color: var(--link-hover);
   border-color: #d6cabd;
   background: #fffaf4;
+  box-shadow: 0 6px 16px rgba(28, 27, 26, 0.06);
+  transform: translateY(-1px);
 }
 
 .profile-links svg {
@@ -158,7 +210,9 @@ hr {
 }
 
 .profile-copy {
+  min-width: 0;
   text-align: justify;
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -181,10 +235,33 @@ h2 {
   margin-bottom: 0.7rem;
   font-size: 1.35rem;
   line-height: 1.25;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+h2::after {
+  content: "";
+  width: 2.3rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(47, 111, 115, 0.58), transparent);
 }
 
 .section {
-  padding: 0;
+  padding: 0.1rem 0;
+  animation: rise-in 560ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.section:nth-of-type(1) {
+  animation-delay: 80ms;
+}
+
+.section:nth-of-type(2) {
+  animation-delay: 140ms;
+}
+
+.section:nth-of-type(3) {
+  animation-delay: 200ms;
 }
 
 .filterable-section {
@@ -192,6 +269,10 @@ h2 {
   grid-template-columns: 78px minmax(0, 1fr);
   gap: 18px;
   align-items: start;
+}
+
+.filter-results {
+  min-width: 0;
 }
 
 .filter-panel {
@@ -220,7 +301,12 @@ h2 {
   text-align: left;
   white-space: nowrap;
   cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  transition:
+    color var(--motion),
+    border-color var(--motion),
+    background-color var(--motion),
+    box-shadow var(--motion),
+    transform var(--motion);
 }
 
 .filter-chip:focus,
@@ -229,6 +315,13 @@ h2 {
   color: var(--ink);
   border-color: #d6cabd;
   background: #fffaf4;
+  box-shadow: 0 6px 14px rgba(28, 27, 26, 0.055);
+  transform: translateY(-1px);
+}
+
+.filter-chip.is-active {
+  border-color: rgba(47, 111, 115, 0.34);
+  background: var(--accent-soft);
 }
 
 .filter-count {
@@ -246,8 +339,8 @@ h2 {
 }
 
 .filter-chip.is-active .filter-count {
-  color: var(--link-hover);
-  background: #f8e8dc;
+  color: #1d5558;
+  background: #ffffff;
 }
 
 .filter-item.is-hidden {
@@ -263,6 +356,10 @@ h2 {
   margin: 0.18rem 0;
 }
 
+.interest-list li::marker {
+  color: var(--accent);
+}
+
 .project-list {
   display: grid;
   gap: 0.85rem;
@@ -274,6 +371,24 @@ h2 {
   gap: 28px;
   align-items: start;
   margin: 1.05rem 0 0.85rem;
+  padding: 0.95rem;
+  border: 1px solid rgba(230, 226, 220, 0.92);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 6px 18px rgba(28, 27, 26, 0.035);
+  transition:
+    transform var(--motion),
+    box-shadow var(--motion),
+    border-color var(--motion),
+    background-color var(--motion);
+}
+
+.project-card:focus-within,
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: #d6cabd;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-hover);
 }
 
 .project-media {
@@ -282,7 +397,7 @@ h2 {
   width: 200px;
   max-width: 100%;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 8px;
   background: #ffffff;
   aspect-ratio: 1 / 1;
 }
@@ -293,6 +408,12 @@ h2 {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: transform 260ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.project-card:focus-within .project-media img,
+.project-card:hover .project-media img {
+  transform: scale(1.025);
 }
 
 .project-body {
@@ -326,11 +447,13 @@ h2 {
   font-weight: 600;
   line-height: 1.25;
   vertical-align: middle;
+  transition: transform var(--motion), color var(--motion);
 }
 
 .metric-badge:focus,
 .metric-badge:hover {
   color: var(--ink);
+  transform: translateY(-1px);
 }
 
 .metric-label,
@@ -379,6 +502,24 @@ h2 {
   gap: 28px;
   align-items: start;
   margin: 1.05rem 0 0.85rem;
+  padding: 0.95rem;
+  border: 1px solid rgba(230, 226, 220, 0.92);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 6px 18px rgba(28, 27, 26, 0.035);
+  transition:
+    transform var(--motion),
+    box-shadow var(--motion),
+    border-color var(--motion),
+    background-color var(--motion);
+}
+
+.publication:focus-within,
+.publication:hover {
+  transform: translateY(-3px);
+  border-color: #d6cabd;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-hover);
 }
 
 .publication-media {
@@ -387,7 +528,7 @@ h2 {
   width: 200px;
   max-width: 100%;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 8px;
   background: #ffffff;
   aspect-ratio: 1 / 1;
 }
@@ -398,6 +539,12 @@ h2 {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: transform 260ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.publication:focus-within .publication-media img,
+.publication:hover .publication-media img {
+  transform: scale(1.025);
 }
 
 .publication-body {
@@ -437,6 +584,7 @@ h2 {
   color: var(--muted);
   font-size: 0.92rem;
   text-align: center;
+  animation: rise-in 560ms cubic-bezier(0.2, 0.8, 0.2, 1) 240ms both;
 }
 
 .footer p {
@@ -445,7 +593,8 @@ h2 {
 
 @media (max-width: 720px) {
   .page {
-    width: min(100% - 24px, 900px);
+    width: calc(100% - 24px);
+    max-width: 900px;
     padding-top: 24px;
   }
 
@@ -495,5 +644,42 @@ h2 {
 
   h1 {
     font-size: 2rem;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
   }
 }
