@@ -17,8 +17,8 @@ assets/projects/zotassets-logo.svg
 .nojekyll
 ```
 
-The site follows a simple academic homepage style: short biography, research
-interests, publication list, projects, and academic links.
+The site follows a simple academic homepage style: short biography, news,
+publication list, projects, and academic links.
 
 Publication entries should only be added after they are verified against Yunze
 Li's Google Scholar profile:
