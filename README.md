@@ -22,3 +22,6 @@ interests, publication list, projects, and academic links.
 Publication entries should only be added after they are verified against Yunze
 Li's Google Scholar profile:
 https://scholar.google.com/citations?hl=zh-CN&user=NIT1ZyoAAAAJ&view_op=list_works&gmla=ACrTK9V4U4XJGi3u-X1_aEz2C8ieXOJKc-RLPsJrgdb30XDj7qxi1IvGoTiFi14KnZMykgUfMp9R3tKBCERM9Ws
+
+Publication venue names should be italicized, for example:
+`<em>Optics Letters</em>, 49(10), 2785-2788, 2024.`
