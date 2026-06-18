@@ -1,15 +1,16 @@
 :root {
   color-scheme: light;
-  --ink: #1c1b1a;
-  --muted: #5f5a54;
-  --line: #e6e2dc;
-  --link: #b5651d;
-  --link-hover: #8b2e2e;
-  --accent: #2f6f73;
-  --accent-soft: #e7f0ef;
-  --paper: #fafaf8;
-  --soft: #ffffff;
-  --shadow-soft: 0 10px 24px rgba(28, 27, 26, 0.07);
+  --ink: #242320;
+  --muted: #6b665f;
+  --line: #ded8cf;
+  --line-strong: #d2cbc1;
+  --link: #9a5f2f;
+  --link-hover: #70442a;
+  --accent: #526f69;
+  --accent-soft: #edf3f1;
+  --paper: #f7f8f5;
+  --soft: #fffefa;
+  --shadow-soft: 0 10px 24px rgba(36, 34, 31, 0.06);
   --motion: 180ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
@@ -25,7 +26,7 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(180deg, #fbfbfa 0%, var(--paper) 46%, #f6f3ee 100%);
+    linear-gradient(180deg, #fbfcfa 0%, var(--paper) 48%, #f2f4ef 100%);
   font-family: "Lora", Georgia, "Times New Roman", serif;
   font-size: 16.5px;
   line-height: 1.68;
@@ -46,7 +47,7 @@ a:hover {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid rgba(47, 111, 115, 0.32);
+  outline: 2px solid rgba(82, 111, 105, 0.32);
   outline-offset: 4px;
 }
 
@@ -115,13 +116,13 @@ hr {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--soft);
-  box-shadow: 0 8px 20px rgba(28, 27, 26, 0.06);
+  box-shadow: 0 8px 20px rgba(36, 34, 31, 0.05);
   transition: transform var(--motion), box-shadow var(--motion), border-color var(--motion);
 }
 
 .profile-card:hover .profile-logo {
   transform: translateY(-2px);
-  border-color: #d6cabd;
+  border-color: var(--line-strong);
   box-shadow: var(--shadow-soft);
 }
 
@@ -153,7 +154,7 @@ hr {
 .profile-links a:focus,
 .profile-links a:hover {
   color: var(--link-hover);
-  background: rgba(47, 111, 115, 0.07);
+  background: rgba(82, 111, 105, 0.08);
   transform: translateY(-1px);
 }
 
@@ -278,14 +279,14 @@ h2:only-child {
 .filter-chip:hover,
 .filter-chip.is-active {
   color: var(--ink);
-  border-color: #d6cabd;
-  background: #fffaf4;
-  box-shadow: 0 6px 14px rgba(28, 27, 26, 0.055);
+  border-color: var(--line-strong);
+  background: var(--soft);
+  box-shadow: 0 6px 14px rgba(36, 34, 31, 0.045);
   transform: translateY(-1px);
 }
 
 .filter-chip.is-active {
-  border-color: rgba(47, 111, 115, 0.34);
+  border-color: rgba(82, 111, 105, 0.36);
   background: var(--accent-soft);
 }
 
@@ -298,14 +299,14 @@ h2:only-child {
   padding: 0 0.22rem;
   border-radius: 999px;
   color: var(--muted);
-  background: #f1ede8;
+  background: #ece8e2;
   font-size: 0.68rem;
   font-weight: 600;
 }
 
 .filter-chip.is-active .filter-count {
-  color: #1d5558;
-  background: #ffffff;
+  color: #3d5f59;
+  background: var(--soft);
 }
 
 .filter-item.is-hidden {
@@ -334,9 +335,10 @@ h2:only-child {
   white-space: nowrap;
 }
 
+.publication-list,
 .project-list {
   display: grid;
-  gap: 0.85rem;
+  gap: 1.45rem;
 }
 
 .project-card {
@@ -344,12 +346,7 @@ h2:only-child {
   grid-template-columns: 200px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
-  margin: 1rem 0 0.9rem;
-}
-
-.project-card + .project-card {
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
+  margin: 0.95rem 0 0;
 }
 
 .project-media {
@@ -359,7 +356,7 @@ h2:only-child {
   max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--soft);
   aspect-ratio: 1 / 1;
 }
 
@@ -422,9 +419,9 @@ h2:only-child {
   display: inline-flex;
   align-items: center;
   min-height: 1.45rem;
-  border: 1px solid #c9c9c9;
+  border: 1px solid var(--line-strong);
   border-radius: 4px;
-  background: linear-gradient(#ffffff, #eeeeee);
+  background: linear-gradient(var(--soft), #f1eee8);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
@@ -435,7 +432,7 @@ h2:only-child {
 
 .metric-count {
   padding: 0.12rem 0.38rem;
-  background: #ffffff;
+  background: var(--soft);
 }
 
 .metric-icon {
@@ -462,12 +459,7 @@ h2:only-child {
   grid-template-columns: 200px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
-  margin: 1rem 0 0.9rem;
-}
-
-.publication + .publication {
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
+  margin: 0.95rem 0 0;
 }
 
 .publication-media {
@@ -477,7 +469,7 @@ h2:only-child {
   max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--soft);
   aspect-ratio: 1 / 1;
 }
 
