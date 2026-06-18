@@ -13,6 +13,7 @@ assets/logo.svg
 assets/publications/li-2024-optics-letters-fig1.png
 assets/projects/journallens-screenshot.png
 assets/projects/journallens-thumb.png
+assets/projects/zotassets-logo.svg
 .nojekyll
 ```
 

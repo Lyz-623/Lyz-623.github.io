@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">ZotAssets logo</title>
+  <desc id="desc">A blue square lettermark with the white initials ZA.</desc>
+  <rect width="240" height="240" fill="#26466e"/>
+  <text
+    x="120"
+    y="137"
+    fill="#ffffff"
+    font-family="Inter, Segoe UI, Arial, sans-serif"
+    font-size="86"
+    font-weight="800"
+    letter-spacing="-8"
+    text-anchor="middle">ZA</text>
+</svg>
