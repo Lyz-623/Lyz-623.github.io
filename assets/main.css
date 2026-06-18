@@ -47,7 +47,7 @@ a:hover {
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid rgba(47, 111, 115, 0.32);
-  outline-offset: 3px;
+  outline-offset: 4px;
 }
 
 .profile-copy a,
@@ -126,53 +126,40 @@ hr {
 }
 
 .profile-links {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-areas:
-    "email github"
-    "twitter rednote"
-    "scholar scholar";
-  gap: 0.42rem;
-  width: min(100%, 218px);
-  margin: 0.75rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.58rem;
+  width: min(100%, 240px);
+  margin: 0.85rem auto 0;
 }
 
 .profile-links a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 0.34rem;
-  min-height: 2.05rem;
-  padding: 0.32rem 0.56rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
+  width: 2.28rem;
+  height: 2.28rem;
+  padding: 0;
+  border-radius: 50%;
   color: var(--ink);
-  background: var(--soft);
-  font-size: 0.82rem;
-  font-weight: 500;
   line-height: 1;
-  white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(28, 27, 26, 0.025);
   transition:
     color var(--motion),
-    border-color var(--motion),
     background-color var(--motion),
-    box-shadow var(--motion),
     transform var(--motion);
 }
 
 .profile-links a:focus,
 .profile-links a:hover {
   color: var(--link-hover);
-  border-color: #d6cabd;
-  background: #fffaf4;
-  box-shadow: 0 6px 16px rgba(28, 27, 26, 0.06);
+  background: rgba(47, 111, 115, 0.07);
   transform: translateY(-1px);
 }
 
 .profile-links svg {
-  width: 0.95rem;
-  height: 0.95rem;
+  width: 1.24rem;
+  height: 1.24rem;
   flex: 0 0 auto;
   fill: none;
   stroke: currentColor;
@@ -188,24 +175,9 @@ hr {
   stroke: none;
 }
 
-.profile-link-email {
-  grid-area: email;
-}
-
-.profile-link-scholar {
-  grid-area: scholar;
-}
-
-.profile-link-github {
-  grid-area: github;
-}
-
-.profile-link-twitter {
-  grid-area: twitter;
-}
-
-.profile-link-rednote {
-  grid-area: rednote;
+.profile-link-rednote svg {
+  width: 1.34rem;
+  height: 1.34rem;
 }
 
 .profile-copy {
@@ -234,16 +206,10 @@ h2 {
   margin-bottom: 0.7rem;
   font-size: 1.35rem;
   line-height: 1.25;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
 }
 
-h2::after {
-  content: "";
-  width: 2.3rem;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(47, 111, 115, 0.58), transparent);
+h2:only-child {
+  margin-bottom: 0;
 }
 
 .section {
