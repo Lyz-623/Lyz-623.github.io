@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&amp;family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add("has-js");</script>
-  <link rel="stylesheet" href="assets/main.css?v=20260731-phd-editorial">
+  <link rel="stylesheet" href="assets/main.css?v=20260731-modular-academic">
 </head>
 <body>
   <div class="reading-progress" aria-hidden="true"></div>
@@ -87,18 +87,23 @@
 
     <section class="section section-reveal" id="news" aria-labelledby="news-heading">
       <div class="section-heading">
-        <span class="section-index" aria-hidden="true">01</span>
         <h2 id="news-heading">News</h2>
       </div>
     </section>
 
     <section class="section section-reveal" id="publications" aria-labelledby="publications-heading">
       <div class="section-heading">
-        <span class="section-index" aria-hidden="true">02</span>
         <h2 id="publications-heading">Publications</h2>
       </div>
-      <div class="section-content publication-list">
-          <article class="publication">
+      <div class="filterable-section" data-filter-group="publications">
+        <aside class="filter-panel" aria-label="Filter publications by year">
+          <button class="filter-chip is-active" type="button" data-filter-value="2024" aria-pressed="true">
+            <span>2024</span>
+            <span class="filter-count" data-filter-count>1</span>
+          </button>
+        </aside>
+        <div class="section-content filter-results publication-list">
+          <article class="publication filter-item" data-filter-value="2024">
             <a class="publication-media" href="https://opg.optica.org/ol/abstract.cfm?uri=ol-49-10-2785" target="_blank" rel="noopener" aria-label="Open publication website">
               <img src="assets/publications/li-2024-optics-letters-fig1.png" alt="Schematic of the optical setup for 3D drift correction in super-resolution imaging">
             </a>
@@ -125,22 +130,31 @@
                   <a href="https://doi.org/10.5281/zenodo.10824433" target="_blank" rel="noopener">Data</a>
                 </span>
                 <a class="metric-badge" href="https://doi.org/10.1364/ol.519290" target="_blank" rel="noopener" data-crossref-citations="10.1364/ol.519290" aria-label="Crossref citation count, 2 citations">
-                  <span class="metric-label">Citations</span>
+                  <span class="metric-label metric-label-crossref">
+                    <img class="metric-brand-logo" src="https://assets.crossref.org/logo/crossref-logo-landscape-200.svg" width="54" height="18" alt="">
+                  </span>
                   <span class="metric-count" data-metric-count>2</span>
                 </a>
               </p>
             </div>
           </article>
+        </div>
       </div>
     </section>
 
     <section class="section section-reveal" id="projects" aria-labelledby="projects-heading">
       <div class="section-heading">
-        <span class="section-index" aria-hidden="true">03</span>
         <h2 id="projects-heading">Projects</h2>
       </div>
-      <div class="section-content project-list">
-          <article class="project-card">
+      <div class="filterable-section" data-filter-group="projects">
+        <aside class="filter-panel" aria-label="Filter projects by category">
+          <button class="filter-chip is-active" type="button" data-filter-value="zotero-plugin" aria-pressed="true">
+            <span>Zotero</span>
+            <span class="filter-count" data-filter-count>2</span>
+          </button>
+        </aside>
+        <div class="section-content filter-results project-list">
+          <article class="project-card filter-item" data-filter-value="zotero-plugin">
             <a class="project-media" href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener" aria-label="Open JournalLens GitHub repository">
               <img src="assets/projects/journallens-thumb.png" alt="JournalLens Zotero plugin interface preview" width="200" height="200">
             </a>
@@ -160,13 +174,18 @@
                   <a href="https://github.com/Lyz-623/JournalLens/releases/latest" target="_blank" rel="noopener">Release</a>
                 </span>
                 <a class="metric-badge" href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener" data-github-stars="Lyz-623/JournalLens" aria-label="JournalLens code repository, 2 GitHub stars">
-                  <span class="metric-label">Stars</span>
+                  <span class="metric-label">
+                    <svg class="metric-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.52 7.52 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+                    </svg>
+                    <span>GitHub Stars</span>
+                  </span>
                   <span class="metric-count" data-metric-count>2</span>
                 </a>
               </p>
             </div>
           </article>
-          <article class="project-card">
+          <article class="project-card filter-item" data-filter-value="zotero-plugin">
             <a class="project-media" href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener" aria-label="Open ZotAssets GitHub repository">
               <img src="assets/projects/zotassets-logo.svg" alt="ZotAssets plugin logo" width="200" height="200">
             </a>
@@ -185,12 +204,18 @@
                   <a href="https://github.com/Lyz-623/ZotAssets/releases/latest" target="_blank" rel="noopener">Release</a>
                 </span>
                 <a class="metric-badge" href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener" data-github-stars="Lyz-623/ZotAssets" aria-label="ZotAssets code repository, 1 GitHub stars">
-                  <span class="metric-label">Stars</span>
+                  <span class="metric-label">
+                    <svg class="metric-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.52 7.52 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+                    </svg>
+                    <span>GitHub Stars</span>
+                  </span>
                   <span class="metric-count" data-metric-count>1</span>
                 </a>
               </p>
             </div>
           </article>
+        </div>
       </div>
     </section>
 
@@ -200,11 +225,50 @@
   </main>
   <script>
     (() => {
+      const setupFilteredSections = () => {
+        document.querySelectorAll("[data-filter-group]").forEach((group) => {
+          const chips = [...group.querySelectorAll("button[data-filter-value]")];
+          const items = [...group.querySelectorAll(".filter-item[data-filter-value]")];
+
+          if (!chips.length || !items.length) {
+            return;
+          }
+
+          const showFilter = (value) => {
+            chips.forEach((chip) => {
+              const isActive = chip.dataset.filterValue === value;
+              chip.classList.toggle("is-active", isActive);
+              chip.setAttribute("aria-pressed", String(isActive));
+            });
+
+            items.forEach((item) => {
+              item.classList.toggle("is-hidden", item.dataset.filterValue !== value);
+            });
+          };
+
+          chips.forEach((chip) => {
+            const countNode = chip.querySelector("[data-filter-count]");
+            const count = items.filter((item) => item.dataset.filterValue === chip.dataset.filterValue).length;
+
+            if (countNode) {
+              countNode.textContent = count;
+            }
+
+            chip.addEventListener("click", () => showFilter(chip.dataset.filterValue));
+          });
+
+          const activeChip = chips.find((chip) => chip.classList.contains("is-active")) || chips[0];
+          showFilter(activeChip.dataset.filterValue);
+        });
+      };
+
       const progress = document.querySelector(".reading-progress");
       const revealNodes = [...document.querySelectorAll(".section-reveal")];
       const githubTags = document.querySelectorAll("[data-github-stars]");
       const crossrefTags = document.querySelectorAll("[data-crossref-citations]");
       const cacheTtl = 24 * 60 * 60 * 1000;
+
+      setupFilteredSections();
 
       const updateProgress = () => {
         const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
