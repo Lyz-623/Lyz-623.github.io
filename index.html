@@ -16,15 +16,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add("has-js");</script>
-  <link rel="stylesheet" href="assets/main.css?v=20260731-typography-news">
+  <link rel="stylesheet" href="assets/main.css?v=20260731-anchored-scholar">
 </head>
 <body>
   <div class="reading-progress" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-brand" href="#about">Yunze Li</a>
+      <div class="site-nav-links">
+        <a class="site-nav-link is-active" href="#about" aria-current="page">About</a>
+        <a class="site-nav-link" href="#news">News</a>
+        <a class="site-nav-link" href="#publications">Publications</a>
+        <a class="site-nav-link" href="#projects">Projects</a>
+      </div>
+    </nav>
+  </header>
   <main class="page">
-    <header class="profile" id="top">
-      <div class="profile-grid">
-        <aside class="profile-card" aria-label="Profile links">
+    <div class="page-layout">
+      <aside class="profile-panel" aria-label="Profile">
           <img class="profile-logo" src="assets/logo.svg" alt="Yunze Li academic logo" width="180" height="180">
+          <h1>Yunze Li</h1>
+          <p class="profile-role">
+            Ph.D. Student in Physics
+            <a href="https://www.polimi.it/en/" target="_blank" rel="noopener">Politecnico di Milano</a>
+          </p>
           <nav class="profile-links" aria-label="Academic links">
             <a class="profile-link profile-link-email" href="mailto:yunze.li@polimi.it" aria-label="Email" title="Email">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -54,14 +69,13 @@
               </svg>
             </a>
           </nav>
-        </aside>
+      </aside>
 
-        <section class="profile-copy" aria-label="Biography">
-          <h1>Yunze Li</h1>
-          <p class="profile-role">
-            Ph.D. Student in Physics <span aria-hidden="true">&middot;</span>
-            <a href="https://www.polimi.it/en/" target="_blank" rel="noopener">Politecnico di Milano</a>
-          </p>
+      <div class="content-column">
+        <section class="section section-about" id="about" aria-labelledby="about-heading">
+          <div class="section-heading">
+            <h2 id="about-heading">About</h2>
+          </div>
           <div class="profile-bio">
             <p>
               I am a Ph.D. student in Physics at
@@ -82,26 +96,24 @@
             </p>
           </div>
         </section>
-      </div>
-    </header>
 
-    <section class="section section-reveal" id="news" aria-labelledby="news-heading">
+        <section class="section section-reveal" id="news" aria-labelledby="news-heading">
       <div class="section-heading">
         <h2 id="news-heading">News</h2>
       </div>
       <ol class="news-list" aria-label="News, newest first">
         <!-- Add newer items above older entries. -->
         <li class="news-item">
-          <time datetime="2026-07">July 2026</time>
+          <time class="meta-label" datetime="2026-07">July 2026</time>
           <p>
             Officially enrolled in the Fall 2026 Ph.D. program in Physics at Politecnico di Milano.
             <span class="news-celebration" role="img" aria-label="Celebration">🎉</span>
           </p>
         </li>
       </ol>
-    </section>
+        </section>
 
-    <section class="section section-reveal" id="publications" aria-labelledby="publications-heading">
+        <section class="section section-reveal" id="publications" aria-labelledby="publications-heading">
       <div class="section-heading">
         <h2 id="publications-heading">Publications</h2>
       </div>
@@ -135,9 +147,9 @@
               <p class="publication-note"><sup>*</sup> Equal contribution.</p>
               <p class="paper-links link-row">
                 <span class="link-row-primary">
-                  <a href="https://opg.optica.org/ol/abstract.cfm?uri=ol-49-10-2785" target="_blank" rel="noopener">Website</a> |
-                  <a href="assets/publications/519290.pdf" target="_blank" rel="noopener">Preprint</a> |
-                  <a href="https://doi.org/10.5281/zenodo.10824433" target="_blank" rel="noopener">Data</a>
+                  <a class="action-link" href="https://opg.optica.org/ol/abstract.cfm?uri=ol-49-10-2785" target="_blank" rel="noopener">Website</a>
+                  <a class="action-link" href="assets/publications/519290.pdf" target="_blank" rel="noopener">Preprint</a>
+                  <a class="action-link" href="https://doi.org/10.5281/zenodo.10824433" target="_blank" rel="noopener">Data</a>
                 </span>
                 <a class="metric-badge" href="https://doi.org/10.1364/ol.519290" target="_blank" rel="noopener" data-crossref-citations="10.1364/ol.519290" aria-label="Crossref citation count, 2 citations">
                   <span class="metric-label metric-label-crossref">
@@ -150,9 +162,9 @@
           </article>
         </div>
       </div>
-    </section>
+        </section>
 
-    <section class="section section-reveal" id="projects" aria-labelledby="projects-heading">
+        <section class="section section-reveal" id="projects" aria-labelledby="projects-heading">
       <div class="section-heading">
         <h2 id="projects-heading">Projects</h2>
       </div>
@@ -180,8 +192,8 @@
               </p>
               <p class="project-links link-row">
                 <span class="link-row-primary">
-                  <a href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener">GitHub</a> |
-                  <a href="https://github.com/Lyz-623/JournalLens/releases/latest" target="_blank" rel="noopener">Release</a>
+                  <a class="action-link" href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener">GitHub</a>
+                  <a class="action-link" href="https://github.com/Lyz-623/JournalLens/releases/latest" target="_blank" rel="noopener">Release</a>
                 </span>
                 <a class="metric-badge" href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener" data-github-stars="Lyz-623/JournalLens" aria-label="JournalLens code repository, 2 GitHub stars">
                   <span class="metric-label">
@@ -210,8 +222,8 @@
               </p>
               <p class="project-links link-row">
                 <span class="link-row-primary">
-                  <a href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener">GitHub</a> |
-                  <a href="https://github.com/Lyz-623/ZotAssets/releases/latest" target="_blank" rel="noopener">Release</a>
+                  <a class="action-link" href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener">GitHub</a>
+                  <a class="action-link" href="https://github.com/Lyz-623/ZotAssets/releases/latest" target="_blank" rel="noopener">Release</a>
                 </span>
                 <a class="metric-badge" href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener" data-github-stars="Lyz-623/ZotAssets" aria-label="ZotAssets code repository, 1 GitHub stars">
                   <span class="metric-label">
@@ -227,11 +239,13 @@
           </article>
         </div>
       </div>
-    </section>
+        </section>
 
-    <footer class="footer section-reveal">
-      <p>Last updated: July 31, 2026.</p>
-    </footer>
+        <footer class="footer section-reveal">
+          <p>Last updated: July 31, 2026.</p>
+        </footer>
+      </div>
+    </div>
   </main>
   <script>
     (() => {
@@ -272,6 +286,57 @@
         });
       };
 
+      const setupActiveNavigation = () => {
+        const links = [...document.querySelectorAll(".site-nav-link")];
+        const sections = links
+          .map((link) => document.querySelector(link.getAttribute("href")))
+          .filter(Boolean);
+
+        const setActive = (id) => {
+          links.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${id}`;
+            link.classList.toggle("is-active", isActive);
+
+            if (isActive) {
+              link.setAttribute("aria-current", "page");
+            } else {
+              link.removeAttribute("aria-current");
+            }
+          });
+        };
+
+        links.forEach((link) => {
+          link.addEventListener("click", () => {
+            setActive(link.getAttribute("href").slice(1));
+          });
+        });
+
+        const updateActiveSection = () => {
+          const headerOffset = 104;
+          const marker = window.scrollY + headerOffset;
+          const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+          let activeSection = sections[0];
+
+          sections.forEach((section) => {
+            if (section.offsetTop <= marker) {
+              activeSection = section;
+            }
+          });
+
+          if (isAtBottom) {
+            activeSection = sections[sections.length - 1];
+          }
+
+          if (activeSection) {
+            setActive(activeSection.id);
+          }
+        };
+
+        updateActiveSection();
+        window.addEventListener("scroll", updateActiveSection, { passive: true });
+        window.addEventListener("resize", updateActiveSection);
+      };
+
       const progress = document.querySelector(".reading-progress");
       const revealNodes = [...document.querySelectorAll(".section-reveal")];
       const githubTags = document.querySelectorAll("[data-github-stars]");
@@ -279,6 +344,7 @@
       const cacheTtl = 24 * 60 * 60 * 1000;
 
       setupFilteredSections();
+      setupActiveNavigation();
 
       const updateProgress = () => {
         const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
