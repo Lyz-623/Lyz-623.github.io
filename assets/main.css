@@ -707,7 +707,12 @@ h2 {
 }
 
 [data-theme="dark"] .metric-label-crossref {
-  background: #f4f6f5;
+  background: var(--surface);
+}
+
+[data-theme="dark"] .metric-label-crossref .metric-brand-logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 
 .metric-count {
