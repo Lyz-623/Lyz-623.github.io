@@ -15,19 +15,47 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <script>document.documentElement.classList.add("has-js");</script>
-  <link rel="stylesheet" href="assets/main.css?v=20260731-aligned-media">
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let theme = "light";
+
+      try {
+        const savedTheme = window.localStorage.getItem("yunze-theme");
+        theme = savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      } catch {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+
+      root.dataset.theme = theme;
+      root.classList.add("has-js");
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/main.css?v=20260801-color-themes">
 </head>
 <body>
   <div class="reading-progress" aria-hidden="true"></div>
   <header class="site-header" id="top">
     <nav class="site-nav" aria-label="Primary navigation">
       <a class="site-brand" href="#about">Yunze Li</a>
-      <div class="site-nav-links">
-        <a class="site-nav-link is-active" href="#about" aria-current="page">About</a>
-        <a class="site-nav-link" href="#news">News</a>
-        <a class="site-nav-link" href="#publications">Publications</a>
-        <a class="site-nav-link" href="#projects">Projects</a>
+      <div class="site-nav-actions">
+        <div class="site-nav-links">
+          <a class="site-nav-link is-active" href="#about" aria-current="page">About</a>
+          <a class="site-nav-link" href="#news">News</a>
+          <a class="site-nav-link" href="#publications">Publications</a>
+          <a class="site-nav-link" href="#projects">Projects</a>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+          </svg>
+        </button>
       </div>
     </nav>
   </header>
@@ -238,6 +266,33 @@
   </main>
   <script>
     (() => {
+      const setupThemeToggle = () => {
+        const toggle = document.querySelector(".theme-toggle");
+
+        if (!toggle) {
+          return;
+        }
+
+        const applyTheme = (theme, persist = true) => {
+          const isDark = theme === "dark";
+          document.documentElement.dataset.theme = isDark ? "dark" : "light";
+          toggle.setAttribute("aria-pressed", String(isDark));
+          toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+          toggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+
+          if (persist) {
+            try {
+              window.localStorage.setItem("yunze-theme", isDark ? "dark" : "light");
+            } catch {}
+          }
+        };
+
+        applyTheme(document.documentElement.dataset.theme || "light", false);
+        toggle.addEventListener("click", () => {
+          applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+        });
+      };
+
       const setupFilteredSections = () => {
         document.querySelectorAll("[data-filter-group]").forEach((group) => {
           const chips = [...group.querySelectorAll("button[data-filter-value]")];
@@ -332,6 +387,7 @@
       const crossrefTags = document.querySelectorAll("[data-crossref-citations]");
       const cacheTtl = 24 * 60 * 60 * 1000;
 
+      setupThemeToggle();
       setupFilteredSections();
       setupActiveNavigation();
 
