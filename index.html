@@ -33,7 +33,7 @@
       root.classList.add("has-js");
     })();
   </script>
-  <link rel="stylesheet" href="assets/main.css?v=20260801-color-themes">
+  <link rel="stylesheet" href="assets/main.css?v=20260801-nav-state">
 </head>
 <body>
   <div class="reading-progress" aria-hidden="true"></div>
@@ -356,7 +356,8 @@
         });
 
         const updateActiveSection = () => {
-          const headerOffset = 104;
+          const header = document.querySelector(".site-header");
+          const headerOffset = (header ? header.offsetHeight : 0) + 24;
           const marker = window.scrollY + headerOffset;
           const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
           let activeSection = sections[0];
