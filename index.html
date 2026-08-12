@@ -33,7 +33,7 @@
       root.classList.add("has-js");
     })();
   </script>
-  <link rel="stylesheet" href="assets/main.css?v=20260801-dark-crossref">
+  <link rel="stylesheet" href="assets/main.css?v=20260812-editorial-polish">
 </head>
 <body>
   <div class="reading-progress" aria-hidden="true"></div>
@@ -62,7 +62,10 @@
   <main class="page">
     <div class="page-layout">
       <aside class="profile-panel" aria-label="Profile">
-          <img class="profile-logo" src="assets/logo.svg" alt="Yunze Li academic logo" width="180" height="180">
+          <span class="profile-logo" aria-hidden="true">
+            <img class="profile-logo-image profile-logo-light" src="assets/logo.svg" alt="" width="160" height="160">
+            <img class="profile-logo-image profile-logo-dark" src="assets/logo-dark.svg" alt="" width="160" height="160">
+          </span>
           <h1>Yunze Li</h1>
           <p class="profile-role">
             Ph.D. Student in Physics
@@ -154,7 +157,7 @@
         </aside>
         <div class="section-content filter-results publication-list">
           <article class="publication filter-item" data-filter-value="2024">
-            <a class="publication-media" href="https://opg.optica.org/ol/abstract.cfm?uri=ol-49-10-2785" target="_blank" rel="noopener" aria-label="Open publication website">
+            <a class="publication-media media-contain" href="https://opg.optica.org/ol/abstract.cfm?uri=ol-49-10-2785" target="_blank" rel="noopener" aria-label="Open publication website">
               <img src="assets/publications/li-2024-optics-letters-fig1.png" alt="Schematic of the optical setup for 3D drift correction in super-resolution imaging">
             </a>
             <div class="publication-body">
@@ -175,7 +178,7 @@
                 </span>
                 <a class="metric-badge" href="https://doi.org/10.1364/ol.519290" target="_blank" rel="noopener" data-crossref-citations="10.1364/ol.519290" aria-label="Crossref citation count, 2 citations">
                   <span class="metric-label metric-label-crossref">
-                    <img class="metric-brand-logo" src="https://assets.crossref.org/logo/crossref-logo-landscape-200.svg" width="54" height="18" alt="">
+                    <img class="metric-brand-logo" src="assets/crossref-logo-landscape.svg" width="54" height="18" alt="">
                   </span>
                   <span class="metric-count" data-metric-count>2</span>
                 </a>
@@ -199,7 +202,7 @@
         </aside>
         <div class="section-content filter-results project-list">
           <article class="project-card filter-item" data-filter-value="zotero-plugin">
-            <a class="project-media" href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener" aria-label="Open JournalLens GitHub repository">
+            <a class="project-media media-cover" href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener" aria-label="Open JournalLens GitHub repository">
               <img src="assets/projects/journallens-thumb.png" alt="JournalLens Zotero plugin interface preview" width="200" height="200">
             </a>
             <div class="project-body">
@@ -227,7 +230,7 @@
             </div>
           </article>
           <article class="project-card filter-item" data-filter-value="zotero-plugin">
-            <a class="project-media" href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener" aria-label="Open ZotAssets GitHub repository">
+            <a class="project-media media-cover" href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener" aria-label="Open ZotAssets GitHub repository">
               <img src="assets/projects/zotassets-logo.svg" alt="ZotAssets plugin logo" width="200" height="200">
             </a>
             <div class="project-body">
@@ -259,7 +262,7 @@
         </section>
 
         <footer class="footer section-reveal">
-          <p>Last updated: July 31, 2026.</p>
+          <p>Last updated: August 12, 2026.</p>
         </footer>
       </div>
     </div>
@@ -335,6 +338,8 @@
         const sections = links
           .map((link) => document.querySelector(link.getAttribute("href")))
           .filter(Boolean);
+        let navigationTarget = null;
+        let navigationTimer = null;
 
         const setActive = (id) => {
           links.forEach((link) => {
@@ -351,11 +356,21 @@
 
         links.forEach((link) => {
           link.addEventListener("click", () => {
-            setActive(link.getAttribute("href").slice(1));
+            navigationTarget = link.getAttribute("href").slice(1);
+            setActive(navigationTarget);
+            window.clearTimeout(navigationTimer);
+            navigationTimer = window.setTimeout(() => {
+              navigationTarget = null;
+              updateActiveSection();
+            }, 900);
           });
         });
 
         const updateActiveSection = () => {
+          if (navigationTarget) {
+            return;
+          }
+
           const header = document.querySelector(".site-header");
           const headerOffset = (header ? header.offsetHeight : 0) + 24;
           const marker = window.scrollY + headerOffset;
@@ -380,6 +395,15 @@
         updateActiveSection();
         window.addEventListener("scroll", updateActiveSection, { passive: true });
         window.addEventListener("resize", updateActiveSection);
+        window.addEventListener("scrollend", () => {
+          if (!navigationTarget) {
+            return;
+          }
+
+          window.clearTimeout(navigationTimer);
+          navigationTarget = null;
+          updateActiveSection();
+        });
       };
 
       const progress = document.querySelector(".reading-progress");

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Yunze Li logo</title>
+  <desc id="desc">A YL monogram with a microscopy mark for dark backgrounds.</desc>
+  <rect x="8" y="8" width="144" height="144" rx="18" fill="#202525" stroke="#d9dfdc" stroke-width="5"/>
+  <text x="80" y="83" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="56" font-weight="700" fill="#e5e9e7">YL</text>
+  <g fill="none" stroke="#79aaa7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M43 110c17-11 32-16 48-16 15 0 25-5 34-16" stroke-width="5"/>
+    <path d="M101 43h24l-18 30h-24z" stroke-width="4"/>
+    <path d="M96 73l-10 16" stroke-width="4"/>
+    <circle cx="84" cy="92" r="6" fill="#202525" stroke-width="4"/>
+  </g>
+</svg>
