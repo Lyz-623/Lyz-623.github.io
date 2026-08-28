@@ -22,6 +22,8 @@
   --accent-border-strong: rgba(53, 109, 117, 0.46);
   --focus-ring: rgba(53, 109, 117, 0.35);
   --media-bg: #eef2f1;
+  --font-sans: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
   --header-height: 62px;
   --motion: 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
@@ -65,7 +67,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: 17px;
   line-height: 1.64;
   -webkit-font-smoothing: antialiased;
@@ -132,8 +134,10 @@ p {
 
 .site-brand {
   color: var(--ink);
-  font-size: 1.22rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .site-brand:focus,
@@ -291,14 +295,14 @@ h1,
 h2 {
   margin: 0;
   color: var(--heading);
-  font-family: inherit;
+  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0;
 }
 
 h1 {
   margin-bottom: 0.25rem;
-  font-size: 2.18rem;
+  font-size: 2.34rem;
   line-height: 1.08;
 }
 
@@ -386,8 +390,8 @@ strong {
 }
 
 h2 {
-  font-size: 1.72rem;
-  line-height: 1.12;
+  font-size: 1.88rem;
+  line-height: 1.08;
 }
 
 h2::after {
@@ -645,13 +649,14 @@ h2::after {
 .paper-title,
 .project-title {
   margin: -0.08rem 0 0.35rem;
-  font-size: 1.3rem;
+  font-family: var(--font-display);
+  font-size: 1.38rem;
   font-weight: 600;
-  line-height: 1.28;
+  line-height: 1.22;
 }
 
 .project-title {
-  font-size: 1.2rem;
+  font-size: 1.28rem;
 }
 
 .paper-meta,
@@ -886,7 +891,7 @@ h2::after {
     grid-row: 1;
     grid-column: 2;
     align-self: end;
-    font-size: 2.35rem;
+    font-size: 2.5rem;
   }
 
   .profile-role {
@@ -910,7 +915,7 @@ h2::after {
   }
 
   h2 {
-    font-size: 1.58rem;
+    font-size: 1.72rem;
   }
 
   .news-item {
@@ -990,7 +995,7 @@ h2::after {
   }
 
   h1 {
-    font-size: 2.08rem;
+    font-size: 2.22rem;
   }
 
   .profile-role {
