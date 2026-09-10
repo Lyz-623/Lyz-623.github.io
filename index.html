@@ -12,9 +12,8 @@
   <meta property="og:image" content="assets/logo.svg">
   <title>Yunze Li</title>
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/newsreader.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
   <script>
     (() => {
       const root = document.documentElement;
@@ -33,7 +32,7 @@
       root.classList.add("has-js");
     })();
   </script>
-  <link rel="stylesheet" href="assets/main.css?v=20260828-editorial-type">
+  <link rel="stylesheet" href="assets/main.css?v=20260910-quiet-glass">
 </head>
 <body>
   <div class="reading-progress" aria-hidden="true"></div>
@@ -145,16 +144,16 @@
         </section>
 
         <section class="section section-reveal" id="publications" aria-labelledby="publications-heading">
-      <div class="section-heading">
-        <h2 id="publications-heading">Publications</h2>
-      </div>
       <div class="filterable-section" data-filter-group="publications">
+        <div class="section-heading">
+          <h2 id="publications-heading">Publications</h2>
         <aside class="filter-panel" aria-label="Filter publications by year">
           <button class="filter-chip is-active" type="button" data-filter-value="2024" aria-pressed="true">
             <span>2024</span>
             <span class="filter-count" data-filter-count>1</span>
           </button>
         </aside>
+        </div>
         <div class="section-content filter-results publication-list">
           <article class="publication filter-item" data-filter-value="2024">
             <a class="publication-media media-contain" href="https://opg.optica.org/ol/abstract.cfm?uri=ol-49-10-2785" target="_blank" rel="noopener" aria-label="Open publication website">
@@ -190,16 +189,16 @@
         </section>
 
         <section class="section section-reveal" id="projects" aria-labelledby="projects-heading">
-      <div class="section-heading">
-        <h2 id="projects-heading">Projects</h2>
-      </div>
       <div class="filterable-section" data-filter-group="projects">
+        <div class="section-heading">
+          <h2 id="projects-heading">Projects</h2>
         <aside class="filter-panel" aria-label="Filter projects by category">
           <button class="filter-chip is-active" type="button" data-filter-value="zotero-plugin" aria-pressed="true">
             <span>Zotero</span>
             <span class="filter-count" data-filter-count>2</span>
           </button>
         </aside>
+        </div>
         <div class="section-content filter-results project-list">
           <article class="project-card filter-item" data-filter-value="zotero-plugin">
             <a class="project-media media-cover" href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener" aria-label="Open JournalLens GitHub repository">
@@ -261,9 +260,9 @@
       </div>
         </section>
 
-        <footer class="footer section-reveal">
+        <footer class="footer">
           <!-- Keep this date synchronized with every deployed site change. -->
-          <p>Last updated: August 28, 2026.</p>
+          <p>Last updated: September 10, 2026.</p>
         </footer>
       </div>
     </div>
@@ -340,7 +339,6 @@
           .map((link) => document.querySelector(link.getAttribute("href")))
           .filter(Boolean);
         let navigationTarget = null;
-        let navigationTimer = null;
 
         const setActive = (id) => {
           links.forEach((link) => {
@@ -355,15 +353,10 @@
           });
         };
 
-        links.forEach((link) => {
+        document.querySelectorAll(".site-nav-link, .site-brand").forEach((link) => {
           link.addEventListener("click", () => {
             navigationTarget = link.getAttribute("href").slice(1);
             setActive(navigationTarget);
-            window.clearTimeout(navigationTimer);
-            navigationTimer = window.setTimeout(() => {
-              navigationTarget = null;
-              updateActiveSection();
-            }, 900);
           });
         });
 
@@ -395,15 +388,31 @@
 
         updateActiveSection();
         window.addEventListener("scroll", updateActiveSection, { passive: true });
-        window.addEventListener("resize", updateActiveSection);
-        window.addEventListener("scrollend", () => {
-          if (!navigationTarget) {
-            return;
-          }
-
-          window.clearTimeout(navigationTimer);
+        // Keep a clicked anchor selected until the reader resumes manual scrolling.
+        const resumeScrollTracking = () => {
           navigationTarget = null;
-          updateActiveSection();
+          window.requestAnimationFrame(updateActiveSection);
+        };
+        window.addEventListener("wheel", resumeScrollTracking, { passive: true });
+        window.addEventListener("touchmove", resumeScrollTracking, { passive: true });
+        window.addEventListener("resize", resumeScrollTracking);
+        window.addEventListener("keydown", (event) => {
+          if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(event.key)
+            && !event.target.closest("input, textarea, select, button, [contenteditable]")) {
+            resumeScrollTracking();
+          }
+        });
+        window.addEventListener("pointerdown", (event) => {
+          if (event.clientX >= document.documentElement.clientWidth) {
+            resumeScrollTracking();
+          }
+        });
+        window.addEventListener("hashchange", () => {
+          const target = sections.find((section) => `#${section.id}` === window.location.hash);
+          if (target) {
+            navigationTarget = target.id;
+            setActive(target.id);
+          }
         });
       };
 
