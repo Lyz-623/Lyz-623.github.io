@@ -832,6 +832,126 @@ h2 {
   height: auto;
 }
 
+.visitor-section {
+  --map-land: #d8e1de;
+}
+
+[data-theme="dark"] .visitor-section {
+  --map-land: #354442;
+}
+
+.visitor-map-shell {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 620px);
+  min-height: 180px;
+  margin: 0 auto;
+  aspect-ratio: 2.04;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.visitor-map-placeholder {
+  position: absolute;
+  inset: 10px;
+  background: var(--map-land);
+  -webkit-mask: url("world-map.svg") center / contain no-repeat;
+  mask: url("world-map.svg") center / contain no-repeat;
+}
+
+.visitor-map-shell[data-visitor-state="ready"] {
+  aspect-ratio: auto;
+}
+
+.visitor-map-shell[data-visitor-state="ready"] .visitor-map-placeholder {
+  display: none;
+}
+
+.visitor-map-message {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 20px;
+  text-align: center;
+}
+
+.visitor-status {
+  max-width: 28ch;
+  margin: 0;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  background: var(--panel-bg);
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.visitor-load {
+  min-height: 36px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.visitor-widget {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+}
+
+.visitor-caption,
+.visitor-privacy {
+  width: min(100%, 620px);
+  margin: 0.6rem auto 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.visitor-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+
+.visitor-section [hidden] {
+  display: none !important;
+}
+
+.visitor-widget #mapmyvisitors-widget {
+  width: 100% !important;
+  min-height: 180px;
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+.visitor-widget .mapmyvisitors-map-container {
+  background-color: var(--surface) !important;
+}
+
+.visitor-widget .mapmyvisitors-map {
+  transform-origin: top left;
+}
+
+.visitor-widget .mapmyvisitors-visitors,
+.visitor-widget .mapmyvisitors-date {
+  padding: 0.25rem 0.5rem;
+  color: var(--ink) !important;
+  font-family: var(--font-sans);
+}
+
+[data-theme="dark"] .visitor-widget .mapmyvisitors-map {
+  filter: invert(1) hue-rotate(180deg) brightness(0.85);
+  mix-blend-mode: screen;
+}
+
 .footer {
   padding: 1.45rem 0 2.4rem;
   border-top: 1px solid var(--line);
