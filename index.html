@@ -32,7 +32,7 @@
       root.classList.add("has-js");
     })();
   </script>
-  <link rel="stylesheet" href="assets/main.css?v=20261001-visitors">
+  <link rel="stylesheet" href="assets/main.css?v=20261001-visitors-compact">
   <script src="assets/visitors.js?v=20261001" defer></script>
 </head>
 <body>
@@ -261,10 +261,21 @@
         </section>
 
         <!-- Set data-map-id to the d parameter in this site's MapMyVisitors embed code. -->
-        <section class="section visitor-section" id="visitors" aria-labelledby="visitors-heading" data-map-id="ZQ_U7cD-OUvXGN-t1cr9xBAF6WZb5q7dhCy1pAEroJ0" data-stats-url="https://mapmyvisitors.com/web/1c8l7">
-          <div class="section-heading">
+        <section class="visitor-section" id="visitors" aria-labelledby="visitors-heading" data-map-id="ZQ_U7cD-OUvXGN-t1cr9xBAF6WZb5q7dhCy1pAEroJ0" data-stats-url="https://mapmyvisitors.com/web/1c8l7">
+          <div class="visitor-copy">
             <h2 id="visitors-heading">Visitors</h2>
-            <span class="meta-label">Worldwide</span>
+            <div class="visitor-caption">
+              <span>Approximate locations based on IP addresses.</span>
+              <a class="visitor-stats-link" target="_blank" rel="noopener" hidden>View statistics</a>
+            </div>
+            <details class="visitor-privacy-details">
+              <summary>Privacy</summary>
+              <p class="visitor-privacy" hidden>
+                MapMyVisitors processes your IP address and visit details when enabled.
+                <a href="https://mapmyvisitors.com/b/policy" target="_blank" rel="noopener">Privacy policy</a>
+              </p>
+            </details>
+            <noscript><p class="visitor-privacy">JavaScript is required to display the visitor map.</p></noscript>
           </div>
           <div class="visitor-map-shell" data-visitor-state="unconfigured">
             <div class="visitor-map-placeholder" aria-hidden="true"></div>
@@ -274,15 +285,6 @@
             </div>
             <div class="visitor-widget" aria-label="Visitor locations and cumulative visit count" hidden></div>
           </div>
-          <div class="visitor-caption">
-            <span>Approximate locations based on IP addresses.</span>
-            <a class="visitor-stats-link" target="_blank" rel="noopener" hidden>View statistics</a>
-          </div>
-          <p class="visitor-privacy" hidden>
-            MapMyVisitors processes your IP address and visit details when enabled.
-            <a href="https://mapmyvisitors.com/b/policy" target="_blank" rel="noopener">Privacy policy</a>
-          </p>
-          <noscript><p class="visitor-privacy">JavaScript is required to display the visitor map.</p></noscript>
         </section>
 
         <footer class="footer">

@@ -834,6 +834,21 @@ h2 {
 
 .visitor-section {
   --map-land: #d8e1de;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: start;
+  gap: 24px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+.visitor-copy h2 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 [data-theme="dark"] .visitor-section {
@@ -843,9 +858,9 @@ h2 {
 .visitor-map-shell {
   position: relative;
   isolation: isolate;
-  width: min(100%, 620px);
-  min-height: 180px;
-  margin: 0 auto;
+  width: min(100%, 300px);
+  min-height: 160px;
+  margin: 0;
   aspect-ratio: 2.04;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -863,6 +878,7 @@ h2 {
 
 .visitor-map-shell[data-visitor-state="ready"] {
   aspect-ratio: auto;
+  min-height: 0;
 }
 
 .visitor-map-shell[data-visitor-state="ready"] .visitor-map-placeholder {
@@ -877,8 +893,8 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 0.8rem;
-  padding: 20px;
+  gap: 0.5rem;
+  padding: 12px;
   text-align: center;
 }
 
@@ -889,7 +905,7 @@ h2 {
   border-radius: 4px;
   background: var(--panel-bg);
   color: var(--ink);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   line-height: 1.45;
 }
 
@@ -897,18 +913,18 @@ h2 {
   min-height: 36px;
   font-family: inherit;
   cursor: pointer;
+  font-size: 0.82rem;
 }
 
 .visitor-widget {
   position: relative;
   width: 100%;
-  min-height: 180px;
+  min-height: 0;
 }
 
 .visitor-caption,
 .visitor-privacy {
-  width: min(100%, 620px);
-  margin: 0.6rem auto 0;
+  margin: 0.4rem 0 0;
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.5;
@@ -916,9 +932,35 @@ h2 {
 
 .visitor-caption {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.25rem 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.visitor-privacy-details {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.visitor-privacy-details summary {
+  width: fit-content;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .visitor-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 18px 0;
+  }
+
+  .visitor-caption {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+  }
 }
 
 .visitor-section [hidden] {
@@ -927,7 +969,7 @@ h2 {
 
 .visitor-widget #mapmyvisitors-widget {
   width: 100% !important;
-  min-height: 180px;
+  min-height: 0;
   color: var(--ink);
   font-family: var(--font-sans);
 }
