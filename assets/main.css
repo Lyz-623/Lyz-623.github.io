@@ -36,12 +36,11 @@
   --underline: rgba(53, 109, 117, 0.32);
   --focus-ring: rgba(53, 109, 117, 0.38);
   --media-bg: #f0f3f2;
-  /* Four muted hues shared by badges, interests and sparkles. */
+  /* Muted hues used by the laser-scanning background. */
   --hue-1: #2f6d73;
   --hue-2: #4b5b9c;
   --hue-3: #a0681a;
   --hue-4: #8c4a6c;
-  --sparkle-peak: 0.7;
   --font: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --header-height: 64px;
@@ -76,7 +75,6 @@
   --hue-2: #a5b1e6;
   --hue-3: #dfbd7c;
   --hue-4: #e0a6c4;
-  --sparkle-peak: 0.85;
 }
 
 * {
@@ -162,59 +160,46 @@ strong {
   will-change: transform;
 }
 
-/* Twinkling background -------------------------------------------- */
+/* Laser-scanning background ------------------------------------------ */
 
-/* Scattered points of light that brighten and fade like a starfield. */
-.sparkle-field {
+/* Canvas drawn by assets/lab-background.js; it never intercepts input. */
+.lab-canvas {
   position: fixed;
   z-index: 0;
   inset: 0;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
 }
 
-.sparkle {
-  --glow: var(--hue-1);
-  position: absolute;
-  width: var(--size, 3px);
-  height: var(--size, 3px);
-  border-radius: 50%;
-  background: var(--glow);
-  box-shadow:
-    0 0 4px 1px color-mix(in srgb, var(--glow) 55%, transparent),
-    0 0 10px 2px color-mix(in srgb, var(--glow) 25%, transparent);
+.lab-hint {
+  position: fixed;
+  z-index: 2;
+  bottom: 22px;
+  left: 22px;
+  max-width: min(360px, calc(100vw - 110px));
+  margin: 0;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  background: var(--header-bg);
+  box-shadow: var(--card-shadow);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: opacity 900ms ease, transform 900ms ease;
+}
+
+.lab-hint[hidden] {
+  display: none;
+}
+
+.lab-hint.is-faded {
   opacity: 0;
-  animation: twinkle 5s ease-in-out infinite;
-  will-change: opacity, transform;
-}
-
-.sparkle-2 {
-  --glow: var(--hue-2);
-}
-
-.sparkle-3 {
-  --glow: var(--hue-3);
-}
-
-.sparkle-4 {
-  --glow: var(--hue-4);
-}
-
-@keyframes twinkle {
-  0%, 100% {
-    opacity: 0;
-    transform: scale(0.4);
-  }
-
-  45% {
-    opacity: var(--sparkle-peak);
-    transform: scale(1);
-  }
-
-  55% {
-    opacity: calc(var(--sparkle-peak) * 0.8);
-    transform: scale(0.9);
-  }
+  transform: translateY(6px);
 }
 
 /* Header ------------------------------------------------------------ */
@@ -571,7 +556,7 @@ h2::after {
 .edu-card {
   --school: #1f4e8c;
   display: grid;
-  grid-template-columns: 56px minmax(0, 1fr);
+  grid-template-columns: 72px minmax(0, 1fr);
   gap: 16px;
   align-items: center;
   padding: 14px 18px;
@@ -605,11 +590,11 @@ h2::after {
 
 .edu-logo {
   display: block;
-  width: 56px;
-  height: 56px;
-  padding: 4px;
+  width: 72px;
+  height: 72px;
+  padding: 5px;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 16px;
   background: #ffffff;
   object-fit: contain;
 }
@@ -1023,19 +1008,58 @@ h2::after {
 /* Footer ------------------------------------------------------------- */
 
 .footer {
-  display: grid;
-  gap: 0.7rem;
-  padding: 1.6rem 0 2.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem 1rem;
+  padding: 2rem 0 2.6rem;
   color: var(--muted);
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .footer p {
   margin: 0;
 }
 
-.footer-credit a {
+.footer-visits {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
   color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 700;
+}
+
+.footer-visits[hidden] {
+  display: none;
+}
+
+.footer-visits svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.footer-visits-count {
+  font-variant-numeric: tabular-nums;
+}
+
+/* The provider's map renders off-screen; only its total is shown. */
+.visit-count-host {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+  width: 300px;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 /* Back to top -------------------------------------------------------- */
@@ -1222,7 +1246,6 @@ h2::after {
     scroll-behavior: auto;
   }
 
-  .sparkle-field,
   .back-to-top {
     transition: none;
   }

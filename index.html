@@ -31,7 +31,9 @@
       root.classList.add("has-js");
     })();
   </script>
-  <link rel="stylesheet" href="assets/main.css?v=20261010-no-dividers">
+  <link rel="stylesheet" href="assets/main.css?v=20261010-laser">
+  <script src="assets/lab-background.js?v=20261010" defer></script>
+  <script src="assets/visit-count.js?v=20261010" defer></script>
 </head>
 <body>
   <div class="reading-progress" aria-hidden="true"></div>
@@ -59,7 +61,8 @@
       </div>
     </nav>
   </header>
-  <div class="sparkle-field" aria-hidden="true"></div>
+  <canvas class="lab-canvas" aria-hidden="true"></canvas>
+  <p class="lab-hint" aria-hidden="true" hidden></p>
   <main class="page">
     <div class="page-grid">
       <aside class="page-aside" aria-label="Profile">
@@ -123,7 +126,7 @@
           <h3 class="subheading">Education</h3>
           <ol class="education-list" aria-label="Education, most recent first">
             <li class="edu-card edu-polimi">
-              <img class="edu-logo" src="assets/education/polimi-logo.svg" alt="Politecnico di Milano crest" width="56" height="56">
+              <img class="edu-logo" src="assets/education/polimi-logo.svg" alt="Politecnico di Milano crest" width="72" height="72">
               <div class="edu-body">
                 <p class="edu-degree">Ph.D. in Physics</p>
                 <p class="edu-school">Politecnico di Milano</p>
@@ -131,7 +134,7 @@
               </div>
             </li>
             <li class="edu-card edu-sustech">
-              <img class="edu-logo" src="assets/education/sustech-logo.png" alt="SUSTech crest" width="56" height="56">
+              <img class="edu-logo" src="assets/education/sustech-logo.png" alt="SUSTech crest" width="72" height="72">
               <div class="edu-body">
                 <p class="edu-degree">M.S. in <abbr title="Electrical and Electronic Engineering">EEE</abbr></p>
                 <p class="edu-school">SUSTech</p>
@@ -139,7 +142,7 @@
               </div>
             </li>
             <li class="edu-card edu-sustech">
-              <img class="edu-logo" src="assets/education/sustech-logo.png" alt="SUSTech crest" width="56" height="56">
+              <img class="edu-logo" src="assets/education/sustech-logo.png" alt="SUSTech crest" width="72" height="72">
               <div class="edu-body">
                 <p class="edu-degree">B.Eng. in <abbr title="Biomedical Engineering">BME</abbr></p>
                 <p class="edu-school">SUSTech</p>
@@ -344,11 +347,15 @@
     </div>
 
         <footer class="footer">
-          <p class="footer-credit">
-            Built with plain HTML &amp; CSS and hosted on
-            <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.
-            Thanks to <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a> for polishing this site.
-          </p>
+          <!-- data-map-id is the d parameter of this site's MapMyVisitors embed code. -->
+          <span class="footer-visits" data-map-id="ZQ_U7cD-OUvXGN-t1cr9xBAF6WZb5q7dhCy1pAEroJ0" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span class="footer-visits-count" data-visit-count></span>
+            <span>visits</span>
+          </span>
           <!-- Keep this date synchronized with every deployed site change. -->
           <p>© 2026 · Yunze Li · Department of Physics, Politecnico di Milano · Last edited: October 10, 2026</p>
         </footer>
@@ -537,31 +544,6 @@
         });
       };
 
-      // Scatter softly twinkling points of light across the background.
-      const setupSparkles = () => {
-        const field = document.querySelector(".sparkle-field");
-
-        if (!field || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          return;
-        }
-
-        const count = window.innerWidth < 600 ? 22 : 46;
-        const fragment = document.createDocumentFragment();
-
-        for (let index = 0; index < count; index += 1) {
-          const sparkle = document.createElement("span");
-          sparkle.className = `sparkle sparkle-${(index % 4) + 1}`;
-          sparkle.style.left = `${(Math.random() * 100).toFixed(2)}%`;
-          sparkle.style.top = `${(Math.random() * 100).toFixed(2)}%`;
-          sparkle.style.setProperty("--size", `${(2 + Math.random() * 3).toFixed(1)}px`);
-          sparkle.style.animationDuration = `${(3.5 + Math.random() * 4.5).toFixed(2)}s`;
-          sparkle.style.animationDelay = `${(-Math.random() * 8).toFixed(2)}s`;
-          fragment.append(sparkle);
-        }
-
-        field.append(fragment);
-      };
-
       const setupBackToTop = () => {
         const button = document.querySelector(".back-to-top");
 
@@ -593,7 +575,6 @@
       setupThemeToggle();
       setupFilteredSections();
       setupActiveNavigation();
-      setupSparkles();
       setupBackToTop();
 
       const updateProgress = () => {
