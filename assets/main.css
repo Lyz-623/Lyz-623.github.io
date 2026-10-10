@@ -275,20 +275,21 @@ strong {
 /* Hero: portrait beside name, biography and links. */
 .hero {
   display: grid;
-  grid-template-columns: 188px minmax(0, 1fr);
-  gap: 48px;
+  grid-template-columns: 212px minmax(0, 1fr);
+  gap: 52px;
   align-items: start;
   padding: 64px 0 56px;
 }
 
 .hero-portrait {
-  position: sticky;
-  top: calc(var(--header-height) + 32px);
+  padding-top: 4px;
 }
 
 .hero-portrait img {
   display: block;
-  width: 100%;
+  width: 188px;
+  max-width: 100%;
+  margin: 0 auto;
   height: auto;
 }
 
@@ -355,17 +356,19 @@ h1 {
 
 .profile-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.4rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 1.1rem;
 }
 
 .profile-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--muted);
@@ -879,9 +882,13 @@ h2 {
     padding: 36px 0 40px;
   }
 
-  .hero-portrait {
-    position: static;
+  .hero-portrait img {
     width: 132px;
+    margin: 0;
+  }
+
+  .hero-portrait .profile-links {
+    justify-content: flex-start;
   }
 
   h1 {
