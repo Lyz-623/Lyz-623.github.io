@@ -31,8 +31,7 @@
       root.classList.add("has-js");
     })();
   </script>
-  <link rel="stylesheet" href="assets/main.css?v=20261010-sparkles">
-  <script src="assets/visitors.js?v=20261010-footer" defer></script>
+  <link rel="stylesheet" href="assets/main.css?v=20261010-no-dividers">
 </head>
 <body>
   <div class="reading-progress" aria-hidden="true"></div>
@@ -41,6 +40,7 @@
       <a class="site-brand" href="#about">Yunze Li</a>
       <div class="site-nav-actions">
         <div class="site-nav-links">
+          <span class="nav-indicator" aria-hidden="true"></span>
           <a class="site-nav-link is-active" href="#about" aria-current="page">About</a>
           <a class="site-nav-link" href="#research">Research</a>
           <a class="site-nav-link" href="#news">News</a>
@@ -154,15 +154,24 @@
             <h2 id="research-heading">Research Interests</h2>
           </div>
           <ul class="interest-list">
-            <li class="interest interest-1">
+            <li class="interest">
+              <span class="interest-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M2 12h3c1.5 0 1.8-6 3.5-6S10.5 18 12 18s1.8-12 3.5-12S17.5 12 19 12h3"></path></svg>
+              </span>
               <p class="interest-title">Ultrafast spectroscopy</p>
               <p>Two-dimensional electronic spectroscopy (2DES), the focus of my doctoral research.</p>
             </li>
-            <li class="interest interest-2">
+            <li class="interest">
+              <span class="interest-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v5M12 17v5M2 12h5M17 12h5"></path></svg>
+              </span>
               <p class="interest-title">Optical microscopy instrumentation</p>
               <p>Designing and building super-resolution fluorescence and Raman microscopy systems.</p>
             </li>
-            <li class="interest interest-3">
+            <li class="interest">
+              <span class="interest-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M3 15l5-5 4 4 3-3 6 6"></path></svg>
+              </span>
               <p class="interest-title">Computational imaging</p>
               <p>Image denoising and spectral unmixing methods for microscopy data.</p>
             </li>
@@ -334,39 +343,14 @@
       </div>
     </div>
 
-        <!-- Set data-map-id to the d parameter in this site's MapMyVisitors embed code. -->
-        <section class="visitor-section" id="visitors" aria-label="Visitor map" data-map-id="ZQ_U7cD-OUvXGN-t1cr9xBAF6WZb5q7dhCy1pAEroJ0">
-          <div class="visitor-map-shell" data-visitor-state="unconfigured">
-            <div class="visitor-map-placeholder" aria-hidden="true"></div>
-            <div class="visitor-map-message">
-              <p class="visitor-status" role="status">Visitor statistics are not yet enabled.</p>
-              <button class="visitor-load" type="button" hidden>Enable visitor statistics</button>
-              <p class="visitor-privacy" hidden>
-                Loads MapMyVisitors (<a href="https://mapmyvisitors.com/b/policy" target="_blank" rel="noopener">privacy policy</a>).
-              </p>
-            </div>
-            <div class="visitor-widget" aria-label="Visitor locations and cumulative visit count" hidden></div>
-          </div>
-        </section>
-
         <footer class="footer">
           <p class="footer-credit">
             Built with plain HTML &amp; CSS and hosted on
             <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.
             Thanks to <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a> for polishing this site.
           </p>
-          <div class="footer-meta">
-            <span class="footer-visits" hidden>
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-              <span class="footer-visits-count" data-visit-count></span>
-              <span>visits</span>
-            </span>
-            <!-- Keep this date synchronized with every deployed site change. -->
-            <p>© 2026 · Yunze Li · Department of Physics, Politecnico di Milano · Last edited: October 10, 2026</p>
-          </div>
+          <!-- Keep this date synchronized with every deployed site change. -->
+          <p>© 2026 · Yunze Li · Department of Physics, Politecnico di Milano · Last edited: October 10, 2026</p>
         </footer>
   </main>
   <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
@@ -449,6 +433,19 @@
           .filter(Boolean);
         let navigationTarget = null;
 
+        // One highlight glides between links instead of each link lighting up on its own.
+        const indicator = document.querySelector(".nav-indicator");
+        let activeLink = links.find((link) => link.classList.contains("is-active")) || links[0];
+
+        const moveIndicator = () => {
+          if (!indicator || !activeLink) {
+            return;
+          }
+
+          indicator.style.width = `${activeLink.offsetWidth}px`;
+          indicator.style.transform = `translateX(${activeLink.offsetLeft}px)`;
+        };
+
         const setActive = (id) => {
           links.forEach((link) => {
             const isActive = link.getAttribute("href") === `#${id}`;
@@ -456,11 +453,26 @@
 
             if (isActive) {
               link.setAttribute("aria-current", "page");
+              activeLink = link;
             } else {
               link.removeAttribute("aria-current");
             }
           });
+
+          moveIndicator();
         };
+
+        moveIndicator();
+        window.addEventListener("resize", moveIndicator);
+        if (document.fonts) {
+          document.fonts.ready.then(moveIndicator);
+        }
+        // Enable the glide only after the first placement so the page does not animate on load.
+        window.requestAnimationFrame(() => {
+          if (indicator) {
+            indicator.classList.add("is-ready");
+          }
+        });
 
         document.querySelectorAll(".site-nav-link, .site-brand").forEach((link) => {
           link.addEventListener("click", () => {
