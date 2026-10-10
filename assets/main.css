@@ -273,10 +273,10 @@ strong {
 }
 
 /* Hero: portrait beside name, biography and links. */
-/* Two columns: content on the left, a pinned portrait column on the right. */
+/* Two columns: a pinned portrait column on the left, content on the right. */
 .page-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 212px;
+  grid-template-columns: 212px minmax(0, 1fr);
   gap: 56px;
   align-items: start;
 }
@@ -287,6 +287,7 @@ strong {
 
 .page-aside {
   position: sticky;
+  order: -1;
   top: calc(var(--header-height) - 28px);
   padding-top: 68px;
 }
