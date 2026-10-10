@@ -15,7 +15,8 @@ assets/projects/journallens-screenshot.png
 assets/projects/journallens-thumb.png
 assets/projects/zotassets-logo.svg
 assets/projects/euposition-thumb.jpg
-assets/pulse.svg
+assets/education/polimi-logo.svg
+assets/education/sustech-logo.png
 .nojekyll
 ```
 
@@ -49,3 +50,12 @@ world-atlas 2.0.2 (ISC license). It is generated using D3's Natural Earth
 projection and TopoJSON; Antarctica is omitted for a compact geographic view.
 Sources: https://github.com/topojson/world-atlas and
 https://www.naturalearthdata.com/about/terms-of-use/.
+
+School crests
+-------------
+
+`assets/education/polimi-logo.svg` is the crest portion of the logo published on
+https://www.polimi.it (wordmark paths removed). `assets/education/sustech-logo.png`
+is the crest from SUSTech's Visual Identity page
+(https://www.sustech.edu.cn/en/school_logo.html). Both are trademarks of their
+respective universities and are used only to identify the degree programmes.

@@ -28,6 +28,15 @@
   };
   setStatsLink(section.dataset.statsUrl);
 
+  // Mirror the provider's recorded total in the footer once the map has loaded.
+  const showFooterCount = (text) => {
+    const pill = document.querySelector('.footer-visits');
+    const digits = (text || '').replace(/[^\d]/g, '');
+    if (!pill || !digits) return;
+    pill.querySelector('[data-visit-count]').textContent = Number(digits).toLocaleString('en');
+    pill.hidden = false;
+  };
+
   privacy.hidden = false;
   button.hidden = false;
   shell.dataset.visitorState = 'consent';
@@ -85,6 +94,7 @@
         shell.dataset.visitorState = 'ready';
         fitMap();
         setStatsLink(widget.querySelector('#mapmyvisitors-widget')?.href);
+        showFooterCount(counter.textContent);
       }
     });
     observer.observe(widget, { childList: true, subtree: true, characterData: true });

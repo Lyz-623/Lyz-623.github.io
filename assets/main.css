@@ -36,12 +36,12 @@
   --underline: rgba(53, 109, 117, 0.32);
   --focus-ring: rgba(53, 109, 117, 0.38);
   --media-bg: #f0f3f2;
-  /* Four muted hues shared by badges, interests and light pulses. */
+  /* Four muted hues shared by badges, interests and sparkles. */
   --hue-1: #2f6d73;
   --hue-2: #4b5b9c;
   --hue-3: #a0681a;
   --hue-4: #8c4a6c;
-  --pulse-opacity: 0.32;
+  --sparkle-peak: 0.7;
   --font: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --header-height: 64px;
@@ -76,7 +76,7 @@
   --hue-2: #a5b1e6;
   --hue-3: #dfbd7c;
   --hue-4: #e0a6c4;
-  --pulse-opacity: 0.4;
+  --sparkle-peak: 0.85;
 }
 
 * {
@@ -162,10 +162,10 @@ strong {
   will-change: transform;
 }
 
-/* Light pulses ------------------------------------------------------- */
+/* Twinkling background -------------------------------------------- */
 
-/* Faint beam lines with wave packets travelling along them. */
-.optics-bg {
+/* Scattered points of light that brighten and fade like a starfield. */
+.sparkle-field {
   position: fixed;
   z-index: 0;
   inset: 0;
@@ -173,77 +173,47 @@ strong {
   pointer-events: none;
 }
 
-.beam {
-  --beam: var(--hue-1);
+.sparkle {
+  --glow: var(--hue-1);
   position: absolute;
-  right: 0;
-  left: 0;
-  height: 1px;
+  width: var(--size, 3px);
+  height: var(--size, 3px);
+  border-radius: 50%;
+  background: var(--glow);
+  box-shadow:
+    0 0 4px 1px color-mix(in srgb, var(--glow) 55%, transparent),
+    0 0 10px 2px color-mix(in srgb, var(--glow) 25%, transparent);
+  opacity: 0;
+  animation: twinkle 5s ease-in-out infinite;
+  will-change: opacity, transform;
 }
 
-.beam::before {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent, var(--beam) 15%, var(--beam) 85%, transparent);
-  content: "";
-  opacity: 0.12;
+.sparkle-2 {
+  --glow: var(--hue-2);
 }
 
-.beam-1 {
-  top: 16%;
+.sparkle-3 {
+  --glow: var(--hue-3);
 }
 
-.beam-2 {
-  --beam: var(--hue-2);
-  top: 39%;
+.sparkle-4 {
+  --glow: var(--hue-4);
 }
 
-.beam-3 {
-  --beam: var(--hue-3);
-  top: 63%;
-}
-
-.beam-4 {
-  --beam: var(--hue-4);
-  top: 87%;
-}
-
-.pulse {
-  position: absolute;
-  top: -16px;
-  left: 0;
-  width: 240px;
-  height: 32px;
-  background: var(--beam);
-  opacity: var(--pulse-opacity);
-  -webkit-mask: url("pulse.svg") center / contain no-repeat;
-  mask: url("pulse.svg") center / contain no-repeat;
-  animation: pulse-travel 18s linear infinite;
-  will-change: transform;
-}
-
-.beam-2 .pulse {
-  animation-duration: 24s;
-  animation-delay: -9s;
-}
-
-.beam-3 .pulse {
-  animation-duration: 21s;
-  animation-delay: -15s;
-}
-
-.beam-4 .pulse {
-  animation-duration: 27s;
-  animation-delay: -4s;
-}
-
-@keyframes pulse-travel {
-  from {
-    transform: translateX(-260px);
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.4);
   }
 
-  to {
-    transform: translateX(calc(100vw + 20px));
+  45% {
+    opacity: var(--sparkle-peak);
+    transform: scale(1);
+  }
+
+  55% {
+    opacity: calc(var(--sparkle-peak) * 0.8);
+    transform: scale(0.9);
   }
 }
 
@@ -578,11 +548,14 @@ h2::after {
   list-style: none;
 }
 
+/* Every card shares one row structure so degree, school and dates align. */
 .edu-card {
   --school: #1f4e8c;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 20px 16px;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 18px 20px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--surface);
@@ -611,71 +584,48 @@ h2::after {
   --school: #f0a35e;
 }
 
-.edu-head {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
+.edu-logo {
+  display: block;
+  width: 56px;
+  height: 56px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+  object-fit: contain;
 }
 
-.edu-mark {
-  display: inline-flex;
-  flex: 0 0 52px;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border: 1px solid color-mix(in srgb, var(--school) 30%, transparent);
-  border-radius: 14px;
-  color: var(--school);
-  background: color-mix(in srgb, var(--school) 9%, transparent);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+.edu-body p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .edu-degree {
-  margin: 0;
   color: var(--heading);
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.4;
+}
+
+.edu-degree abbr {
+  text-decoration: none;
 }
 
 .edu-school {
-  margin: 0.2rem 0 0;
   color: var(--school);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  line-height: 1.35;
-}
-
-.edu-meta {
-  display: grid;
-  gap: 0.3rem;
-  margin: auto 0 0;
-  padding-top: 1.1rem;
-}
-
-.edu-meta div {
-  display: grid;
-  grid-template-columns: 74px minmax(0, 1fr);
-  gap: 8px;
-  font-size: 0.86rem;
   line-height: 1.45;
 }
 
-.edu-meta dt {
+.edu-period {
+  margin-top: 0.15rem !important;
   color: var(--muted);
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  line-height: 1.95;
-  text-transform: uppercase;
-}
-
-.edu-meta dd {
-  margin: 0;
-  color: var(--ink);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.45;
 }
 
 /* Research interests ------------------------------------------------- */
@@ -1166,14 +1116,116 @@ h2::after {
 /* Footer ------------------------------------------------------------- */
 
 .footer {
-  padding: 1rem 0 2.5rem;
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.6rem 0 2.6rem;
   color: var(--muted);
-  font-size: 0.85rem;
-  text-align: center;
+  font-size: 0.9rem;
 }
 
 .footer p {
   margin: 0;
+}
+
+.footer-credit a {
+  color: var(--accent);
+}
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+}
+
+.footer-visits {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 700;
+}
+
+.footer-visits[hidden] {
+  display: none;
+}
+
+.footer-visits svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.footer-visits-count {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Back to top -------------------------------------------------------- */
+
+/* Fades and settles in once the reader has scrolled; eases away at the top. */
+.back-to-top {
+  position: fixed;
+  z-index: 60;
+  right: 28px;
+  bottom: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--accent);
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition:
+    opacity 280ms ease,
+    transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    visibility 0s linear 280ms,
+    border-color var(--motion),
+    box-shadow var(--motion);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  visibility: visible;
+  transition:
+    opacity 280ms ease,
+    transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    visibility 0s,
+    border-color var(--motion),
+    box-shadow var(--motion);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  border-color: var(--accent-border);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* Motion ------------------------------------------------------------- */
@@ -1239,6 +1291,14 @@ h2::after {
     font-size: 16px;
   }
 
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+  }
+
   .site-brand {
     display: none;
   }
@@ -1289,8 +1349,9 @@ h2::after {
     scroll-behavior: auto;
   }
 
-  .pulse {
-    display: none;
+  .sparkle-field,
+  .back-to-top {
+    transition: none;
   }
 
   *,

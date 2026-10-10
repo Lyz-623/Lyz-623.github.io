@@ -31,8 +31,8 @@
       root.classList.add("has-js");
     })();
   </script>
-  <link rel="stylesheet" href="assets/main.css?v=20261010-profile-card">
-  <script src="assets/visitors.js?v=20261010" defer></script>
+  <link rel="stylesheet" href="assets/main.css?v=20261010-sparkles">
+  <script src="assets/visitors.js?v=20261010-footer" defer></script>
 </head>
 <body>
   <div class="reading-progress" aria-hidden="true"></div>
@@ -59,12 +59,7 @@
       </div>
     </nav>
   </header>
-  <div class="optics-bg" aria-hidden="true">
-    <span class="beam beam-1"><i class="pulse"></i></span>
-    <span class="beam beam-2"><i class="pulse"></i></span>
-    <span class="beam beam-3"><i class="pulse"></i></span>
-    <span class="beam beam-4"><i class="pulse"></i></span>
-  </div>
+  <div class="sparkle-field" aria-hidden="true"></div>
   <main class="page">
     <div class="page-grid">
       <aside class="page-aside" aria-label="Profile">
@@ -128,43 +123,28 @@
           <h3 class="subheading">Education</h3>
           <ol class="education-list" aria-label="Education, most recent first">
             <li class="edu-card edu-polimi">
-              <div class="edu-head">
-                <span class="edu-mark" aria-hidden="true">PoliMi</span>
-                <div>
-                  <p class="edu-degree">Ph.D. in Physics</p>
-                  <p class="edu-school">Politecnico di Milano</p>
-                </div>
+              <img class="edu-logo" src="assets/education/polimi-logo.svg" alt="Politecnico di Milano crest" width="56" height="56">
+              <div class="edu-body">
+                <p class="edu-degree">Ph.D. in Physics</p>
+                <p class="edu-school">Politecnico di Milano</p>
+                <p class="edu-period"><time datetime="2026">2026</time> – 2029 (expected)</p>
               </div>
-              <dl class="edu-meta">
-                <div><dt>Period</dt><dd><time datetime="2026">2026</time> – 2029 (expected)</dd></div>
-                <div><dt>Advisors</dt><dd>Prof. Giulio Cerullo &amp; Prof. Dario Polli</dd></div>
-              </dl>
             </li>
             <li class="edu-card edu-sustech">
-              <div class="edu-head">
-                <span class="edu-mark" aria-hidden="true">SUSTech</span>
-                <div>
-                  <p class="edu-degree">M.S. in Electronic Science and Technology</p>
-                  <p class="edu-school">SUSTech</p>
-                </div>
+              <img class="edu-logo" src="assets/education/sustech-logo.png" alt="SUSTech crest" width="56" height="56">
+              <div class="edu-body">
+                <p class="edu-degree">M.S. in <abbr title="Electrical and Electronic Engineering">EEE</abbr></p>
+                <p class="edu-school">SUSTech</p>
+                <p class="edu-period"><time datetime="2023">2023</time> – <time datetime="2026">2026</time></p>
               </div>
-              <dl class="edu-meta">
-                <div><dt>Period</dt><dd><time datetime="2023">2023</time> – <time datetime="2026">2026</time></dd></div>
-                <div><dt>Department</dt><dd>Electrical and Electronic Engineering</dd></div>
-              </dl>
             </li>
             <li class="edu-card edu-sustech">
-              <div class="edu-head">
-                <span class="edu-mark" aria-hidden="true">SUSTech</span>
-                <div>
-                  <p class="edu-degree">B.Eng. in Biomedical Engineering</p>
-                  <p class="edu-school">SUSTech</p>
-                </div>
+              <img class="edu-logo" src="assets/education/sustech-logo.png" alt="SUSTech crest" width="56" height="56">
+              <div class="edu-body">
+                <p class="edu-degree">B.Eng. in <abbr title="Biomedical Engineering">BME</abbr></p>
+                <p class="edu-school">SUSTech</p>
+                <p class="edu-period"><time datetime="2019">2019</time> – <time datetime="2023">2023</time></p>
               </div>
-              <dl class="edu-meta">
-                <div><dt>Period</dt><dd><time datetime="2019">2019</time> – <time datetime="2023">2023</time></dd></div>
-                <div><dt>Department</dt><dd>Biomedical Engineering</dd></div>
-              </dl>
             </li>
           </ol>
         </section>
@@ -370,10 +350,30 @@
         </section>
 
         <footer class="footer">
-          <!-- Keep this date synchronized with every deployed site change. -->
-          <p>Last updated: October 10, 2026.</p>
+          <p class="footer-credit">
+            Built with plain HTML &amp; CSS and hosted on
+            <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.
+            Thanks to <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a> for polishing this site.
+          </p>
+          <div class="footer-meta">
+            <span class="footer-visits" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span class="footer-visits-count" data-visit-count></span>
+              <span>visits</span>
+            </span>
+            <!-- Keep this date synchronized with every deployed site change. -->
+            <p>© 2026 · Yunze Li · Department of Physics, Politecnico di Milano · Last edited: October 10, 2026</p>
+          </div>
         </footer>
   </main>
+  <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"></path>
+    </svg>
+  </button>
   <script>
     (() => {
       const setupThemeToggle = () => {
@@ -525,6 +525,53 @@
         });
       };
 
+      // Scatter softly twinkling points of light across the background.
+      const setupSparkles = () => {
+        const field = document.querySelector(".sparkle-field");
+
+        if (!field || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          return;
+        }
+
+        const count = window.innerWidth < 600 ? 22 : 46;
+        const fragment = document.createDocumentFragment();
+
+        for (let index = 0; index < count; index += 1) {
+          const sparkle = document.createElement("span");
+          sparkle.className = `sparkle sparkle-${(index % 4) + 1}`;
+          sparkle.style.left = `${(Math.random() * 100).toFixed(2)}%`;
+          sparkle.style.top = `${(Math.random() * 100).toFixed(2)}%`;
+          sparkle.style.setProperty("--size", `${(2 + Math.random() * 3).toFixed(1)}px`);
+          sparkle.style.animationDuration = `${(3.5 + Math.random() * 4.5).toFixed(2)}s`;
+          sparkle.style.animationDelay = `${(-Math.random() * 8).toFixed(2)}s`;
+          fragment.append(sparkle);
+        }
+
+        field.append(fragment);
+      };
+
+      const setupBackToTop = () => {
+        const button = document.querySelector(".back-to-top");
+
+        if (!button) {
+          return;
+        }
+
+        const update = () => {
+          button.classList.toggle("is-visible", window.scrollY > 320);
+        };
+
+        update();
+        window.addEventListener("scroll", update, { passive: true });
+        button.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          const brand = document.querySelector(".site-brand");
+          if (brand) {
+            brand.focus({ preventScroll: true });
+          }
+        });
+      };
+
       const progress = document.querySelector(".reading-progress");
       const revealNodes = [...document.querySelectorAll(".section-reveal")];
       const githubTags = document.querySelectorAll("[data-github-stars]");
@@ -534,6 +581,8 @@
       setupThemeToggle();
       setupFilteredSections();
       setupActiveNavigation();
+      setupSparkles();
+      setupBackToTop();
 
       const updateProgress = () => {
         const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
