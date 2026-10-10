@@ -955,3 +955,18 @@ h2 {
 .visitor-map-shell[data-visitor-state="consent"] .visitor-status {
   display: none;
 }
+
+.equal-mark {
+  margin-left: 0.05em;
+  color: var(--accent);
+  font-size: 0.7em;
+  font-weight: 600;
+  line-height: 0;
+}
+
+.equal-note {
+  margin-left: 0.25em;
+  color: var(--muted);
+  font-size: 0.85em;
+  white-space: nowrap;
+}
