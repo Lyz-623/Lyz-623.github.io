@@ -15,6 +15,7 @@
   if (!/^[A-Za-z0-9_-]{16,128}$/.test(mapId)) return;
 
   const setStatsLink = (value) => {
+    if (!statsLink || !value) return;
     try {
       const url = new URL(value);
       if (['https:', 'http:'].includes(url.protocol) && url.hostname === 'mapmyvisitors.com'

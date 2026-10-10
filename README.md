@@ -30,10 +30,9 @@ Publication venue names should be italicized, for example:
 Visitor map
 -----------
 
-The Visitors section uses the site's MapMyVisitors map and cumulative recorded
-pageview count. The public map ID is in `data-map-id` on the Visitors section in
-`index.html`; the statistics link is in `data-stats-url`. Update these values
-together if the provider account or map changes.
+The Visitors section is a centered MapMyVisitors map with its cumulative recorded
+pageview count and no other text. The public map ID is in `data-map-id` on the
+Visitors section in `index.html`; update it if the provider account or map changes.
 
 An unconfigured map sends no visitor data to the provider. Visitors enable
 tracking explicitly; this choice is remembered for the current tab only. Only visits recorded
