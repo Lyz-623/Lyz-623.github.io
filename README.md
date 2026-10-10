@@ -17,7 +17,6 @@ assets/projects/zotassets-logo.svg
 assets/projects/euposition-thumb.jpg
 assets/education/polimi-logo.svg
 assets/education/sustech-logo.png
-assets/lab-background.js
 assets/visit-count.js
 .nojekyll
 ```
@@ -40,16 +39,6 @@ https://www.polimi.it (wordmark paths removed). `assets/education/sustech-logo.p
 is the crest from SUSTech's Visual Identity page
 (https://www.sustech.edu.cn/en/school_logo.html). Both are trademarks of their
 respective universities and are used only to identify the degree programmes.
-
-Background effect
------------------
-
-`assets/lab-background.js` draws a laser-scanning microscope on a canvas behind
-the page: the pointer is the excitation beam, fluorescent labels light up and
-fade with a visible lifetime, Raman-active nuclei and lipid droplets respond
-only while illuminated, and a click fires a pump pulse followed by a delayed
-probe pulse. Without a mouse the beam scans on its own. It is disabled for
-visitors who prefer reduced motion.
 
 Visit count
 -----------

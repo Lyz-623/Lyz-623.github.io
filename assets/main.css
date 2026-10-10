@@ -36,7 +36,7 @@
   --underline: rgba(53, 109, 117, 0.32);
   --focus-ring: rgba(53, 109, 117, 0.38);
   --media-bg: #f0f3f2;
-  /* Muted hues used by the laser-scanning background. */
+  /* Muted hues kept for accents. */
   --hue-1: #2f6d73;
   --hue-2: #4b5b9c;
   --hue-3: #a0681a;
@@ -158,48 +158,6 @@ strong {
   transform: scaleX(0);
   transform-origin: left center;
   will-change: transform;
-}
-
-/* Laser-scanning background ------------------------------------------ */
-
-/* Canvas drawn by assets/lab-background.js; it never intercepts input. */
-.lab-canvas {
-  position: fixed;
-  z-index: 0;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-}
-
-.lab-hint {
-  position: fixed;
-  z-index: 2;
-  bottom: 22px;
-  left: 22px;
-  max-width: min(360px, calc(100vw - 110px));
-  margin: 0;
-  padding: 0.45rem 0.8rem;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  color: var(--muted);
-  background: var(--header-bg);
-  box-shadow: var(--card-shadow);
-  font-size: 0.8rem;
-  line-height: 1.45;
-  pointer-events: none;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  transition: opacity 900ms ease, transform 900ms ease;
-}
-
-.lab-hint[hidden] {
-  display: none;
-}
-
-.lab-hint.is-faded {
-  opacity: 0;
-  transform: translateY(6px);
 }
 
 /* Header ------------------------------------------------------------ */
@@ -714,6 +672,8 @@ h2::after {
 
 .news-date {
   display: inline-block;
+  width: 5.9em;
+  text-align: center;
   margin-right: 0.55rem;
   padding: 0.05rem 0.55rem;
   border-radius: 6px;
