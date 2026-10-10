@@ -15,6 +15,7 @@ assets/projects/journallens-screenshot.png
 assets/projects/journallens-thumb.png
 assets/projects/zotassets-logo.svg
 assets/projects/euposition-thumb.jpg
+assets/pulse.svg
 .nojekyll
 ```
 
