@@ -977,3 +977,7 @@ h2 {
   font-size: 0.85em;
   white-space: nowrap;
 }
+
+.media-top img {
+  object-position: left top;
+}
