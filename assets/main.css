@@ -273,16 +273,26 @@ strong {
 }
 
 /* Hero: portrait beside name, biography and links. */
-.hero {
+/* Two columns: content on the left, a pinned portrait column on the right. */
+.page-grid {
   display: grid;
-  grid-template-columns: 212px minmax(0, 1fr);
-  gap: 52px;
+  grid-template-columns: minmax(0, 1fr) 212px;
+  gap: 56px;
   align-items: start;
-  padding: 64px 0 56px;
 }
 
-.hero-portrait {
-  padding-top: 4px;
+.page-main {
+  min-width: 0;
+}
+
+.page-aside {
+  position: sticky;
+  top: calc(var(--header-height) - 28px);
+  padding-top: 68px;
+}
+
+.hero {
+  padding: 64px 0 56px;
 }
 
 .hero-portrait img {
@@ -876,10 +886,19 @@ h2 {
     width: calc(100% - 32px);
   }
 
-  .hero {
+  .page-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 36px 0 40px;
+    gap: 0;
+  }
+
+  .page-aside {
+    position: static;
+    order: -1;
+    padding-top: 36px;
+  }
+
+  .hero {
+    padding: 20px 0 40px;
   }
 
   .hero-portrait img {
@@ -980,4 +999,40 @@ h2 {
 
 .media-top img {
   object-position: left top;
+}
+
+/* Research tags: one muted hue each, tuned to sit beside the teal accent. */
+.hero-tags li {
+  --tag: #2f6d73;
+  border-color: color-mix(in srgb, var(--tag) 30%, transparent);
+  color: var(--tag);
+  background: color-mix(in srgb, var(--tag) 9%, transparent);
+}
+
+.hero-tags li:nth-child(4n + 2) {
+  --tag: #4b5b9c;
+}
+
+.hero-tags li:nth-child(4n + 3) {
+  --tag: #8a6420;
+}
+
+.hero-tags li:nth-child(4n + 4) {
+  --tag: #8c4a6c;
+}
+
+[data-theme="dark"] .hero-tags li {
+  --tag: #86c0c0;
+}
+
+[data-theme="dark"] .hero-tags li:nth-child(4n + 2) {
+  --tag: #a5b1e6;
+}
+
+[data-theme="dark"] .hero-tags li:nth-child(4n + 3) {
+  --tag: #dfbd7c;
+}
+
+[data-theme="dark"] .hero-tags li:nth-child(4n + 4) {
+  --tag: #e0a6c4;
 }
