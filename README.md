@@ -14,7 +14,7 @@ assets/publications/li-2024-optics-letters-fig1.png
 assets/projects/journallens-screenshot.png
 assets/projects/journallens-thumb.png
 assets/projects/zotassets-logo.svg
-assets/projects/euposition-thumb.jpg
+assets/projects/euposition-home.jpg
 assets/education/polimi-logo.svg
 assets/education/sustech-logo.png
 assets/visit-count.js
