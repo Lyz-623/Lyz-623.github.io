@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PC-TWINS 二维电子光谱学习路线图：按依赖分层的 23 个知识模块、可勾选的掌握清单、经核实的推荐阅读与可搜索术语表。">
+  <meta name="author" content="Yunze Li">
+  <title>PC-TWINS 学习路线图 · Yunze Li</title>
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let theme = "light";
+
+      try {
+        const savedTheme = window.localStorage.getItem("yunze-theme");
+        theme = savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      } catch {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+
+      root.dataset.theme = theme;
+      root.classList.add("has-js");
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/main.css?v=20261010-icons">
+  <link rel="stylesheet" href="kmap.css?v=20261014">
+  <script src="data.js?v=20261014" defer></script>
+  <script src="kmap.js?v=20261014" defer></script>
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <nav class="site-nav" aria-label="页面导航">
+      <a class="site-brand" href="../index.html">Yunze Li</a>
+      <div class="site-nav-actions">
+        <div class="site-nav-links">
+          <a class="site-nav-link" href="../index.html#projects">主页</a>
+          <a class="site-nav-link" href="#map">图谱</a>
+          <a class="site-nav-link" href="#plan">计划</a>
+          <a class="site-nav-link" href="#glossary">术语</a>
+          <a class="site-nav-link" href="#progress">进度</a>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="切换到深色模式" aria-pressed="false" title="切换到深色模式">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page kmap-page">
+    <section class="section kmap-intro" id="intro" aria-labelledby="intro-heading">
+      <div class="section-heading">
+        <h2 id="intro-heading">PC-TWINS 学习路线图</h2>
+      </div>
+      <p class="intro">
+        面向二维电子光谱（2DES）与 PC-TWINS 课题的知识地图：从复数与傅里叶变换出发，经由偏振光学、超短脉冲、
+        密度矩阵与响应函数，一直到 TWINS 干涉仪、相位循环和双量子谱。每个模块列出前置依赖、可勾选的掌握清单、
+        经 Crossref / arXiv 核实的推荐阅读和术语表；建议按每周 15–20 小时、26 周完成。
+      </p>
+      <p class="kmap-noscript" data-noscript>此页面需要启用 JavaScript 才能显示图谱与清单。</p>
+      <ul class="kmap-stats" aria-label="概览">
+        <li><span class="kmap-stat-value" data-stat="modules">–</span><span class="kmap-stat-label">模块</span></li>
+        <li><span class="kmap-stat-value" data-stat="layers">–</span><span class="kmap-stat-label">依赖层级</span></li>
+        <li><span class="kmap-stat-value" data-stat="hours">–</span><span class="kmap-stat-label">计划学时</span></li>
+        <li><span class="kmap-stat-value" data-stat="done">–</span><span class="kmap-stat-label">清单完成</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="map" aria-labelledby="map-heading">
+      <div class="section-heading">
+        <h2 id="map-heading">知识图谱</h2>
+        <div class="filter-panel" role="group" aria-label="按掌握层级筛选清单">
+          <button class="filter-chip is-active" type="button" data-level="all" aria-pressed="true"><span>全部</span></button>
+          <button class="filter-chip" type="button" data-level="核心" aria-pressed="false" title="能推导或计算，并能讲给别人听"><span>核心</span></button>
+          <button class="filter-chip" type="button" data-level="熟悉" aria-pressed="false" title="知道结论、物理图像或适用条件"><span>熟悉</span></button>
+          <button class="filter-chip" type="button" data-level="了解" aria-pressed="false" title="知道它存在，能跑别人的代码或看懂论文中的用法"><span>了解</span></button>
+        </div>
+      </div>
+      <p class="kmap-hint">
+        自上而下为第 0–9 层，箭头由前置指向后续。点击模块查看详情：<span class="kmap-key kmap-key-pre">前置</span>
+        与 <span class="kmap-key kmap-key-post">后续</span> 会高亮（实框为直接依赖，虚框为间接依赖）。层级筛选同时作用于清单与节点上的进度条。
+      </p>
+      <div class="kmap-layout">
+        <div class="kmap-graph" id="graph" aria-label="模块依赖图"></div>
+        <aside class="kmap-panel" id="panel" aria-live="polite" tabindex="-1">
+          <p class="kmap-empty">点击左侧图中的任意模块查看掌握清单、推荐阅读与术语。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="plan" aria-labelledby="plan-heading">
+      <div class="section-heading">
+        <h2 id="plan-heading">26 周计划</h2>
+      </div>
+      <p class="kmap-hint">每个模块只在其全部前置结束后开始；学时按所在周均摊，每周合计 15–20 小时。点击条形可跳到对应模块。</p>
+      <div class="kmap-timeline" id="timeline"></div>
+    </section>
+
+    <section class="section" id="glossary" aria-labelledby="glossary-heading">
+      <div class="section-heading">
+        <h2 id="glossary-heading">术语表</h2>
+      </div>
+      <div class="kmap-search">
+        <label class="kmap-search-label" for="term-search">搜索术语</label>
+        <input class="kmap-search-input" id="term-search" type="search" placeholder="中文、英文或释义，如 相位 / chirp / FFCF" autocomplete="off">
+        <span class="kmap-search-count" id="term-count" aria-live="polite"></span>
+      </div>
+      <dl class="kmap-glossary" id="glossary-list"></dl>
+    </section>
+
+    <section class="section" id="progress" aria-labelledby="progress-heading">
+      <div class="section-heading">
+        <h2 id="progress-heading">进度</h2>
+      </div>
+      <div class="kmap-progress-card">
+        <div class="kmap-progress-rows" id="progress-rows"></div>
+        <p class="kmap-hint">勾选结果保存在本浏览器的 localStorage 中，换设备或清理浏览器数据前请先导出。</p>
+        <div class="link-row">
+          <span class="link-row-primary">
+            <button class="action-link" type="button" id="export-btn">导出 JSON</button>
+            <button class="action-link" type="button" id="import-btn">导入 JSON</button>
+            <button class="action-link" type="button" id="reset-btn">清空进度</button>
+          </span>
+          <input type="file" id="import-file" accept="application/json,.json" hidden>
+        </div>
+        <p class="kmap-status" id="progress-status" role="status"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 · Yunze Li · 数据由 <code>gen_data.py</code> 生成 · <span data-generated></span></p>
+    </footer>
+  </main>
+  <button class="back-to-top" type="button" aria-label="回到顶部" title="回到顶部">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"></path>
+    </svg>
+  </button>
+</body>
+</html>

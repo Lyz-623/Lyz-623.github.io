@@ -18,6 +18,8 @@ assets/projects/euposition-home.jpg
 assets/education/polimi-logo.svg
 assets/education/sustech-logo.png
 assets/visit-count.js
+assets/projects/knowledge-map-thumb.svg
+knowledge-map/   (PC-TWINS learning roadmap; see knowledge-map/README.md)
 .nojekyll
 ```
 
