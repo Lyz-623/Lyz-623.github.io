@@ -18,6 +18,8 @@ assets/projects/euposition-home.jpg
 assets/education/polimi-logo.svg
 assets/education/sustech-logo.png
 assets/visit-count.js
+assets/light-ripples.js
+assets/publications/li-2026-anal-chem-schematic.svg
 assets/projects/knowledge-map-thumb.svg
 knowledge-map/   (PC-TWINS learning roadmap; see knowledge-map/README.md)
 .nojekyll
@@ -50,3 +52,17 @@ and shows only its cumulative pageview total in the footer. This sends each
 visitor's IP address and visit details to MapMyVisitors
 (https://mapmyvisitors.com/b/policy). The map ID is `data-map-id` on
 `.footer-visits` in `index.html`. Never add private account credentials here.
+
+Light ripples
+-------------
+
+The site uses a single near-black theme. `assets/light-ripples.js` draws, with
+WebGL, a broadband light pulse wherever the background is clicked: eight
+wavelength bands (410-690 nm) expand as slow cylindrical waves, each band
+interferes coherently with the same band of other ripples, and normal
+dispersion spreads every ring into a rainbow. It is disabled for visitors who
+prefer reduced motion and does nothing without WebGL.
+
+The Analytical Chemistry entry uses a schematic drawn for this site
+(`assets/publications/li-2026-anal-chem-schematic.svg`); replace it with the
+paper's TOC graphic if one is available for reuse.
