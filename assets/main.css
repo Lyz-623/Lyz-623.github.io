@@ -1204,3 +1204,74 @@ h2::after {
     font-size: 0.84rem;
   }
 }
+
+/* Card surfaces on the near-black page ------------------------------- */
+
+/* A faint glass panel: a lifted gradient fill and a luminous hairline edge that
+   catches the teal accent at its top-left corner and fades to neutral. */
+:root[data-theme="dark"] {
+  --card-fill: linear-gradient(180deg, rgba(24, 31, 33, 0.94), rgba(14, 19, 21, 0.94));
+  --card-edge: linear-gradient(155deg, rgba(127, 200, 194, 0.36), rgba(255, 255, 255, 0.09) 38%, rgba(255, 255, 255, 0.04));
+  --card-edge-hover: linear-gradient(155deg, rgba(127, 200, 194, 0.78), rgba(127, 200, 194, 0.2) 45%, rgba(255, 255, 255, 0.07));
+  --card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 32px rgba(0, 0, 0, 0.5);
+  --card-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 28px rgba(127, 200, 194, 0.09);
+}
+
+.profile-card,
+.edu-card,
+.interest,
+.publication,
+.project-card {
+  border: 1px solid transparent;
+  background: var(--card-fill) padding-box, var(--card-edge) border-box;
+  box-shadow: var(--card-shadow);
+}
+
+.edu-card:hover,
+.interest:hover,
+.publication:hover,
+.publication:focus-within,
+.project-card:hover,
+.project-card:focus-within {
+  border-color: transparent;
+  background: var(--card-fill) padding-box, var(--card-edge-hover) border-box;
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Small controls share the same faint lift. */
+.action-link,
+.metric-badge,
+.filter-chip,
+.profile-links a,
+.back-to-top {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.filter-chip.is-active {
+  background: var(--accent-soft);
+}
+
+.back-to-top {
+  background: rgba(17, 22, 24, 0.92);
+}
+
+/* Bright figures sit in a softened panel instead of glaring against black. */
+.media-contain {
+  background: #eef2f1;
+}
+
+.publication-media img,
+.project-media img {
+  filter: brightness(0.94);
+}
+
+.publication:hover .publication-media img,
+.project-card:hover .project-media img {
+  filter: none;
+}
+
+.edu-logo {
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.03);
+}
