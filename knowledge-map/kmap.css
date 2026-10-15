@@ -130,9 +130,7 @@ button.action-link {
 }
 
 .kmap-graph,
-.kmap-panel,
-.kmap-timeline,
-.kmap-progress-card {
+.kmap-panel {
   min-width: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -160,11 +158,6 @@ button.action-link {
   font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 0.02em;
-}
-
-.kmap-layer-rule {
-  stroke: var(--line);
-  stroke-dasharray: 2 4;
 }
 
 .kmap-edge {
@@ -234,14 +227,6 @@ button.action-link {
   font-weight: 600;
 }
 
-.kmap-node-track {
-  fill: var(--line);
-}
-
-.kmap-node-bar {
-  fill: var(--done);
-}
-
 .kmap-node.is-sel rect.kmap-node-box {
   fill: var(--accent-soft);
   stroke: var(--accent);
@@ -268,10 +253,6 @@ button.action-link {
 
 .kmap-node.is-dim {
   opacity: 0.4;
-}
-
-.kmap-node.is-complete .kmap-node-id {
-  fill: var(--done);
 }
 
 .kmap-panel {
@@ -406,83 +387,6 @@ button.action-link {
   font-variant-numeric: tabular-nums;
 }
 
-/* Checklist ----------------------------------------------------------- */
-
-.kmap-checklist {
-  display: grid;
-  gap: 0.35rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.kmap-check {
-  display: grid;
-  grid-template-columns: auto auto minmax(0, 1fr);
-  gap: 0.55rem;
-  align-items: start;
-  padding: 0.45rem 0.55rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  cursor: pointer;
-}
-
-.kmap-check:hover {
-  background: var(--accent-soft);
-}
-
-.kmap-check input {
-  width: 1.05rem;
-  height: 1.05rem;
-  margin: 0.2rem 0 0;
-  accent-color: var(--done);
-  cursor: pointer;
-}
-
-.kmap-check.is-done .kmap-check-text {
-  color: var(--muted);
-  text-decoration: line-through;
-  text-decoration-color: var(--line-strong);
-}
-
-.kmap-check-text {
-  overflow-wrap: anywhere;
-}
-
-.kmap-level {
-  display: inline-block;
-  min-width: 2.6em;
-  padding: 0 0.35rem;
-  border-radius: 5px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.75;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.kmap-level-核心 {
-  color: var(--hue-4);
-  background: color-mix(in srgb, var(--hue-4) 14%, transparent);
-}
-
-.kmap-level-熟悉 {
-  color: var(--hue-2);
-  background: color-mix(in srgb, var(--hue-2) 14%, transparent);
-}
-
-.kmap-level-了解 {
-  color: var(--hue-1);
-  background: color-mix(in srgb, var(--hue-1) 14%, transparent);
-}
-
-.kmap-filter-note {
-  margin: 0.4rem 0 0;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
 /* Readings ------------------------------------------------------------ */
 
 .kmap-readings {
@@ -584,7 +488,7 @@ button.action-link {
 /* Terms (panel + glossary) ------------------------------------------- */
 
 .kmap-terms,
-.kmap-glossary {
+.kmap-term-grid {
   margin: 0;
 }
 
@@ -617,7 +521,7 @@ button.action-link {
   line-height: 1.6;
 }
 
-.kmap-glossary {
+.kmap-term-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 28px;
@@ -628,18 +532,18 @@ button.action-link {
   box-shadow: var(--card-shadow);
 }
 
-.kmap-glossary .kmap-term:nth-last-child(2):nth-child(odd) {
+.kmap-term-grid .kmap-term:nth-last-child(2):nth-child(odd) {
   border-bottom: 0;
 }
 
-.kmap-glossary .kmap-chip-link {
+.kmap-term-grid .kmap-chip-link {
   margin: 0 0 0 0.4rem;
   font-size: 0.75rem;
   line-height: 1.55;
   vertical-align: 0.1em;
 }
 
-.kmap-glossary mark {
+.kmap-term-grid mark {
   border-radius: 3px;
   color: inherit;
   background: color-mix(in srgb, var(--hue-3) 30%, transparent);
@@ -693,139 +597,6 @@ button.action-link {
   font-size: 0.88rem;
 }
 
-/* Timeline ------------------------------------------------------------ */
-
-.kmap-timeline {
-  padding: 14px 16px 16px;
-}
-
-.kmap-tl-grid {
-  display: grid;
-  grid-template-columns: 7.5rem repeat(26, minmax(0, 1fr));
-  row-gap: 4px;
-  align-items: center;
-}
-
-.kmap-tl-head {
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-variant-numeric: tabular-nums;
-  text-align: center;
-}
-
-
-.kmap-tl-label {
-  overflow: hidden;
-  padding-right: 0.5rem;
-  color: var(--ink);
-  font-size: 0.82rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.kmap-tl-label b {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.kmap-tl-bar {
-  height: 18px;
-  margin: 0 1px;
-  padding: 0;
-  border: 0;
-  border-radius: 5px;
-  background: color-mix(in srgb, var(--accent) 55%, transparent);
-  cursor: pointer;
-  transition: background-color var(--motion);
-}
-
-.kmap-tl-bar:hover,
-.kmap-tl-bar:focus-visible {
-  background: var(--accent);
-}
-
-.kmap-tl-bar.is-sel {
-  background: var(--accent);
-  box-shadow: 0 0 0 2px var(--focus-ring);
-}
-
-.kmap-tl-load {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 34px;
-}
-
-.kmap-tl-load span {
-  display: block;
-  width: 70%;
-  min-height: 2px;
-  border-radius: 2px 2px 0 0;
-  background: var(--hue-3);
-  opacity: 0.75;
-}
-
-.kmap-tl-foot {
-  margin: 0.6rem 0 0;
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-/* Progress ------------------------------------------------------------ */
-
-.kmap-progress-card {
-  padding: 18px 22px;
-}
-
-.kmap-progress-rows {
-  display: grid;
-  gap: 0.6rem;
-  margin-bottom: 1.2rem;
-}
-
-.kmap-progress-row {
-  display: grid;
-  grid-template-columns: 4.5rem minmax(0, 1fr) 5.5rem;
-  gap: 0.8rem;
-  align-items: center;
-  font-size: 0.92rem;
-}
-
-.kmap-progress-track {
-  height: 10px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: var(--line);
-}
-
-.kmap-progress-fill {
-  height: 100%;
-  border-radius: 999px;
-  background: var(--done);
-  transition: width 300ms ease;
-}
-
-.kmap-progress-num {
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-  text-align: right;
-}
-
-.kmap-progress-card .link-row {
-  padding-top: 0;
-}
-
-.kmap-status {
-  min-height: 1.5em;
-  margin: 0.8rem 0 0;
-  color: var(--accent);
-  font-size: 0.9rem;
-}
-
-.kmap-status.is-error {
-  color: var(--hue-4);
-}
-
 /* Responsive ---------------------------------------------------------- */
 
 @media (max-width: 980px) {
@@ -839,11 +610,11 @@ button.action-link {
     overflow: visible;
   }
 
-  .kmap-glossary {
+  .kmap-term-grid {
     grid-template-columns: 1fr;
   }
 
-  .kmap-glossary .kmap-term:nth-last-child(2):nth-child(odd) {
+  .kmap-term-grid .kmap-term:nth-last-child(2):nth-child(odd) {
     border-bottom: 1px solid var(--line);
   }
 }
@@ -870,39 +641,65 @@ button.action-link {
     padding: 8px 4px;
   }
 
-  .kmap-panel,
-  .kmap-progress-card {
+  .kmap-panel {
     padding: 16px 14px;
   }
 
-  .kmap-glossary {
+  .kmap-term-grid {
     padding: 4px 14px;
   }
+}
 
-  .kmap-timeline {
-    padding: 12px 8px;
-  }
+/* Knowledge card: concepts and key results ---------------------------- */
 
-  .kmap-tl-grid {
-    grid-template-columns: 4.4rem repeat(26, minmax(0, 1fr));
-  }
+.kmap-concepts {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+}
 
-  .kmap-tl-head.is-even {
-    visibility: hidden;
-  }
+.kmap-concepts li + li {
+  margin-top: 0.35rem;
+}
 
-  .kmap-tl-bar {
-    height: 16px;
-    margin: 0;
-  }
+.kmap-results {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  .kmap-progress-row {
-    grid-template-columns: 3.4rem minmax(0, 1fr) 4.6rem;
-    gap: 0.5rem;
-  }
+.kmap-result {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
 
-  .kmap-check {
-    padding: 0.4rem 0.2rem;
-    gap: 0.45rem;
-  }
+.kmap-result:last-child {
+  border-bottom: 0;
+}
+
+.kmap-result-name {
+  margin: 0;
+  color: var(--heading);
+  font-weight: 700;
+}
+
+.kmap-formula {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.kmap-formula .katex-display {
+  margin: 0.4rem 0;
+}
+
+.kmap-result-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.kmap-panel .katex,
+.kmap-term-grid .katex {
+  font-size: 1.05em;
 }

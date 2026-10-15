@@ -3,7 +3,6 @@
   "use strict";
 
   const DATA = window.KMAP_DATA;
-  const STORE_KEY = "kmap-progress-v1";
   const SVG_NS = "http://www.w3.org/2000/svg";
 
   if (!DATA || !Array.isArray(DATA.modules)) {
@@ -16,13 +15,9 @@
 
   const modules = DATA.modules;
   const byId = new Map(modules.map((m) => [m.id, m]));
-  const allKeys = new Set(modules.flatMap((m) => m.checklist.map((c) => c.key)));
 
   const state = {
-    selected: null,
-    level: "all",
-    checked: new Set(),
-    storageOk: true
+    selected: null
   };
 
   /* ------------------------------------------------------------------ helpers */
@@ -34,13 +29,6 @@
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
-
-  const el = (tag, attrs = {}, html = "") => {
-    const node = document.createElement(tag);
-    Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
-    if (html) node.innerHTML = html;
-    return node;
-  };
 
   const svg = (tag, attrs = {}) => {
     const node = document.createElementNS(SVG_NS, tag);
@@ -60,55 +48,22 @@
     }
     return out;
   };
+  // Typeset $...$ / $$...$$ inside a freshly updated node (KaTeX auto-render).
+  const MATH_OPTS = {
+    delimiters: [
+      { left: "$$", right: "$$", display: true },
+      { left: "$", right: "$", display: false }
+    ],
+    throwOnError: false
+  };
+  const renderMath = (node) => {
+    if (node && typeof window.renderMathInElement === "function") {
+      window.renderMathInElement(node, MATH_OPTS);
+    }
+  };
+
   const ancestorsOf = (id) => closure(id, (m) => m.prereqs);
   const descendantsOf = (id) => closure(id, (m) => m.successors);
-
-  const levelMatch = (item) => state.level === "all" || item.level === state.level;
-
-  const moduleProgress = (m) => {
-    const items = m.checklist.filter(levelMatch);
-    const done = items.filter((c) => state.checked.has(c.key)).length;
-    return { done, total: items.length };
-  };
-
-  /* ----------------------------------------------------------------- storage */
-
-  const loadProgress = () => {
-    try {
-      const raw = window.localStorage.getItem(STORE_KEY);
-      if (!raw) return;
-      const parsed = JSON.parse(raw);
-      const keys = Array.isArray(parsed.checked) ? parsed.checked : [];
-      keys.filter((k) => allKeys.has(k)).forEach((k) => state.checked.add(k));
-    } catch {
-      state.storageOk = false;
-    }
-  };
-
-  const saveProgress = () => {
-    try {
-      window.localStorage.setItem(STORE_KEY, JSON.stringify({
-        version: 1,
-        updated: new Date().toISOString(),
-        checked: [...state.checked].sort()
-      }));
-      state.storageOk = true;
-    } catch {
-      if (state.storageOk) {
-        setStatus("浏览器不允许本地存储：本次勾选只在当前页面有效，请用“导出 JSON”保存。", true);
-      }
-      state.storageOk = false;
-    }
-  };
-
-  const setStatus = (text, isError = false) => {
-    const node = $("#progress-status");
-    if (!node) return;
-    node.textContent = text;
-    node.classList.toggle("is-error", isError);
-  };
-
-  /* ------------------------------------------------------------------- graph */
 
   let layout = null;
 
@@ -240,7 +195,7 @@
       });
       g.appendChild(svg("rect", { class: "kmap-node-box", x: p.x, y: p.y, width: p.w, height: p.h, rx: "9" }));
       const title = svg("title");
-      title.textContent = `${m.id} ${m.zh}（第 ${m.weeks[0]}–${m.weeks[1]} 周）`;
+      title.textContent = `${m.id} ${m.zh}（第 ${m.layer} 层）`;
       g.appendChild(title);
       const idText = svg("text", { class: "kmap-node-id", x: p.x + 9, y: p.y + 15 });
       idText.textContent = m.id;
@@ -256,8 +211,6 @@
         t.textContent = line;
         g.appendChild(t);
       });
-      g.appendChild(svg("rect", { class: "kmap-node-track", x: p.x + 9, y: p.y + p.h - 8, width: p.w - 18, height: "3", rx: "1.5" }));
-      g.appendChild(svg("rect", { class: "kmap-node-bar", x: p.x + 9, y: p.y + p.h - 8, width: "0", height: "3", rx: "1.5" }));
       g.addEventListener("click", () => select(m.id, { scrollPanel: true }));
       g.addEventListener("keydown", (event) => {
         if (event.key === "Enter" || event.key === " ") {
@@ -280,18 +233,12 @@
 
     document.querySelectorAll(".kmap-node").forEach((g) => {
       const id = g.dataset.id;
-      const m = byId.get(id);
-      const p = layout.pos.get(id);
       g.classList.toggle("is-sel", id === sel);
       g.classList.toggle("is-pre", anc.has(id));
       g.classList.toggle("is-post", desc.has(id));
       g.classList.toggle("is-far", Boolean(sel) && (anc.has(id) || desc.has(id))
         && !byId.get(sel).prereqs.includes(id) && !byId.get(sel).successors.includes(id));
       g.classList.toggle("is-dim", Boolean(sel) && id !== sel && !anc.has(id) && !desc.has(id));
-      const { done, total } = moduleProgress(m);
-      const frac = total ? done / total : 0;
-      g.querySelector(".kmap-node-bar").setAttribute("width", String(Math.max(0, (p.w - 18) * frac)));
-      g.classList.toggle("is-complete", total > 0 && done === total);
       g.setAttribute("aria-pressed", String(id === sel));
     });
 
@@ -325,16 +272,10 @@
       ? ids.map((id) => `<button type="button" class="kmap-chip-link ${cls}" data-goto="${id}">${id} ${esc(byId.get(id).short)}</button>`).join("")
       : '<span class="kmap-links-label">无</span>';
 
-    const items = m.checklist.filter(levelMatch);
-    const { done, total } = moduleProgress(m);
-    const checklist = items.map((c) => {
-      const isDone = state.checked.has(c.key);
-      return `<li><label class="kmap-check${isDone ? " is-done" : ""}">`
-        + `<input type="checkbox" data-key="${c.key}"${isDone ? " checked" : ""}>`
-        + `<span class="kmap-level kmap-level-${c.level}">${c.level}</span>`
-        + `<span class="kmap-check-text">${esc(c.text)}</span></label></li>`;
-    }).join("");
-    const hidden = m.checklist.length - items.length;
+    const concepts = m.concepts.map((c) => `<li>${esc(c)}</li>`).join("");
+    const results = m.results.map((r) => `<li class="kmap-result"><p class="kmap-result-name">${esc(r.name)}</p>`
+      + `<div class="kmap-formula">$$${esc(r.tex)}$$</div>`
+      + (r.note ? `<p class="kmap-result-note">${esc(r.note)}</p>` : "") + "</li>").join("");
 
     const readings = m.readings.map((r) => {
       const ref = DATA.refs[r.ref];
@@ -359,21 +300,21 @@
         <p class="kmap-panel-en">${esc(m.en)}</p>
         <ul class="kmap-meta">
           <li>第 ${m.layer} 层</li>
-          <li>第 ${m.weeks[0]}${m.weeks[1] !== m.weeks[0] ? `–${m.weeks[1]}` : ""} 周</li>
-          <li>约 ${m.hours} 小时</li>
           <li>教材第 ${m.chapters.join("、")} 章</li>
         </ul>
       </div>
       <p class="kmap-why">${esc(m.why)}</p>
       <p class="kmap-links"><span class="kmap-links-label">前置：</span>${chips(m.prereqs, "is-pre")}<br>
         <span class="kmap-links-label">后续：</span>${chips(m.successors, "is-post")}</p>
-      <h4>掌握清单 <span class="kmap-count" data-module-count>${done}/${total}</span></h4>
-      <ul class="kmap-checklist">${checklist}</ul>
-      ${hidden ? `<p class="kmap-filter-note">已按“${state.level}”筛选，隐藏 ${hidden} 条。</p>` : ""}
+      <h4>核心概念</h4>
+      <ul class="kmap-concepts">${concepts}</ul>
+      <h4>关键结果与公式 <span class="kmap-count">${m.results.length} 条</span></h4>
+      <ul class="kmap-results">${results}</ul>
       <h4>推荐阅读 <span class="kmap-count">${m.readings.length} 项</span></h4>
       <ul class="kmap-readings">${readings}</ul>
       <h4>关键术语 <span class="kmap-count">${m.terms.length} 个</span></h4>
       <dl class="kmap-terms">${terms}</dl>`;
+    renderMath(panel);
   };
 
   const select = (id, { scrollPanel = false, updateHash = true } = {}) => {
@@ -381,7 +322,6 @@
     state.selected = id;
     renderPanel();
     updateGraph();
-    document.querySelectorAll(".kmap-tl-bar").forEach((b) => b.classList.toggle("is-sel", b.dataset.goto === id));
     const panel = $("#panel");
     panel.scrollTop = 0;
     if (updateHash) {
@@ -394,56 +334,22 @@
     }
   };
 
-  /* ---------------------------------------------------------------- timeline */
-
-  const renderTimeline = () => {
-    const host = $("#timeline");
-    const weeks = DATA.plan.weeks;
-    const grid = el("div", { class: "kmap-tl-grid", role: "table", "aria-label": "26 周学习计划" });
-    grid.appendChild(el("div", { class: "kmap-tl-label" }, "<b>周</b>"));
-    for (let w = 1; w <= weeks; w += 1) {
-      grid.appendChild(el("div", { class: `kmap-tl-head${w % 2 === 0 ? " is-even" : ""}` }, String(w)));
-    }
-    const ordered = [...modules].sort((a, b) => a.weeks[0] - b.weeks[0] || a.layer - b.layer);
-    ordered.forEach((m) => {
-      grid.appendChild(el("div", { class: "kmap-tl-label", title: m.zh }, `<b>${m.id}</b> ${esc(m.short)}`));
-      const bar = el("button", {
-        type: "button",
-        class: "kmap-tl-bar",
-        "data-goto": m.id,
-        title: `${m.id} ${m.zh}：第 ${m.weeks[0]}–${m.weeks[1]} 周，约 ${m.hours} 小时`,
-        "aria-label": `${m.id} ${m.zh}，第 ${m.weeks[0]} 到 ${m.weeks[1]} 周`,
-        style: `grid-column: ${m.weeks[0] + 1} / ${m.weeks[1] + 2}`
-      });
-      grid.appendChild(bar);
-      // keep each module on its own row
-      const filler = el("div", { style: `grid-column: ${m.weeks[1] + 2} / -1`, "aria-hidden": "true" });
-      if (m.weeks[1] < weeks) grid.appendChild(filler);
-    });
-    grid.appendChild(el("div", { class: "kmap-tl-label" }, "周学时"));
-    const maxLoad = Math.max(...DATA.plan.weekly_load);
-    DATA.plan.weekly_load.forEach((h, i) => {
-      const cell = el("div", { class: "kmap-tl-load", title: `第 ${i + 1} 周：${h} 小时` });
-      cell.appendChild(el("span", { style: `height:${Math.round((h / maxLoad) * 100)}%` }));
-      grid.appendChild(cell);
-    });
-    host.replaceChildren(grid);
-    host.appendChild(el("p", { class: "kmap-tl-foot" },
-      `合计 ${DATA.plan.total_hours} 小时；每周 ${Math.min(...DATA.plan.weekly_load)}–${maxLoad} 小时（悬停查看每周数值）。`));
-  };
-
   /* ---------------------------------------------------------------- glossary */
 
   const allTerms = modules.flatMap((m) => m.terms.map((t) => ({ ...t, module: m.id })))
     .sort((a, b) => a.en.localeCompare(b.en, "en", { sensitivity: "base" }));
 
-  const highlight = (text, q) => {
+  const highlightPlain = (text, q) => {
     const safe = esc(text);
     if (!q) return safe;
     const i = text.toLowerCase().indexOf(q);
     if (i < 0) return safe;
     return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
   };
+
+  // Highlight matches only outside $...$ so KaTeX still sees intact TeX.
+  const highlight = (text, q) => text.split(/(\$[^$]+\$)/)
+    .map((part, i) => (i % 2 ? esc(part) : highlightPlain(part, q))).join("");
 
   const renderGlossary = () => {
     const q = ($("#term-search").value || "").trim().toLowerCase();
@@ -457,93 +363,13 @@
         + `<button type="button" class="kmap-chip-link" data-goto="${t.module}" data-scroll="map">${t.module}</button></dt>`
         + `<dd>${highlight(t.definition, q)}</dd></div>`).join("")
       : '<p class="kmap-glossary-empty">没有匹配的术语。</p>';
+    renderMath(list);
     $("#term-count").textContent = q ? `${hits.length} / ${allTerms.length} 个术语` : `共 ${allTerms.length} 个术语`;
-  };
-
-  /* ---------------------------------------------------------------- progress */
-
-  const renderProgress = () => {
-    const rows = [["全部", () => true], ...DATA.levels.map((l) => [l.name, (c) => c.level === l.name])];
-    const items = modules.flatMap((m) => m.checklist);
-    $("#progress-rows").innerHTML = rows.map(([name, pred]) => {
-      const sub = items.filter(pred);
-      const done = sub.filter((c) => state.checked.has(c.key)).length;
-      const pct = sub.length ? (100 * done) / sub.length : 0;
-      return `<div class="kmap-progress-row"><span>${name}</span>`
-        + `<div class="kmap-progress-track" role="progressbar" aria-label="${name}进度" aria-valuemin="0" aria-valuemax="${sub.length}" aria-valuenow="${done}">`
-        + `<div class="kmap-progress-fill" style="width:${pct.toFixed(1)}%"></div></div>`
-        + `<span class="kmap-progress-num">${done}/${sub.length}</span></div>`;
-    }).join("");
-    const doneAll = items.filter((c) => state.checked.has(c.key)).length;
-    const stat = document.querySelector('[data-stat="done"]');
-    if (stat) stat.textContent = `${Math.round((100 * doneAll) / items.length)}%`;
-  };
-
-  const refreshAll = () => {
-    if (state.selected) renderPanel();
-    updateGraph();
-    renderProgress();
-  };
-
-  const exportJson = () => JSON.stringify({
-    app: "pc-twins-knowledge-map",
-    version: 1,
-    exported: new Date().toISOString(),
-    data_generated: DATA.generated,
-    checked: [...state.checked].sort()
-  }, null, 2);
-
-  const exportProgress = () => {
-    const blob = new Blob([exportJson()], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = el("a", { href: url, download: `kmap-progress-${new Date().toISOString().slice(0, 10)}.json` });
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-    setStatus(`已导出 ${state.checked.size} 条勾选记录。`);
-  };
-
-  const importText = (text) => {
-    let parsed;
-    try {
-      parsed = JSON.parse(text);
-    } catch {
-      setStatus("导入失败：文件不是有效的 JSON。", true);
-      return false;
-    }
-    if (!parsed || parsed.app !== "pc-twins-knowledge-map" || !Array.isArray(parsed.checked)) {
-      setStatus("导入失败：这不是本页导出的进度文件。", true);
-      return false;
-    }
-    const keys = parsed.checked.filter((k) => typeof k === "string");
-    const known = keys.filter((k) => allKeys.has(k));
-    state.checked = new Set(known);
-    saveProgress();
-    refreshAll();
-    const skipped = keys.length - known.length;
-    setStatus(`已导入 ${known.length} 条勾选记录${skipped ? `，忽略 ${skipped} 条已不存在的条目` : ""}。`);
-    return true;
   };
 
   /* ------------------------------------------------------------------ wiring */
 
   const setupEvents = () => {
-    $("#panel").addEventListener("change", (event) => {
-      const box = event.target.closest('input[type="checkbox"][data-key]');
-      if (!box) return;
-      if (box.checked) state.checked.add(box.dataset.key);
-      else state.checked.delete(box.dataset.key);
-      box.closest(".kmap-check").classList.toggle("is-done", box.checked);
-      saveProgress();
-      const m = byId.get(state.selected);
-      const { done, total } = moduleProgress(m);
-      const count = document.querySelector("[data-module-count]");
-      if (count) count.textContent = `${done}/${total}`;
-      updateGraph();
-      renderProgress();
-    });
-
     document.addEventListener("click", (event) => {
       const go = event.target.closest("[data-goto]");
       if (!go) return;
@@ -554,41 +380,7 @@
       }
     });
 
-    document.querySelectorAll("[data-level]").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        state.level = chip.dataset.level;
-        document.querySelectorAll("[data-level]").forEach((c) => {
-          const on = c === chip;
-          c.classList.toggle("is-active", on);
-          c.setAttribute("aria-pressed", String(on));
-        });
-        refreshAll();
-      });
-    });
-
     $("#term-search").addEventListener("input", renderGlossary);
-    $("#export-btn").addEventListener("click", exportProgress);
-    $("#import-btn").addEventListener("click", () => $("#import-file").click());
-    $("#import-file").addEventListener("change", (event) => {
-      const file = event.target.files && event.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => importText(String(reader.result));
-      reader.onerror = () => setStatus("导入失败：无法读取文件。", true);
-      reader.readAsText(file);
-      event.target.value = "";
-    });
-    $("#reset-btn").addEventListener("click", () => {
-      if (!state.checked.size) {
-        setStatus("当前没有勾选记录。");
-        return;
-      }
-      if (!window.confirm("确定清空全部勾选记录？建议先导出备份。")) return;
-      state.checked.clear();
-      saveProgress();
-      refreshAll();
-      setStatus("已清空进度。");
-    });
 
     let resizeTimer = 0;
     let lastWidth = $("#graph").clientWidth;
@@ -646,27 +438,19 @@
   };
 
   const init = () => {
-    loadProgress();
     setupChrome();
     document.querySelector('[data-stat="modules"]').textContent = String(modules.length);
     document.querySelector('[data-stat="layers"]').textContent = String(new Set(modules.map((m) => m.layer)).size);
-    document.querySelector('[data-stat="hours"]').textContent = `${DATA.plan.total_hours} h`;
+    document.querySelector('[data-stat="results"]').textContent = String(modules.reduce((n, m) => n + m.results.length, 0));
+    document.querySelector('[data-stat="terms"]').textContent = String(allTerms.length);
     const gen = document.querySelector("[data-generated]");
     if (gen) gen.textContent = `数据生成于 ${DATA.generated}`;
     renderGraph();
-    renderTimeline();
     renderGlossary();
-    renderProgress();
     setupEvents();
     const fromHash = window.location.hash.slice(1);
     select(byId.has(fromHash) ? fromHash : modules[0].id, { updateHash: false });
-    if (!state.storageOk) {
-      setStatus("浏览器不允许本地存储：本次勾选只在当前页面有效，请用“导出 JSON”保存。", true);
-    }
   };
-
-  // Small hook for automated checks (export/import round trip); not used by the page itself.
-  window.KMAP = { exportJson, importText, state };
 
   init();
 })();
