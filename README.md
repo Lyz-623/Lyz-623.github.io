@@ -19,7 +19,7 @@ assets/education/polimi-logo.svg
 assets/education/sustech-logo.png
 assets/visit-count.js
 assets/light-ripples.js
-assets/publications/li-2026-anal-chem-schematic.svg
+assets/publications/li-2026-anal-chem-toc.png
 assets/projects/knowledge-map-thumb.svg
 knowledge-map/   (PC-TWINS learning roadmap; see knowledge-map/README.md)
 .nojekyll
@@ -62,7 +62,3 @@ wavelength bands (410-690 nm) expand as slow cylindrical waves, each band
 interferes coherently with the same band of other ripples, and normal
 dispersion spreads every ring into a rainbow. It is disabled for visitors who
 prefer reduced motion and does nothing without WebGL.
-
-The Analytical Chemistry entry uses a schematic drawn for this site
-(`assets/publications/li-2026-anal-chem-schematic.svg`); replace it with the
-paper's TOC graphic if one is available for reuse.
