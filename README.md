@@ -20,7 +20,6 @@ assets/education/sustech-logo.png
 assets/visit-count.js
 assets/light-ripples.js
 assets/publications/li-2026-anal-chem-toc.png
-assets/projects/knowledge-map-thumb.svg
 knowledge-map/   (PC-TWINS learning roadmap; see knowledge-map/README.md)
 .nojekyll
 ```
