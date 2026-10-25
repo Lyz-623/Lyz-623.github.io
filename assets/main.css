@@ -690,7 +690,7 @@ h2::after {
   display: grid;
   grid-template-columns: 250px minmax(0, 1fr);
   gap: 30px;
-  align-items: center;
+  align-items: stretch;
   padding: 24px 28px;
 }
 
@@ -698,7 +698,7 @@ h2::after {
 .project-media {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 10;
+  min-height: 156px;
   overflow: hidden;
   border: 1px solid var(--card-border);
   border-radius: 14px;
@@ -708,6 +708,8 @@ h2::after {
 
 .publication-media img,
 .project-media img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -760,6 +762,7 @@ h2::after {
   display: flex;
   min-width: 0;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .paper-title,
@@ -834,8 +837,8 @@ h2::after {
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
-  margin: 0;
-  padding-top: 0.7rem;
+  margin: auto 0 0;
+  padding-top: 0.9rem;
 }
 
 .link-row-primary {
@@ -1143,6 +1146,12 @@ h2::after {
     grid-template-columns: 1fr;
     gap: 16px;
     padding: 16px;
+  }
+
+  .publication-media,
+  .project-media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
   }
 }
 
