@@ -115,8 +115,9 @@
       }
 
       colour = 1.0 - exp(-colour * 3.6);
-      float alpha = max(colour.r, max(colour.g, colour.b));
-      gl_FragColor = vec4(colour, alpha);
+      // On the light page the bands are drawn as slightly deepened spectral tints.
+      float alpha = max(colour.r, max(colour.g, colour.b)) * 0.85;
+      gl_FragColor = vec4(colour * 0.72, alpha);
     }
   `;
 

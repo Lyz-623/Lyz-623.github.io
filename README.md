@@ -55,9 +55,10 @@ visitor's IP address and visit details to MapMyVisitors
 Light ripples
 -------------
 
-The site uses a single near-black theme. `assets/light-ripples.js` draws, with
-WebGL, a broadband light pulse wherever the background is clicked: eight
+The site uses a single light theme with solid white cards. `assets/light-ripples.js`
+draws, with WebGL, a broadband light pulse wherever the background is clicked: eight
 wavelength bands (410-690 nm) expand as slow cylindrical waves, each band
 interferes coherently with the same band of other ripples, and normal
-dispersion spreads every ring into a rainbow. It is disabled for visitors who
+dispersion spreads every ring into a rainbow, drawn as soft spectral tints on the
+light page. It is disabled for visitors who
 prefer reduced motion and does nothing without WebGL.
