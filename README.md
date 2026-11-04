@@ -9,7 +9,7 @@ Deployment files:
 ```text
 index.html
 assets/main.css
-assets/logo.svg
+assets/logo.svg  (favicon; PNG fallbacks: favicon-32.png, apple-touch-icon.png)
 assets/profile-photo.jpg
 assets/publications/li-2024-optics-letters-fig1.png
 assets/projects/journallens-screenshot.png
