@@ -9,7 +9,8 @@ Deployment files:
 ```text
 index.html
 assets/main.css
-assets/logo.svg  (favicon; PNG fallbacks: favicon-32.png, apple-touch-icon.png)
+assets/logo.svg  (YL monogram, used by knowledge-map/)
+assets/favicon-32.png, favicon-96.png, apple-touch-icon.png  (site icon, from the profile photo)
 assets/profile-photo.jpg
 assets/publications/li-2024-optics-letters-fig1.png
 assets/projects/journallens-screenshot.png
