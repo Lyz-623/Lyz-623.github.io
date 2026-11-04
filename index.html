@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#f6f8f7">
+  <meta name="theme-color" content="#f7f5f0">
   <meta name="description" content="Academic homepage of Yunze Li, a Ph.D. student in Physics at Politecnico di Milano working on ultrafast spectroscopy, optical microscopy, and computational imaging.">
   <meta name="author" content="Yunze Li">
   <meta name="keywords" content="Yunze Li, SUSTech, Polimi, microscopy, super-resolution imaging, Raman microscopy, computational imaging, 2DES, biomedical engineering">
@@ -20,13 +20,10 @@
   <script>
     document.documentElement.classList.add("has-js");
   </script>
-  <link rel="stylesheet" href="assets/main.css?v=20261104-photo">
-  <script src="assets/light-ripples.js?v=20261025" defer></script>
+  <link rel="stylesheet" href="assets/main.css?v=20261104-editorial">
   <script src="assets/visit-count.js?v=20261010" defer></script>
 </head>
 <body>
-  <canvas class="ripple-canvas" aria-hidden="true"></canvas>
-  <div class="reading-progress" aria-hidden="true"></div>
   <header class="site-header" id="top">
     <nav class="site-nav" aria-label="Primary navigation">
       <a class="site-brand" href="#about">Yunze Li</a>
@@ -92,7 +89,6 @@
             <h2 id="about-heading">About Me</h2>
           </div>
           <p class="intro">
-            Hi there! I'm <strong>Yunze Li</strong> <span class="wave" role="img" aria-label="Waving hand">👋</span>
             I am a first-year Ph.D. student in Physics at
             <a href="https://www.polimi.it/en/" target="_blank" rel="noopener">Politecnico di Milano</a>,
             working with
@@ -105,81 +101,54 @@
 
           <h3 class="subheading">Education</h3>
           <ol class="education-list" aria-label="Education, most recent first">
-            <li class="edu-card edu-polimi">
+            <li class="edu-item">
               <img class="edu-logo" src="assets/education/polimi-logo.svg" alt="Politecnico di Milano crest" width="72" height="72">
               <div class="edu-body">
                 <p class="edu-degree">Ph.D. in Physics</p>
                 <p class="edu-school">Politecnico di Milano</p>
-                <p class="edu-period"><time datetime="2026">2026</time> – 2029 (expected)</p>
               </div>
+              <p class="edu-period"><time datetime="2026">2026</time> – 2029 <span class="edu-note">(expected)</span></p>
             </li>
-            <li class="edu-card edu-sustech">
+            <li class="edu-item">
               <img class="edu-logo" src="assets/education/sustech-logo.png" alt="SUSTech crest" width="72" height="72">
               <div class="edu-body">
                 <p class="edu-degree">M.S. in <abbr title="Electrical and Electronic Engineering">EEE</abbr></p>
                 <p class="edu-school">SUSTech</p>
-                <p class="edu-period"><time datetime="2023">2023</time> – <time datetime="2026">2026</time></p>
               </div>
+              <p class="edu-period"><time datetime="2023">2023</time> – <time datetime="2026">2026</time></p>
             </li>
-            <li class="edu-card edu-sustech">
+            <li class="edu-item">
               <img class="edu-logo" src="assets/education/sustech-logo.png" alt="SUSTech crest" width="72" height="72">
               <div class="edu-body">
                 <p class="edu-degree">B.Eng. in <abbr title="Biomedical Engineering">BME</abbr></p>
                 <p class="edu-school">SUSTech</p>
-                <p class="edu-period"><time datetime="2019">2019</time> – <time datetime="2023">2023</time></p>
               </div>
+              <p class="edu-period"><time datetime="2019">2019</time> – <time datetime="2023">2023</time></p>
             </li>
           </ol>
         </section>
 
-        <section class="section section-reveal" id="research" aria-labelledby="research-heading">
+        <section class="section" id="research" aria-labelledby="research-heading">
           <div class="section-heading">
             <h2 id="research-heading">Research Interests</h2>
           </div>
-          <ul class="interest-list">
-            <li class="interest">
-              <div class="interest-head">
-                <span class="interest-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" focusable="false"><path d="M2 12h4.2l1-1.2 1 2.4 1.1-4.4 1.2 6.4 1.2-8.4 1.2 8.4 1.1-6.4 1.1 4.4 1-2.4 1 1.2H22"></path></svg>
-                </span>
-                <p class="interest-title">Ultrafast spectroscopy</p>
-              </div>
-              <p class="interest-text">Two-dimensional electronic spectroscopy (2DES), the focus of my doctoral research.</p>
-              <ul class="interest-tags" aria-label="Keywords">
-                <li>2DES</li>
-                <li>Femtosecond</li>
-              </ul>
-            </li>
-            <li class="interest">
-              <div class="interest-head">
-                <span class="interest-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" focusable="false"><path d="M9.2 2.8l2.6 1.5-3.6 6.2-2.6-1.5z"></path><path d="M7.6 11.2 7 12.3"></path><path d="M12.5 7.8a6.2 6.2 0 0 1 1.3 11.7"></path><path d="M5 21h14"></path><path d="M7 17.5h7"></path><path d="M10.5 17.5v-4"></path></svg>
-                </span>
-                <p class="interest-title">Optical microscopy</p>
-              </div>
-              <p class="interest-text">Designing and building super-resolution fluorescence and Raman microscopy systems.</p>
-              <ul class="interest-tags" aria-label="Keywords">
-                <li>Super-resolution</li>
-                <li>Raman</li>
-              </ul>
-            </li>
-            <li class="interest">
-              <div class="interest-head">
-                <span class="interest-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg>
-                </span>
-                <p class="interest-title">Computational imaging</p>
-              </div>
-              <p class="interest-text">Image denoising and spectral unmixing methods for microscopy data.</p>
-              <ul class="interest-tags" aria-label="Keywords">
-                <li>Denoising</li>
-                <li>Spectral unmixing</li>
-              </ul>
-            </li>
-          </ul>
+          <dl class="interest-list">
+            <div class="interest">
+              <dt>Ultrafast spectroscopy</dt>
+              <dd>Two-dimensional electronic spectroscopy (2DES), the focus of my doctoral research.<span class="interest-keywords">2DES · Femtosecond</span></dd>
+            </div>
+            <div class="interest">
+              <dt>Optical microscopy</dt>
+              <dd>Designing and building super-resolution fluorescence and Raman microscopy systems.<span class="interest-keywords">Super-resolution · Raman</span></dd>
+            </div>
+            <div class="interest">
+              <dt>Computational imaging</dt>
+              <dd>Image denoising and spectral unmixing methods for microscopy data.<span class="interest-keywords">Denoising · Spectral unmixing</span></dd>
+            </div>
+          </dl>
         </section>
 
-        <section class="section section-reveal" id="news" aria-labelledby="news-heading">
+        <section class="section" id="news" aria-labelledby="news-heading">
           <div class="section-heading">
             <h2 id="news-heading">News</h2>
           </div>
@@ -187,45 +156,26 @@
             <!-- Add newer items above older entries. -->
             <li class="news-item">
               <time class="news-date" datetime="2026-10">Oct 2026</time>
-              Our paper “A Simulation-Driven Deep Learning Approach for Artifact-Resistant Raman Spectral Unmixing” is published in
-              <em>Analytical Chemistry</em>.
+              <span class="news-text">Our paper “A Simulation-Driven Deep Learning Approach for Artifact-Resistant Raman Spectral Unmixing” is published in <em>Analytical Chemistry</em>.</span>
             </li>
             <li class="news-item">
               <time class="news-date" datetime="2026-07">Jul 2026</time>
-              Officially enrolled in the Fall 2026 Ph.D. program in Physics at Politecnico di Milano.
-              <span class="news-celebration" role="img" aria-label="Celebration">🎉</span>
+              <span class="news-text">Officially enrolled in the Fall 2026 Ph.D. program in Physics at Politecnico di Milano.</span>
             </li>
             <li class="news-item">
               <time class="news-date" datetime="2024-05">May 2024</time>
-              Our paper “3D drift correction for super-resolution imaging with a single laser light” is published in
-              <em>Optics Letters</em>.
+              <span class="news-text">Our paper “3D drift correction for super-resolution imaging with a single laser light” is published in <em>Optics Letters</em>.</span>
             </li>
           </ol>
         </section>
 
-        <section class="section section-reveal" id="publications" aria-labelledby="publications-heading">
-      <div class="filterable-section" data-filter-group="publications">
+        <section class="section" id="publications" aria-labelledby="publications-heading">
         <div class="section-heading">
           <h2 id="publications-heading">Publications</h2>
-        <aside class="filter-panel" aria-label="Filter publications by year">
-          <button class="filter-chip is-active" type="button" data-filter-value="all" aria-pressed="true">
-            <span>All</span>
-            <span class="filter-count" data-filter-count>2</span>
-          </button>
-          <button class="filter-chip" type="button" data-filter-value="2026" aria-pressed="false">
-            <span>2026</span>
-            <span class="filter-count" data-filter-count>1</span>
-          </button>
-          <button class="filter-chip" type="button" data-filter-value="2024" aria-pressed="false">
-            <span>2024</span>
-            <span class="filter-count" data-filter-count>1</span>
-          </button>
-        </aside>
         </div>
-        <div class="section-content filter-results publication-list">
-          <article class="publication filter-item" data-filter-value="2026">
+        <div class="section-content publication-list">
+          <article class="publication">
             <a class="publication-media media-contain" href="https://pubs.acs.org/doi/10.1021/acs.analchem.5c07805" target="_blank" rel="noopener" aria-label="Open publication website">
-              <span class="media-badge">Anal. Chem.</span>
               <img src="assets/publications/li-2026-anal-chem-toc.png" alt="Workflow: simulated spectra train an attention U-Net that denoises raw Raman data and extracts component images and spectra" width="799" height="439">
             </a>
             <div class="publication-body">
@@ -252,9 +202,8 @@
               </p>
             </div>
           </article>
-          <article class="publication filter-item" data-filter-value="2024">
+          <article class="publication">
             <a class="publication-media media-contain" href="https://opg.optica.org/ol/abstract.cfm?uri=ol-49-10-2785" target="_blank" rel="noopener" aria-label="Open publication website">
-              <span class="media-badge">Opt. Lett.</span>
               <img src="assets/publications/li-2024-optics-letters-fig1.png" alt="Schematic of the optical setup for 3D drift correction in super-resolution imaging">
             </a>
             <div class="publication-body">
@@ -284,35 +233,19 @@
             </div>
           </article>
         </div>
-      </div>
         </section>
 
-        <section class="section section-reveal" id="projects" aria-labelledby="projects-heading">
-      <div class="filterable-section" data-filter-group="projects">
+        <section class="section" id="projects" aria-labelledby="projects-heading">
         <div class="section-heading">
           <h2 id="projects-heading">Projects</h2>
-        <aside class="filter-panel" aria-label="Filter projects by category">
-          <button class="filter-chip is-active" type="button" data-filter-value="all" aria-pressed="true">
-            <span>All</span>
-            <span class="filter-count" data-filter-count>3</span>
-          </button>
-          <button class="filter-chip" type="button" data-filter-value="web" aria-pressed="false">
-            <span>Web</span>
-            <span class="filter-count" data-filter-count>1</span>
-          </button>
-          <button class="filter-chip" type="button" data-filter-value="zotero-plugin" aria-pressed="false">
-            <span>Zotero</span>
-            <span class="filter-count" data-filter-count>2</span>
-          </button>
-        </aside>
         </div>
-        <div class="section-content filter-results project-list">
-          <article class="project-card filter-item" data-filter-value="web">
-            <a class="project-media media-cover media-top" href="https://euposition.cn/" target="_blank" rel="noopener" aria-label="Open the EUposition website">
-              <span class="media-badge">Web app</span>
-              <img src="assets/projects/euposition-home.jpg" alt="EUposition search page listing European Ph.D. and postdoctoral positions" width="840" height="699">
+        <div class="section-content project-list">
+          <article class="project-card">
+            <a class="project-media media-cover" href="https://euposition.cn/" target="_blank" rel="noopener" aria-label="Open the EUposition website">
+              <img src="assets/projects/euposition-detail.jpg" alt="EUposition search page with position counts and filters" width="640" height="400" loading="lazy">
             </a>
             <div class="project-body">
+              <p class="project-kind">Web application</p>
               <p class="project-title">
                 <a href="https://euposition.cn/" target="_blank" rel="noopener">EUposition</a>
               </p>
@@ -326,12 +259,12 @@
               </p>
             </div>
           </article>
-          <article class="project-card filter-item" data-filter-value="zotero-plugin">
+          <article class="project-card">
             <a class="project-media media-cover" href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener" aria-label="Open JournalLens GitHub repository">
-              <span class="media-badge">Zotero plugin</span>
-              <img src="assets/projects/journallens-thumb.png" alt="JournalLens Zotero plugin interface preview" width="200" height="200">
+              <img src="assets/projects/journallens-detail.jpg" alt="JournalLens window with followed journals and a recent paper" width="640" height="400" loading="lazy">
             </a>
             <div class="project-body">
+              <p class="project-kind">Zotero plugin</p>
               <p class="project-title">
                 <a href="https://github.com/Lyz-623/JournalLens" target="_blank" rel="noopener">JournalLens</a>
               </p>
@@ -355,12 +288,12 @@
               </p>
             </div>
           </article>
-          <article class="project-card filter-item" data-filter-value="zotero-plugin">
-            <a class="project-media media-cover" href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener" aria-label="Open ZotAssets GitHub repository">
-              <span class="media-badge">Zotero plugin</span>
+          <article class="project-card">
+            <a class="project-media media-contain" href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener" aria-label="Open ZotAssets GitHub repository">
               <img src="assets/projects/zotassets-logo.svg" alt="ZotAssets plugin logo" width="200" height="200">
             </a>
             <div class="project-body">
+              <p class="project-kind">Zotero plugin</p>
               <p class="project-title">
                 <a href="https://github.com/Lyz-623/ZotAssets" target="_blank" rel="noopener">ZotAssets</a>
               </p>
@@ -385,23 +318,15 @@
             </div>
           </article>
         </div>
-      </div>
         </section>
       </div>
     </div>
 
         <footer class="footer">
           <!-- data-map-id is the d parameter of this site's MapMyVisitors embed code. -->
-          <span class="footer-visits" data-map-id="ZQ_U7cD-OUvXGN-t1cr9xBAF6WZb5q7dhCy1pAEroJ0" hidden>
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-            <span class="footer-visits-count" data-visit-count></span>
-            <span>visits</span>
-          </span>
+          <span class="footer-visits" data-map-id="ZQ_U7cD-OUvXGN-t1cr9xBAF6WZb5q7dhCy1pAEroJ0" hidden><span data-visit-count></span> visits</span>
           <!-- Keep this date synchronized with every deployed site change. -->
-          <p>© 2026 · Yunze Li · Department of Physics, Politecnico di Milano · Last edited: October 25, 2026</p>
+          <p>© 2026 Yunze Li · Department of Physics, Politecnico di Milano · Last edited November 4, 2026</p>
         </footer>
   </main>
   <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
@@ -411,45 +336,6 @@
   </button>
   <script>
     (() => {
-      const setupFilteredSections = () => {
-        document.querySelectorAll("[data-filter-group]").forEach((group) => {
-          const chips = [...group.querySelectorAll("button[data-filter-value]")];
-          const items = [...group.querySelectorAll(".filter-item[data-filter-value]")];
-
-          if (!chips.length || !items.length) {
-            return;
-          }
-
-          const showFilter = (value) => {
-            chips.forEach((chip) => {
-              const isActive = chip.dataset.filterValue === value;
-              chip.classList.toggle("is-active", isActive);
-              chip.setAttribute("aria-pressed", String(isActive));
-            });
-
-            items.forEach((item) => {
-              item.classList.toggle("is-hidden", value !== "all" && item.dataset.filterValue !== value);
-            });
-          };
-
-          chips.forEach((chip) => {
-            const countNode = chip.querySelector("[data-filter-count]");
-            const count = chip.dataset.filterValue === "all"
-              ? items.length
-              : items.filter((item) => item.dataset.filterValue === chip.dataset.filterValue).length;
-
-            if (countNode) {
-              countNode.textContent = count;
-            }
-
-            chip.addEventListener("click", () => showFilter(chip.dataset.filterValue));
-          });
-
-          const activeChip = chips.find((chip) => chip.classList.contains("is-active")) || chips[0];
-          showFilter(activeChip.dataset.filterValue);
-        });
-      };
-
       const setupActiveNavigation = () => {
         const links = [...document.querySelectorAll(".site-nav-link")];
         const sections = links
@@ -583,44 +469,13 @@
         });
       };
 
-      const progress = document.querySelector(".reading-progress");
-      const revealNodes = [...document.querySelectorAll(".section-reveal")];
       const githubTags = document.querySelectorAll("[data-github-stars]");
       const crossrefTags = document.querySelectorAll("[data-crossref-citations]");
       const cacheTtl = 24 * 60 * 60 * 1000;
 
 
-      setupFilteredSections();
       setupActiveNavigation();
       setupBackToTop();
-
-      const updateProgress = () => {
-        const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
-        const value = scrollRange > 0 ? Math.min(window.scrollY / scrollRange, 1) : 0;
-        progress.style.transform = `scaleX(${value})`;
-      };
-
-      updateProgress();
-      window.addEventListener("scroll", updateProgress, { passive: true });
-      window.addEventListener("resize", updateProgress);
-
-      if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, {
-          rootMargin: "0px 0px -8% 0px",
-          threshold: 0.08
-        });
-
-        revealNodes.forEach((node) => observer.observe(node));
-      } else {
-        revealNodes.forEach((node) => node.classList.add("is-visible"));
-      }
 
       if ((!githubTags.length && !crossrefTags.length) || !window.fetch) {
         return;

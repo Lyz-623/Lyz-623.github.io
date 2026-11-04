@@ -14,13 +14,13 @@ assets/favicon-32.png, favicon-96.png, apple-touch-icon.png  (site icon, from th
 assets/profile-photo.jpg
 assets/publications/li-2024-optics-letters-fig1.png
 assets/projects/journallens-screenshot.png
-assets/projects/journallens-thumb.png
+assets/projects/journallens-detail.jpg
 assets/projects/zotassets-logo.svg
-assets/projects/euposition-home.jpg
+assets/projects/euposition-detail.jpg
 assets/education/polimi-logo.svg
 assets/education/sustech-logo.png
 assets/visit-count.js
-assets/light-ripples.js
+assets/fonts/   (Newsreader for headings, Source Sans 3 for text)
 assets/publications/li-2026-anal-chem-toc.png
 knowledge-map/   (PC-TWINS learning roadmap; see knowledge-map/README.md)
 .nojekyll
@@ -54,13 +54,12 @@ visitor's IP address and visit details to MapMyVisitors
 (https://mapmyvisitors.com/b/policy). The map ID is `data-map-id` on
 `.footer-visits` in `index.html`. Never add private account credentials here.
 
-Light ripples
--------------
+Design notes
+------------
 
-The site uses a single light theme with solid white cards. `assets/light-ripples.js`
-draws, with WebGL, a broadband light pulse wherever the background is clicked: eight
-wavelength bands (410-690 nm) expand as slow cylindrical waves, each band
-interferes coherently with the same band of other ripples, and normal
-dispersion spreads every ring into a rainbow, drawn as soft spectral tints on the
-light page. It is disabled for visitors who
-prefer reduced motion and does nothing without WebGL.
+A single light theme on warm paper (#f7f5f0). Newsreader (serif) sets the name,
+section and entry titles; Source Sans 3 sets everything else. Deep teal
+(#2f6a71) is the only accent colour, and ochre (#8c621c) is reserved for small
+labels such as news dates and project kinds. Only publications and projects sit
+in cards; the remaining sections are plain typography. Motion is limited to the
+sliding nav underline and the back-to-top button.
