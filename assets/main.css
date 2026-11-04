@@ -284,7 +284,12 @@ strong {
   display: block;
   width: 150px;
   height: auto;
-  margin: 0 auto 1rem;
+  aspect-ratio: 1;
+  margin: 0 auto 1.1rem;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px var(--card-border), 0 8px 22px rgba(30, 50, 48, 0.16);
 }
 
 h1 {
