@@ -13,9 +13,6 @@ assets/logo.svg  (YL monogram, used by knowledge-map/)
 assets/favicon-32.png, favicon-96.png, apple-touch-icon.png  (site icon, from the profile photo)
 assets/profile-photo.jpg
 assets/publications/li-2024-optics-letters-fig1.png
-assets/projects/journallens-screenshot.png
-assets/projects/journallens-detail.jpg
-assets/projects/zotassets-logo.svg
 assets/projects/euposition-detail.jpg
 assets/education/polimi-logo.svg
 assets/education/sustech-logo.png
