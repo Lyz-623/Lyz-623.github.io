@@ -328,8 +328,23 @@ h1 {
   padding: 0 0 56px;
 }
 
+/* Each section opens with its title on a hairline rule; a short teal bar sits
+   on the rule beneath the title, like the index mark on a scale. */
 .section-heading {
-  margin-bottom: 1.25rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-heading::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  content: "";
 }
 
 h2 {
@@ -340,13 +355,34 @@ h2 {
   line-height: 1.2;
 }
 
+/* Sub-blocks inside a section: a small-caps label with a small ochre diamond
+   and a hairline rule, one step quieter than the section title. */
 .subheading {
-  margin: 2.2rem 0 1rem;
-  color: var(--faint);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 2.2rem 0 1.1rem;
+  color: var(--muted);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.subheading::before {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  background: var(--ochre);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.subheading::after {
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+  content: "";
 }
 
 .intro {
