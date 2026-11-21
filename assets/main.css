@@ -11,6 +11,14 @@
 }
 
 @font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("fonts/newsreader-italic-latin.woff") format("woff");
+}
+
+@font-face {
   font-family: "Source Sans 3";
   font-style: normal;
   font-weight: 400 700;
@@ -625,40 +633,53 @@ h2 {
   color: var(--accent);
 }
 
+/* Authors and venue are set in the serif, like a reference list. */
 .paper-meta,
-.paper-venue,
-.project-meta {
-  margin: 0 0 0.15rem;
-  color: var(--muted);
-  font-size: 0.97rem;
+.paper-venue {
+  margin: 0 0 0.1rem;
+  color: #4f4c45;
+  font-family: var(--serif);
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
 .paper-meta strong {
   color: var(--heading);
+  font-weight: 600;
+}
+
+.paper-venue {
+  font-variant-numeric: lining-nums;
+}
+
+.paper-venue em {
+  color: var(--heading);
+  font-style: italic;
 }
 
 .project-meta {
+  margin: 0 0 0.15rem;
+  color: var(--muted);
+  font-size: 0.97rem;
+  line-height: 1.5;
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
 }
 
-.paper-venue em {
-  color: var(--ink);
-}
-
 .equal-mark {
-  margin-left: 0.05em;
-  font-size: 0.7em;
+  margin-left: 0.04em;
+  color: var(--accent);
+  font-size: 0.72em;
   font-weight: 600;
   line-height: 0;
 }
 
 .equal-note {
-  margin-left: 0.25em;
+  margin-left: 0.35em;
   color: var(--faint);
-  font-size: 0.88em;
+  font-family: var(--sans);
+  font-size: 0.8rem;
   white-space: nowrap;
 }
 
@@ -736,10 +757,10 @@ h2 {
   fill: currentColor;
 }
 
-.metric-brand-logo {
+.metric-brand-mark {
   display: block;
-  width: 50px;
-  height: auto;
+  width: auto;
+  height: 14px;
 }
 
 /* Footer ------------------------------------------------------------- */

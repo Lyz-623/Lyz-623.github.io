@@ -55,7 +55,9 @@ Design notes
 ------------
 
 A single light theme on warm paper (#f7f5f0). Newsreader (serif) sets the name,
-section and entry titles; Source Sans 3 sets everything else. Deep teal
+section and entry titles and the author and venue lines of publications;
+Source Sans 3 sets everything else. `assets/crossref-mark.svg` is the Crossref
+mark taken from `assets/crossref-logo-landscape.svg`. Deep teal
 (#2f6a71) is the only accent colour, and ochre (#8c621c) is reserved for small
 labels such as news dates and project kinds. Only publications and projects sit
 in cards; the remaining sections are plain typography. Motion is limited to the
